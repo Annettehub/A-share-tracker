@@ -117,6 +117,10 @@ def apply_market_data(companies: list[dict]) -> dict | None:
         company["current_price"] = float(quote["price"])
         company["change_from_start"] = pct((current_cap - float(company["start_market_cap"])) / float(company["start_market_cap"]) * 100)
         company["space"] = pct((float(company["year_end_market_cap"]) - current_cap) / current_cap * 100)
+        if quote.get("drawdown_from_recent_high_pct") is not None:
+            company["drawdown_from_recent_high"] = pct(float(quote["drawdown_from_recent_high_pct"]))
+            company["recent_high_price"] = float(quote.get("recent_high_price", 0))
+            company["recent_high_date"] = quote.get("recent_high_date", "")
         company["quote_time"] = quote.get("quote_time", "")
     return data
 
@@ -183,7 +187,7 @@ section, .research-article { padding: 24px 26px; }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 1380px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #fff; table-layout: fixed; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
 th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
@@ -233,7 +237,7 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 1180px; }
+  table { min-width: 1290px; }
 }
 """
 
@@ -307,6 +311,7 @@ def render(companies: list[dict]) -> str:
           <td class="metric-cell">{price(c.get('current_price', c['start_price']))}</td>
           <td class="metric-cell">{cap(c['current_market_cap'])}</td>
           <td class="metric-cell">{c['change_from_start']}</td>
+          <td class="metric-cell">{c.get('drawdown_from_recent_high', '-')}</td>
           <td class="metric-cell">{cap(c['year_end_market_cap'])}</td>
           <td class="metric-cell">{c['space']}</td>
           <td>{c['source_note']}</td>
@@ -412,7 +417,7 @@ def render(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」和「距 2026 年底目标市值空间」。</p>
+            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -427,6 +432,7 @@ def render(companies: list[dict]) -> str:
                 <th class="metric-cell">{quote_day}<br>收盘价</th>
                 <th class="metric-cell">{quote_day}<br>市值</th>
                 <th class="metric-cell">距起点<br>变化</th>
+                <th class="metric-cell">距最高点<br>下跌幅度</th>
                 <th class="metric-cell">2026 年底<br>目标市值</th>
                 <th class="metric-cell">目前至<br>年底空间</th>
                 <th style="width:300px;">原图说明摘录</th>
@@ -435,7 +441,7 @@ def render(companies: list[dict]) -> str:
             <tbody>{rows}</tbody>
           </table>
         </div>
-        <p class="note">「目标市值」仅用于记录原图中的年底目标市值，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
+        <p class="note">「距最高点下跌幅度」按最近 2 个月日线最高股价直接计算；「目标市值」仅用于记录原图中的年底目标市值，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
       </section>
 
       <section class="view" id="weekly">

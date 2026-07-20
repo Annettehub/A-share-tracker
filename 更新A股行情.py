@@ -5,7 +5,7 @@ import os
 import subprocess
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import requests
@@ -100,6 +100,43 @@ def fetch_eastmoney_market_cap_yi(item: dict, s: requests.Session) -> float | No
         return None
 
 
+def fetch_tencent_recent_high(item: dict, quote: dict, s: requests.Session) -> dict:
+    symbol = TENCENT_PREFIX[item["market"]] + item["code"]
+    quote_date = datetime.strptime(quote["quote_time"][:10], "%Y-%m-%d").date()
+    start_date = quote_date - timedelta(days=62)
+    params = {"param": f"{symbol},day,,,1000,qfq"}
+    response = s.get("https://web.ifzq.gtimg.cn/appstock/app/fqkline/get", params=params, timeout=20)
+    response.raise_for_status()
+    data = response.json().get("data", {}).get(symbol, {})
+    klines = data.get("qfqday") or data.get("day") or []
+    rows = []
+    for line in klines:
+        if len(line) < 5:
+            continue
+        trade_date = datetime.strptime(line[0], "%Y-%m-%d").date()
+        if start_date <= trade_date <= quote_date:
+            rows.append(
+                {
+                    "date": line[0],
+                    "close": float(line[2]),
+                    "high": float(line[3]),
+                }
+            )
+    if not rows:
+        raise ValueError(f"{item['name']} 最近2个月日线为空")
+    high_row = max(rows, key=lambda row: row["high"])
+    high_price = float(high_row["high"])
+    drawdown = (float(quote["price"]) - high_price) / high_price * 100
+    return {
+        "recent_high_window_start": start_date.strftime("%Y-%m-%d"),
+        "recent_high_window_end": quote_date.strftime("%Y-%m-%d"),
+        "recent_high_date": high_row["date"],
+        "recent_high_price": round(high_price, 2),
+        "drawdown_from_recent_high_pct": round(drawdown, 3),
+        "recent_high_source": "Tencent daily kline qfq endpoint",
+    }
+
+
 def retry(fn, attempts: int = 3):
     last_error = None
     for attempt in range(attempts):
@@ -118,6 +155,11 @@ def main() -> None:
 
     for item in COMPANIES:
         quote = retry(lambda item=item: fetch_tencent_quote(item, s))
+        try:
+            quote.update(retry(lambda item=item, quote=quote: fetch_tencent_recent_high(item, quote, s)))
+        except Exception as error:
+            quote["recent_high_error"] = str(error)
+            checks.append(f"{item['name']}: 最近2个月最高价未返回")
         em_cap = fetch_eastmoney_market_cap_yi(item, s)
         if em_cap is None:
             quote["eastmoney_check"] = "not_available"
@@ -163,7 +205,10 @@ def main() -> None:
         "本次行情：",
     ]
     for quote in quotes.values():
-        lines.append(f"- {quote['name']} {quote['code']}：价格 {quote['price']}，总市值 {quote['market_cap_yi']:.2f} 亿，行情时间 {quote['quote_time']}")
+        high_text = "最高价未返回"
+        if quote.get("recent_high_price") is not None:
+            high_text = f"近2个月最高价 {quote['recent_high_price']}（{quote.get('recent_high_date', '')}），距高点 {quote.get('drawdown_from_recent_high_pct', 0):+.1f}%"
+        lines.append(f"- {quote['name']} {quote['code']}：价格 {quote['price']}，总市值 {quote['market_cap_yi']:.2f} 亿，行情时间 {quote['quote_time']}，{high_text}")
     lines.extend(["", "校验说明：", output["validation"]])
     LOG_FILE.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))

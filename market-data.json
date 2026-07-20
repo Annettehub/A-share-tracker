@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20 18:00:47",
+  "updated_at": "2026-07-20 21:39:37",
   "primary_source": "Tencent qt.gtimg.cn",
   "secondary_source": "Eastmoney push2.eastmoney.com",
   "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 飞荣达: 东方财富校验未返回；长飞光纤: 东方财富校验未返回；胜宏科技: 东方财富校验未返回；东山精密: 东方财富校验未返回；寒武纪: 东方财富校验未返回；沪电股份: 东方财富校验未返回；中际旭创: 东方财富校验未返回；兆易创新: 东方财富校验未返回",
@@ -11,6 +11,12 @@
       "market_cap_yi": 200.56,
       "quote_time": "2026-07-20 16:14:00",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-06-26",
+      "recent_high_price": 52.92,
+      "drawdown_from_recent_high_pct": -35.374,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "601869": {
@@ -20,6 +26,12 @@
       "market_cap_yi": 3162.6,
       "quote_time": "2026-07-20 16:14:44",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-06-25",
+      "recent_high_price": 600.0,
+      "drawdown_from_recent_high_pct": -36.333,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "300476": {
@@ -29,6 +41,12 @@
       "market_cap_yi": 2202.52,
       "quote_time": "2026-07-20 16:14:21",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-05-27",
+      "recent_high_price": 402.6,
+      "drawdown_from_recent_high_pct": -44.334,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "002384": {
@@ -38,6 +56,12 @@
       "market_cap_yi": 3987.96,
       "quote_time": "2026-07-20 16:14:30",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-07-15",
+      "recent_high_price": 280.08,
+      "drawdown_from_recent_high_pct": -22.261,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "688256": {
@@ -47,6 +71,12 @@
       "market_cap_yi": 7596.06,
       "quote_time": "2026-07-20 16:14:54",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-06-30",
+      "recent_high_price": 1620.0,
+      "drawdown_from_recent_high_pct": -25.37,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "002463": {
@@ -56,6 +86,12 @@
       "market_cap_yi": 2213.4,
       "quote_time": "2026-07-20 16:14:12",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-07-01",
+      "recent_high_price": 158.2,
+      "drawdown_from_recent_high_pct": -27.295,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "300308": {
@@ -65,6 +101,12 @@
       "market_cap_yi": 11196.96,
       "quote_time": "2026-07-20 16:14:27",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-06-22",
+      "recent_high_price": 1416.88,
+      "drawdown_from_recent_high_pct": -29.14,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     },
     "603986": {
@@ -74,6 +116,12 @@
       "market_cap_yi": 3033.64,
       "quote_time": "2026-07-20 16:14:56",
       "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-05-19",
+      "recent_high_window_end": "2026-07-20",
+      "recent_high_date": "2026-06-29",
+      "recent_high_price": 846.66,
+      "drawdown_from_recent_high_pct": -48.941,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
       "eastmoney_check": "not_available"
     }
   }
