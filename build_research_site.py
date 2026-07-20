@@ -204,7 +204,7 @@ def first_summary(markdown: str) -> str:
 
 
 def cap(value: float) -> str:
-    return f"{value:,.1f} 亿"
+    return f"{float(value):,.0f} 亿"
 
 
 def css() -> str:
