@@ -4,6 +4,7 @@ import html
 import base64
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 
 from build_research_site import IMAGE_SOURCE, OUTPUTS, DEST, SITE_TITLE, cap, prepare
@@ -25,6 +26,19 @@ def trim_repeated_company_heading(companies: list[dict]) -> None:
 
 def pct(value: float) -> str:
     return f"{value:+.1f}%"
+
+
+def quote_day_label(companies: list[dict]) -> str:
+    for company in companies:
+        quote_time = company.get("quote_time")
+        if not quote_time:
+            continue
+        try:
+            dt = datetime.strptime(quote_time[:19], "%Y-%m-%d %H:%M:%S")
+            return f"{dt.month}/{dt.day}日"
+        except ValueError:
+            continue
+    return "当前"
 
 
 def apply_market_data(companies: list[dict]) -> dict | None:
@@ -154,6 +168,7 @@ td span { color: var(--muted); font-size: 12px; }
 
 def render(companies: list[dict]) -> str:
     market_data = apply_market_data(companies)
+    quote_day = quote_day_label(companies)
     market_note = "当前市值暂等于起点市值。接入行情快照后，这里会显示抓取时间、来源与校验结果。"
     if market_data:
         validation_text = str(market_data.get("validation", ""))
@@ -200,6 +215,7 @@ def render(companies: list[dict]) -> str:
           <td>{c['track']}</td>
           <td class="baseline">{c['start_price']}</td>
           <td class="baseline">{cap(c['start_market_cap'])}</td>
+          <td>{c.get('current_price', c['start_price'])}</td>
           <td>{cap(c['current_market_cap'])}</td>
           <td>{c['change_from_start']}</td>
           <td>{cap(c['year_end_market_cap'])}</td>
@@ -307,7 +323,7 @@ def render(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；当前市值来自本地行情快照，后续每周更新后记录「距起点变化」和「距 2026 年底观察市值空间」。</p>
+            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」和「距 2026 年底观察市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -319,7 +335,8 @@ def render(companies: list[dict]) -> str:
                 <th>强相关方向</th>
                 <th class="baseline">07/17 股价</th>
                 <th class="baseline">07/17 市值</th>
-                <th>当前市值</th>
+                <th>{quote_day}收盘价</th>
+                <th>{quote_day}市值</th>
                 <th>距起点变化</th>
                 <th>2026 年底观察市值</th>
                 <th>目前至年底空间</th>
