@@ -204,8 +204,6 @@ def first_summary(markdown: str) -> str:
 
 
 def cap(value: float) -> str:
-    if value == int(value):
-        return f"{value:,.0f} 亿"
     return f"{value:,.1f} 亿"
 
 

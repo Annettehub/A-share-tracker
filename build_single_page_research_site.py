@@ -28,6 +28,10 @@ def pct(value: float) -> str:
     return f"{value:+.1f}%"
 
 
+def price(value: float | str) -> str:
+    return f"{float(value):.1f}"
+
+
 def quote_day_label(companies: list[dict]) -> str:
     for company in companies:
         quote_time = company.get("quote_time")
@@ -35,7 +39,7 @@ def quote_day_label(companies: list[dict]) -> str:
             continue
         try:
             dt = datetime.strptime(quote_time[:19], "%Y-%m-%d %H:%M:%S")
-            return f"{dt.month}/{dt.day}日"
+            return f"{dt.month:02d}/{dt.day:02d}"
         except ValueError:
             continue
     return "当前"
@@ -122,10 +126,12 @@ section, .research-article { padding: 24px 26px; }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 980px; border-collapse: collapse; background: #fff; }
+table { width: 100%; min-width: 1380px; border-collapse: collapse; background: #fff; table-layout: fixed; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
-th { color: #173237; background: #e7efed; font-weight: 800; white-space: nowrap; }
+th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
+th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
+th.metric-cell { line-height: 1.25; word-break: keep-all; }
 td a { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
 .weekly { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -161,7 +167,7 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 880px; }
+  table { min-width: 1180px; }
 }
 """
 
@@ -213,13 +219,13 @@ def render(companies: list[dict]) -> str:
         <tr>
           <td><a href="#{c['id']}" data-target="{c['id']}">{c['name']}</a><span>{c['code']}</span></td>
           <td>{c['track']}</td>
-          <td class="baseline">{c['start_price']}</td>
-          <td class="baseline">{cap(c['start_market_cap'])}</td>
-          <td>{c.get('current_price', c['start_price'])}</td>
-          <td>{cap(c['current_market_cap'])}</td>
-          <td>{c['change_from_start']}</td>
-          <td>{cap(c['year_end_market_cap'])}</td>
-          <td>{c['space']}</td>
+          <td class="baseline metric-cell">{price(c['start_price'])}</td>
+          <td class="baseline metric-cell">{cap(c['start_market_cap'])}</td>
+          <td class="metric-cell">{price(c.get('current_price', c['start_price']))}</td>
+          <td class="metric-cell">{cap(c['current_market_cap'])}</td>
+          <td class="metric-cell">{c['change_from_start']}</td>
+          <td class="metric-cell">{cap(c['year_end_market_cap'])}</td>
+          <td class="metric-cell">{c['space']}</td>
           <td>{c['source_note']}</td>
         </tr>
         """
@@ -323,7 +329,7 @@ def render(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」和「距 2026 年底观察市值空间」。</p>
+            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」和「距 2026 年底目标市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -331,22 +337,22 @@ def render(companies: list[dict]) -> str:
           <table>
             <thead>
               <tr>
-                <th>公司</th>
-                <th>强相关方向</th>
-                <th class="baseline">07/17 股价</th>
-                <th class="baseline">07/17 市值</th>
-                <th>{quote_day}收盘价</th>
-                <th>{quote_day}市值</th>
-                <th>距起点变化</th>
-                <th>2026 年底观察市值</th>
-                <th>目前至年底空间</th>
-                <th>原图说明摘录</th>
+                <th style="width:140px;">公司</th>
+                <th style="width:150px;">强相关方向</th>
+                <th class="baseline metric-cell">07/17<br>股价</th>
+                <th class="baseline metric-cell">07/17<br>市值</th>
+                <th class="metric-cell">{quote_day}<br>收盘价</th>
+                <th class="metric-cell">{quote_day}<br>市值</th>
+                <th class="metric-cell">距起点<br>变化</th>
+                <th class="metric-cell">2026 年底<br>目标市值</th>
+                <th class="metric-cell">目前至<br>年底空间</th>
+                <th style="width:300px;">原图说明摘录</th>
               </tr>
             </thead>
             <tbody>{rows}</tbody>
           </table>
         </div>
-        <p class="note">命名采用「观察市值」而不是投资目标；页面不展示基本面评级、估值高低判断或价格走势图。</p>
+        <p class="note">「目标市值」仅用于记录原图中的年底目标市值，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
       </section>
 
       <section class="view" id="weekly">
