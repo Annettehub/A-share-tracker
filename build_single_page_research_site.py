@@ -11,6 +11,7 @@ from build_research_site import IMAGE_SOURCE, OUTPUTS, DEST, SITE_TITLE, cap, pr
 
 TARGET_HTML = "2026 H2 吴梓豪A股公司追踪 2026.7.html"
 MARKET_DATA = DEST / "market-data.json"
+WEEKLY_OBSERVATIONS = DEST / "weekly-observations.json"
 
 
 def trim_repeated_company_heading(companies: list[dict]) -> None:
@@ -43,6 +44,62 @@ def quote_day_label(companies: list[dict]) -> str:
         except ValueError:
             continue
     return "当前"
+
+
+def load_weekly_observations() -> dict | None:
+    if not WEEKLY_OBSERVATIONS.exists():
+        return None
+    return json.loads(WEEKLY_OBSERVATIONS.read_text(encoding="utf-8"))
+
+
+def render_observation_items(items: list[dict], fallback_items: list[str]) -> str:
+    if not items:
+        return "<ul>" + "".join(f"<li>{html.escape(item)}</li>" for item in fallback_items) + "</ul>"
+    rendered = []
+    for item in items:
+        keywords = " / ".join(html.escape(str(keyword)) for keyword in item.get("matched_keywords", [])[:4])
+        source_path = html.escape(str(item.get("source_path", "")))
+        source_url = html.escape(str(item.get("source_url", "")))
+        source_time = html.escape(str(item.get("source_commit_time", ""))[:10])
+        rendered.append(
+            f"""
+            <div class="observation-item">
+              <div class="observation-meta">{source_time} · {keywords}</div>
+              <strong>{html.escape(str(item.get("title", "来源记录")))}</strong>
+              <p>{html.escape(str(item.get("snippet", "")))}</p>
+              <a href="{source_url}" target="_blank" rel="noopener">{source_path}</a>
+            </div>
+            """
+        )
+    return '<div class="observation-list">' + "\n".join(rendered) + "</div>"
+
+
+def render_company_observations(data: dict | None, companies: list[dict]) -> str:
+    fallback = [
+        "公告、业绩预告、机构调研与订单线索",
+        "每周市值相对 2026-07-17 起点变化",
+        "与原始研究假设不一致的新增信息",
+    ]
+    if not data:
+        return "<ul>" + "".join(f"<li>{item}</li>" for item in fallback) + "</ul>"
+
+    groups = data.get("company_observations", {})
+    blocks = []
+    for company in companies:
+        items = groups.get(company["name"], [])
+        if not items:
+            continue
+        blocks.append(
+            f"""
+            <div class="company-observation-group">
+              <h4>{html.escape(company["name"])}</h4>
+              {render_observation_items(items, [])}
+            </div>
+            """
+        )
+    if not blocks:
+        return "<ul>" + "".join(f"<li>{item}</li>" for item in fallback) + "</ul>"
+    return "\n".join(blocks)
 
 
 def apply_market_data(companies: list[dict]) -> dict | None:
@@ -138,6 +195,15 @@ td span { color: var(--muted); font-size: 12px; }
 .monitor-box { padding: 16px; border: 1px solid var(--line); border-radius: 6px; background: #fbfcfb; }
 .monitor-box h3 { margin: 0 0 10px; font-size: 16px; }
 .monitor-box ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.75; }
+.observation-list { display: grid; gap: 12px; }
+.observation-item { padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.observation-item strong { display: block; color: var(--teal-dark); line-height: 1.45; margin-bottom: 6px; }
+.observation-item p { margin: 0 0 8px; color: #26383c; line-height: 1.65; }
+.observation-item a { color: var(--blue); font-size: 12px; overflow-wrap: anywhere; }
+.observation-meta { color: var(--muted); font-size: 12px; line-height: 1.45; margin-bottom: 5px; }
+.company-observation-group { display: grid; gap: 8px; margin-top: 14px; }
+.company-observation-group:first-child { margin-top: 0; }
+.company-observation-group h4 { margin: 0; color: #14282c; font-size: 15px; }
 .article-head { align-items: start; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
 .article-summary { margin: 16px 0; padding: 14px; border-left: 4px solid var(--gold); background: #fff8ee; color: #4c3b25; line-height: 1.75; }
 .markdown-body { color: #1b2629; line-height: 1.82; font-size: 15px; }
@@ -174,6 +240,7 @@ td span { color: var(--muted); font-size: 12px; }
 
 def render(companies: list[dict]) -> str:
     market_data = apply_market_data(companies)
+    weekly_data = load_weekly_observations()
     quote_day = quote_day_label(companies)
     market_note = "当前市值暂等于起点市值。接入行情快照后，这里会显示抓取时间、来源与校验结果。"
     if market_data:
@@ -189,6 +256,22 @@ def render(companies: list[dict]) -> str:
             f"主源：腾讯行情｜"
             f"校验：{compact_validation}"
         )
+    weekly_note = "尚未同步 ai-investing 仓库；这里先保留观察项占位。"
+    if weekly_data:
+        weekly_note = (
+            f"已同步 {html.escape(str(weekly_data.get('source_repo', 'Annettehub/ai-investing')))}；"
+            f"快照时间：{html.escape(str(weekly_data.get('updated_at', '')))}；"
+            f"来源提交：{html.escape(str(weekly_data.get('source_commit', ''))[:7])}。"
+        )
+    market_observation_html = render_observation_items(
+        (weekly_data or {}).get("market_observations", []),
+        [
+            "AI CAPEX 与国内算力建设变化",
+            "800G / 1.6T / CPO 产业链订单与产能变化",
+            "AI PCB、液冷散热、存储周期的周度新闻",
+        ],
+    )
+    company_observation_html = render_company_observations(weekly_data, companies)
     image_data = base64.b64encode(IMAGE_SOURCE.read_bytes()).decode("ascii")
     image_src = f"data:image/png;base64,{image_data}"
     nav_main = "\n".join(
@@ -360,25 +443,18 @@ def render(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
-            <p>这里预留给后续每周更新。记录事实与来源，不写买卖判断。</p>
+            <p>自动扫描 Annettehub/ai-investing 中与 8 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
+            <p>{weekly_note}</p>
           </div>
         </div>
         <div class="weekly">
           <div class="monitor-box">
             <h3>市场观察</h3>
-            <ul>
-              <li>AI CAPEX 与国内算力建设变化</li>
-              <li>800G / 1.6T / CPO 产业链订单与产能变化</li>
-              <li>AI PCB、液冷散热、存储周期的周度新闻</li>
-            </ul>
+            {market_observation_html}
           </div>
           <div class="monitor-box">
             <h3>公司观察</h3>
-            <ul>
-              <li>公告、业绩预告、机构调研与订单线索</li>
-              <li>每周市值相对 2026-07-17 起点变化</li>
-              <li>与原始研究假设不一致的新增信息</li>
-            </ul>
+            {company_observation_html}
           </div>
         </div>
       </section>

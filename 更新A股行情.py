@@ -11,6 +11,11 @@ from pathlib import Path
 import requests
 
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 LOCAL_PROJECT_DIR = Path(r"D:\WorkBuddy\Claw\2026-07-16-08-52-07")
 if os.environ.get("TRACKER_PROJECT_DIR"):
     PROJECT_DIR = Path(os.environ["TRACKER_PROJECT_DIR"]).resolve()
@@ -22,6 +27,7 @@ else:
 BUILD_SCRIPT = PROJECT_DIR / "build_single_page_research_site.py"
 if not BUILD_SCRIPT.exists():
     BUILD_SCRIPT = Path(r"C:\Users\Annette Zhang\Documents\Codex\2026-07-18\referenced-chatgpt-conversation-this-is-untrusted\work\build_single_page_research_site.py")
+SYNC_OBSERVATIONS_SCRIPT = PROJECT_DIR / "sync_ai_investing_observations.py"
 LOG_FILE = PROJECT_DIR / "行情更新日志.txt"
 
 COMPANIES = [
@@ -138,12 +144,21 @@ def main() -> None:
     }
     (PROJECT_DIR / "market-data.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    observations_status = "未找到 ai-investing 观察同步脚本。"
+    if SYNC_OBSERVATIONS_SCRIPT.exists():
+        try:
+            result = subprocess.run([sys.executable, str(SYNC_OBSERVATIONS_SCRIPT)], check=True, capture_output=True, text=True, encoding="utf-8", errors="ignore")
+            observations_status = result.stdout.strip() or "ai-investing 观察已同步。"
+        except Exception as error:
+            observations_status = f"ai-investing 观察同步失败，已继续更新行情：{error}"
+
     subprocess.run([sys.executable, str(BUILD_SCRIPT)], check=True)
     lines = [
         f"更新时间：{output['updated_at']}",
         f"主源：{output['primary_source']}",
         f"校验源：{output['secondary_source']}",
         f"网页：{PROJECT_DIR / '2026 H2 吴梓豪A股公司追踪 2026.7.html'}",
+        f"ai-investing观察：{observations_status}",
         "",
         "本次行情：",
     ]
