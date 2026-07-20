@@ -394,6 +394,7 @@ def render(companies: list[dict]) -> str:
 def write_single_page(base: Path, companies: list[dict]) -> None:
     html_text = render(companies)
     (base / TARGET_HTML).write_text(html_text, encoding="utf-8", newline="\n")
+    (base / "index.html").write_text(html_text, encoding="utf-8", newline="\n")
 
 
 def main() -> None:
