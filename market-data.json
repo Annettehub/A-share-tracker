@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-21 19:27:26",
+  "updated_at": "2026-07-21 23:25:38",
   "primary_source": "Tencent qt.gtimg.cn",
   "secondary_source": "Eastmoney push2.eastmoney.com",
-  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 飞荣达: 东方财富校验未返回；长飞光纤: 东方财富校验未返回；胜宏科技: 东方财富校验未返回；东山精密: 东方财富校验未返回；寒武纪: 东方财富校验未返回；沪电股份: 东方财富校验未返回；中际旭创: 东方财富校验未返回；兆易创新: 东方财富校验未返回",
+  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 胜宏科技: 东方财富校验未返回；东山精密: 东方财富校验未返回；寒武纪: 东方财富校验未返回；沪电股份: 东方财富校验未返回；兆易创新: 东方财富校验未返回",
   "quotes": {
     "300602": {
       "code": "300602",
@@ -17,14 +17,16 @@
       "recent_high_price": 52.92,
       "drawdown_from_recent_high_pct": -30.669,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_market_cap_yi": 215.17,
+      "eastmoney_diff_pct": 0.002,
+      "eastmoney_check": "pass"
     },
     "601869": {
       "code": "601869",
       "name": "长飞光纤",
       "price": 406.38,
       "market_cap_yi": 3364.44,
-      "quote_time": "2026-07-21 16:15:00",
+      "quote_time": "2026-07-21 16:14:40",
       "source": "Tencent qt.gtimg.cn",
       "recent_high_window_start": "2026-05-20",
       "recent_high_window_end": "2026-07-21",
@@ -32,7 +34,9 @@
       "recent_high_price": 600.0,
       "drawdown_from_recent_high_pct": -32.27,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_market_cap_yi": 3364.44,
+      "eastmoney_diff_pct": 0.0,
+      "eastmoney_check": "pass"
     },
     "300476": {
       "code": "300476",
@@ -107,7 +111,9 @@
       "recent_high_price": 1416.88,
       "drawdown_from_recent_high_pct": -19.785,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_market_cap_yi": 12675.2,
+      "eastmoney_diff_pct": 0.0,
+      "eastmoney_check": "pass"
     },
     "603986": {
       "code": "603986",
