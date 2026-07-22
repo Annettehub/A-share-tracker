@@ -7,11 +7,8 @@ import shutil
 from pathlib import Path
 
 
-LOCAL_PROJECT_DIR = Path(r"D:\WorkBuddy\Claw\2026-07-16-08-52-07")
 if os.environ.get("TRACKER_PROJECT_DIR"):
     PROJECT_DIR = Path(os.environ["TRACKER_PROJECT_DIR"]).resolve()
-elif LOCAL_PROJECT_DIR.exists():
-    PROJECT_DIR = LOCAL_PROJECT_DIR.resolve()
 else:
     PROJECT_DIR = Path(__file__).resolve().parent
 
