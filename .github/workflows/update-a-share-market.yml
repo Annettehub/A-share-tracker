@@ -2,8 +2,8 @@ name: Update A-share market data
 
 on:
   schedule:
-    # 09:00 UTC = 17:00 Asia/Shanghai
-    - cron: "0 9 * * *"
+    # 09:20 UTC = 17:20 Asia/Shanghai, after A-share close.
+    - cron: "20 9 * * 1-5"
   workflow_dispatch:
 
 permissions:
