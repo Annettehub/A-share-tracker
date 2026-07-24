@@ -33,6 +33,41 @@ def price(value: float | str) -> str:
     return f"{float(value):.1f}"
 
 
+def pct_number(value: object) -> float | None:
+    if value is None:
+        return None
+    text = str(value).strip().replace("%", "").replace("+", "").replace(",", "")
+    if text in {"", "-", "—"}:
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def annotate_dashboard_ranks(companies: list[dict]) -> None:
+    for company in companies:
+        company.pop("drawdown_rank", None)
+        company.pop("upside_rank", None)
+
+    drawdowns = [(pct_number(company.get("drawdown_from_recent_high")), company) for company in companies]
+    drawdowns = [(value, company) for value, company in drawdowns if value is not None and value < 0]
+    for rank, (_value, company) in enumerate(sorted(drawdowns, key=lambda item: item[0])[:3], start=1):
+        company["drawdown_rank"] = rank
+
+    upsides = [(pct_number(company.get("space")), company) for company in companies]
+    upsides = [(value, company) for value, company in upsides if value is not None and value > 0]
+    for rank, (_value, company) in enumerate(sorted(upsides, key=lambda item: item[0], reverse=True)[:3], start=1):
+        company["upside_rank"] = rank
+
+
+def ranked_metric(value: object, kind: str, rank: object | None) -> str:
+    text = html.escape(str(value))
+    if rank in {1, 2, 3}:
+        return f'<span class="rank-badge rank-{kind}-{rank}">{text}</span>'
+    return text
+
+
 def quote_day_label(companies: list[dict]) -> str:
     for company in companies:
         quote_time = company.get("quote_time")
@@ -196,6 +231,13 @@ th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal;
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
+.rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
+.rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
+.rank-down-2 { background: #ffe4c2; color: #734000; box-shadow: inset 0 0 0 1px #e7b46f; }
+.rank-down-3 { background: #fff0b8; color: #604a00; box-shadow: inset 0 0 0 1px #d9bf4c; }
+.rank-up-1 { background: #cfeeda; color: #07522a; box-shadow: inset 0 0 0 1px #88c99b; }
+.rank-up-2 { background: #dff4df; color: #174f20; box-shadow: inset 0 0 0 1px #9bd29b; }
+.rank-up-3 { background: #edf7d2; color: #405400; box-shadow: inset 0 0 0 1px #c5d77a; }
 td a { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
 .weekly { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -248,6 +290,7 @@ td span { color: var(--muted); font-size: 12px; }
 
 def render(companies: list[dict]) -> str:
     market_data = apply_market_data(companies)
+    annotate_dashboard_ranks(companies)
     weekly_data = load_weekly_observations()
     quote_day = quote_day_label(companies)
     market_note = "当前市值暂等于起点市值。接入行情快照后，这里会显示抓取时间、来源与校验结果。"
@@ -315,9 +358,9 @@ def render(companies: list[dict]) -> str:
           <td class="metric-cell">{price(c.get('current_price', c['start_price']))}</td>
           <td class="metric-cell">{cap(c['current_market_cap'])}</td>
           <td class="metric-cell">{c['change_from_start']}</td>
-          <td class="metric-cell">{c.get('drawdown_from_recent_high', '-')}</td>
+          <td class="metric-cell">{ranked_metric(c.get('drawdown_from_recent_high', '-'), 'down', c.get('drawdown_rank'))}</td>
           <td class="metric-cell">{cap(c['year_end_market_cap'])}</td>
-          <td class="metric-cell">{c['space']}</td>
+          <td class="metric-cell">{ranked_metric(c['space'], 'up', c.get('upside_rank'))}</td>
           <td>{c['source_note']}</td>
         </tr>
         """

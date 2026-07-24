@@ -74,6 +74,13 @@ th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal;
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
+.rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
+.rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
+.rank-down-2 { background: #ffe4c2; color: #734000; box-shadow: inset 0 0 0 1px #e7b46f; }
+.rank-down-3 { background: #fff0b8; color: #604a00; box-shadow: inset 0 0 0 1px #d9bf4c; }
+.rank-up-1 { background: #cfeeda; color: #07522a; box-shadow: inset 0 0 0 1px #88c99b; }
+.rank-up-2 { background: #dff4df; color: #174f20; box-shadow: inset 0 0 0 1px #9bd29b; }
+.rank-up-3 { background: #edf7d2; color: #405400; box-shadow: inset 0 0 0 1px #c5d77a; }
 td a { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
 .weekly { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -303,7 +310,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">-3.4%</td>
           <td class="metric-cell">-33.1%</td>
           <td class="metric-cell">302 亿</td>
-          <td class="metric-cell">+45.3%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-3">+45.3%</span></td>
           <td>华为手机散热与下半年业绩增长相关。</td>
         </tr>
         
@@ -316,9 +323,9 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">331.6</td>
           <td class="metric-cell">2,746 亿</td>
           <td class="metric-cell">-8.3%</td>
-          <td class="metric-cell">-44.7%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-2">-44.7%</span></td>
           <td class="metric-cell">4,140 亿</td>
-          <td class="metric-cell">+50.8%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-2">+50.8%</span></td>
           <td>27 年利润超百亿为核心观察点，PE 区间来自原图。</td>
         </tr>
         
@@ -331,7 +338,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">230.0</td>
           <td class="metric-cell">2,260 亿</td>
           <td class="metric-cell">-4.7%</td>
-          <td class="metric-cell">-42.9%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-3">-42.9%</span></td>
           <td class="metric-cell">3,096 亿</td>
           <td class="metric-cell">+37.0%</td>
           <td>计算机板与明年 Rubin Ultra 正交背板为观察重点。</td>
@@ -348,7 +355,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">-17.7%</td>
           <td class="metric-cell">-28.9%</td>
           <td class="metric-cell">5,610 亿</td>
-          <td class="metric-cell">+53.8%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-1">+53.8%</span></td>
           <td>索尔思已占业务大头，估值相对合理为原图表述。</td>
         </tr>
         
@@ -406,7 +413,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">457.0</td>
           <td class="metric-cell">3,207 亿</td>
           <td class="metric-cell">-1.3%</td>
-          <td class="metric-cell">-46.0%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-1">-46.0%</span></td>
           <td class="metric-cell">3,720 亿</td>
           <td class="metric-cell">+16.0%</td>
           <td>下半年存储可能出现高点，年底 PE 是否调整为观察点。</td>
