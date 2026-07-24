@@ -58,13 +58,63 @@ def inline_markdown(text: str) -> str:
     return escaped
 
 
+def display_width(text: str) -> int:
+    text = re.sub(r"`([^`]+)`", r"\1", text)
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+    text = re.sub(r"\*(.+?)\*", r"\1", text)
+    width = 0
+    for char in text:
+        width += 2 if ord(char) > 127 else 1
+    return width
+
+
+def clamp(value: int, minimum: int, maximum: int) -> int:
+    return max(minimum, min(maximum, value))
+
+
+def column_bounds(header: str, index: int, col_count: int, headers: list[str]) -> tuple[int, int]:
+    if header in {"序号", "#"}:
+        return 52, 64
+    if header in {"确定性", "状态", "判定", "归属", "归属判定", "类别", "类型", "频率"}:
+        return 92, 150
+    if "时间" in header or "日期" in header:
+        return 130, 210
+    if "来源" in header or "数据源" in header:
+        return 150, 260
+    if header in {"维度", "指标", "项目", "环节", "板块", "客户"}:
+        return 140, 240
+    if "事项" in header or "场景" in header or "对象" in header:
+        return 220, 380
+    if any(keyword in header for keyword in ["依据", "证据", "说明", "风险", "不确定", "关联", "关系", "判断", "结论", "备注", "定义", "表现"]):
+        return 300, 560
+    if col_count >= 5 and index > 0 and headers[0] in {"维度", "类别", "项目"}:
+        return 220, 420
+    return 170, 340
+
+
+def column_widths(header: list[str], body: list[list[str]]) -> list[int]:
+    widths: list[int] = []
+    for index, name in enumerate(header):
+        cells = [name] + [row[index] for row in body if index < len(row)]
+        min_width, max_width = column_bounds(name, index, len(header), header)
+        content_width = max(display_width(cell) for cell in cells) * 7 + 34
+        widths.append(clamp(content_width, min_width, max_width))
+    return widths
+
+
 def table_to_html(lines: list[str]) -> str:
     rows = [[cell.strip() for cell in raw.strip().strip("|").split("|")] for raw in lines]
     if not rows:
         return ""
     header = rows[0]
     body = rows[2:] if len(rows) > 1 and re.match(r"^[\s|:\-]+$", lines[1]) else rows[1:]
-    out = ["<div class=\"table-wrap\"><table>"]
+    col_count = len(header)
+    classes = [f"cols-{col_count}"]
+    if header and header[0] in {"序号", "#"}:
+        classes.append("index-table")
+    out = [f"<div class=\"table-wrap\"><table class=\"{' '.join(classes)}\">"]
+    widths = column_widths(header, body)
+    out.append("<colgroup>" + "".join(f"<col style=\"width:{width}px\">" for width in widths) + "</colgroup>")
     out.append("<thead><tr>" + "".join(f"<th>{inline_markdown(cell)}</th>" for cell in header) + "</tr></thead>")
     out.append("<tbody>")
     for row in body:
@@ -262,10 +312,11 @@ section, .research-article { margin-top: 24px; padding: 24px 26px; }
 .company-card strong { font-size: 18px; color: var(--teal-dark); }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
-.table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 980px; border-collapse: collapse; background: #fff; }
+.table-wrap { width: fit-content; max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+table { width: auto; min-width: 0; max-width: none; border-collapse: collapse; background: #fff; table-layout: fixed; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
-th { color: #173237; background: #e7efed; font-weight: 800; white-space: nowrap; }
+th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
+th, td { box-sizing: border-box; overflow-wrap: break-word; word-break: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
 td a { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
@@ -302,7 +353,7 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 880px; }
+  table { min-width: 680px; }
 }
 """
 

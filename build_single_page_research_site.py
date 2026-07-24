@@ -188,6 +188,9 @@ section, .research-article { padding: 24px 26px; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
 table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+.markdown-body .table-wrap { width: fit-content; max-width: 100%; overflow-x: auto; }
+.markdown-body table { width: auto; min-width: 0; max-width: none; table-layout: fixed; }
+.markdown-body th, .markdown-body td { box-sizing: border-box; white-space: normal; overflow-wrap: break-word; word-break: normal; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
 th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
@@ -238,6 +241,7 @@ td span { color: var(--muted); font-size: 12px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
   table { min-width: 1290px; }
+  .markdown-body table { min-width: 680px; }
 }
 """
 
