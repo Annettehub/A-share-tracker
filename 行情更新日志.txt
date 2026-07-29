@@ -1,10 +1,9 @@
-更新时间：2026-07-29 19:20:33
+更新时间：2026-07-29 23:57:38
 主源：Tencent qt.gtimg.cn
 校验源：Eastmoney push2.eastmoney.com
-网页：D:\WorkBuddy\Claw\A-share-tracker\2026 H2 吴梓豪A股公司追踪 2026.7.html
-ai-investing观察：ai-investing 刷新失败，使用本地缓存：fatal: unable to access 'https://github.com/Annettehub/ai-investing.git/': Recv failure: Connection was reset
-已同步 ai-investing 观察：市场 10 条，公司 15 条。
-来源提交：43659948a5232099690690f09d45e48529c3f8b5
+网页：/home/runner/work/A-share-tracker/A-share-tracker/2026 H2 吴梓豪A股公司追踪 2026.7.html
+ai-investing观察：已同步 ai-investing 观察：市场 10 条，公司 15 条。
+来源提交：3abcaf78d2c3b1c769936821d1c4f816f6329f04
 
 本次行情：
 - 飞荣达 300602：价格 33.66，总市值 197.40 亿，行情时间 2026-07-29 16:14:36，近 2 个月最高价 52.92（2026-06-26），距高点 -36.4%
@@ -17,4 +16,4 @@ ai-investing观察：ai-investing 刷新失败，使用本地缓存：fatal: una
 - 兆易创新 603986：价格 364.03，总市值 2554.56 亿，行情时间 2026-07-29 16:14:45，近 2 个月最高价 846.66（2026-06-29），距高点 -57.0%
 
 校验说明：
-双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。
+双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 东山精密: 东方财富市值校验未返回；中际旭创: 东方财富市值校验未返回；兆易创新: 东方财富市值校验未返回

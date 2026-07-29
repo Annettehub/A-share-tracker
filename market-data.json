@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-29 19:20:33",
+  "updated_at": "2026-07-29 23:57:38",
   "primary_source": "Tencent qt.gtimg.cn",
   "secondary_source": "Eastmoney push2.eastmoney.com",
-  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。",
+  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 东山精密: 东方财富市值校验未返回；中际旭创: 东方财富市值校验未返回；兆易创新: 东方财富市值校验未返回",
   "quotes": {
     "300602": {
       "code": "300602",
@@ -68,9 +68,7 @@
       "recent_high_price": 280.08,
       "drawdown_from_recent_high_pct": -35.811,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 3292.86,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available"
     },
     "688256": {
       "code": "688256",
@@ -119,9 +117,7 @@
       "recent_high_price": 1416.88,
       "drawdown_from_recent_high_pct": -32.881,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 10605.88,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available"
     },
     "603986": {
       "code": "603986",
@@ -136,9 +132,7 @@
       "recent_high_price": 846.66,
       "drawdown_from_recent_high_pct": -57.004,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 2554.56,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available"
     }
   }
 }
