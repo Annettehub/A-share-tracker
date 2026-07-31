@@ -66,11 +66,21 @@ section, .research-article { padding: 24px 26px; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
 table { width: 100%; min-width: 1600px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+.markdown-body .table-wrap { width: fit-content; max-width: 100%; overflow-x: auto; }
+.markdown-body table { width: auto; min-width: 0; max-width: none; table-layout: fixed; }
+.markdown-body th, .markdown-body td { box-sizing: border-box; white-space: normal; overflow-wrap: break-word; word-break: normal; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
 th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
+ .rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
+.rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
+.rank-down-2 { background: #ffe4c2; color: #734000; box-shadow: inset 0 0 0 1px #e7b46f; }
+.rank-down-3 { background: #fff0b8; color: #604a00; box-shadow: inset 0 0 0 1px #d9bf4c; }
+.rank-up-1 { background: #cfeeda; color: #07522a; box-shadow: inset 0 0 0 1px #88c99b; }
+.rank-up-2 { background: #dff4df; color: #174f20; box-shadow: inset 0 0 0 1px #9bd29b; }
+.rank-up-3 { background: #edf7d2; color: #405400; box-shadow: inset 0 0 0 1px #c5d77a; }
 td a, .plain-company { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
 .weekly { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -116,6 +126,7 @@ td span { color: var(--muted); font-size: 12px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
   table { min-width: 1400px; }
+  .markdown-body table { min-width: 680px; }
 }
 </style>
 </head>
@@ -268,7 +279,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
             <p>原 8 家公司以 2026-07-17 为起点；后续从新图新增的公司以 2026-07-25 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
-            <p>行情快照：2026-07-31 18:53:03｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
+            <p>行情快照：2026-07-31 18:58:05｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -315,9 +326,9 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">271.5</td>
           <td class="metric-cell">2,248 亿</td>
           <td class="metric-cell">-24.9%</td>
-          <td class="metric-cell">-54.8%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-2">-54.8%</span></td>
           <td class="metric-cell">4,140 亿</td>
-          <td class="metric-cell">+84.2%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-1">+84.2%</span></td>
           <td>27 年利润超百亿为核心观察点，PE 区间来自原图。</td>
         </tr>
         
@@ -333,7 +344,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">-21.1%</td>
           <td class="metric-cell">-50.1%</td>
           <td class="metric-cell">3,096 亿</td>
-          <td class="metric-cell">+65.5%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-3">+65.5%</span></td>
           <td>计算机板与明年 Rubin Ultra 正交背板为观察重点。</td>
         </tr>
         
@@ -349,7 +360,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">-29.1%</td>
           <td class="metric-cell">-38.8%</td>
           <td class="metric-cell">5,610 亿</td>
-          <td class="metric-cell">+78.6%</td>
+          <td class="metric-cell"><span class="rank-badge rank-up-2">+78.6%</span></td>
           <td>索尔思已占业务大头，估值相对合理为原图表述。</td>
         </tr>
         
@@ -411,7 +422,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">378.6</td>
           <td class="metric-cell">2,657 亿</td>
           <td class="metric-cell">-18.3%</td>
-          <td class="metric-cell">-55.3%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-1">-55.3%</span></td>
           <td class="metric-cell">3,720 亿</td>
           <td class="metric-cell">+40.0%</td>
           <td>下半年存储可能出现高点，年底 PE 是否调整为观察点。</td>
@@ -475,7 +486,7 @@ td span { color: var(--muted); font-size: 12px; }
           <td class="metric-cell">140.5</td>
           <td class="metric-cell">414 亿</td>
           <td class="metric-cell">-4.8%</td>
-          <td class="metric-cell">-54.6%</td>
+          <td class="metric-cell"><span class="rank-badge rank-down-3">-54.6%</span></td>
           <td class="metric-cell">390 亿</td>
           <td class="metric-cell">-5.8%</td>
           <td>高密度MPO避开太辰光与仕佳，AOC有源光缆谷歌三供，这两年靠这两块支撑增长，6.4T以后MCF-FAU有新增量，走小而精技术路线。</td>
@@ -508,7 +519,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
             <p>自动扫描 Annettehub/ai-investing 中与 8 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
-            <p>已同步 Annettehub/ai-investing；快照时间：2026-07-31 18:54:25；来源提交：6a0fba1。</p>
+            <p>已同步 Annettehub/ai-investing；快照时间：2026-07-31 18:58:42；来源提交：6a0fba1。</p>
           </div>
         </div>
         <div class="weekly">
@@ -764,7 +775,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第八章前置：数据来源与方法说明（先于分析，便于核验）</h3>
 <h4>数据来源与交叉验证结果</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:174px"><col style="width:260px"><col style="width:340px"><col style="width:300px"></colgroup>
 <thead><tr><th>层级</th><th>来源</th><th>覆盖情况</th><th>采用结论</th></tr></thead>
 <tbody>
 <tr><td>第1层 本地知识库</td><td><code>wiki/industry/半导体.md</code>、<code>02-kb/snapshot.md</code></td><td>全文检索&quot;飞荣达/电磁屏蔽/导热/散热/液冷&quot;——<strong>0 命中</strong>（本地KB以半导体/存储/AI芯片为主，飞荣达属功能材料环节，不在其覆盖）</td><td>无相关行业背景事实可引用</td></tr>
@@ -797,7 +809,8 @@ td span { color: var(--muted); font-size: 12px; }
 终端应用：5G基站 · 手机/PC · AI服务器 · 新能源汽车 · 储能 · 具身智能机器人</code></pre>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-5 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"><col style="width:181px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>判定</th><th>关键依据</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>下游（华为算力/手机）受限制→国产算力建设→散热需求↑；但飞荣达产品本身替代的是 3M/莱尔德等海外材料厂，非被禁运品，属间接受益</td><td>公开信息</td></tr>
@@ -838,7 +851,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 下游客户（高度集中于头部品牌与设备商）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:170px"><col style="width:340px"><col style="width:300px"></colgroup>
 <thead><tr><th>客户群</th><th>代表客户</th><th>备注</th></tr></thead>
 <tbody>
 <tr><td>战略级核心</td><td><strong>华为</strong>（客户一 13.05 亿 / 19.99%，合作近 30 年，联合研发）</td><td>2025 年报前五大客户</td></tr>
@@ -852,7 +866,8 @@ td span { color: var(--muted); font-size: 12px; }
 <li>产品已覆盖：TIM、3D-VC、单相/两相液冷冷板模组、CDU、流量控制仪、快接头、液冷机箱/机柜等，多款批量交付（2026H1 预告）。</li>
 </ul>
 <h4>4.2 上游供应商 / 依赖</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:111px"><col style="width:340px"><col style="width:314px"></colgroup>
 <thead><tr><th>类别</th><th>主要投入</th><th>依赖度与风险</th></tr></thead>
 <tbody>
 <tr><td>金属材料</td><td>铜、镍（导电布/铍铜弹片）、铝合金（压铸/轻量化）</td><td>标准大宗，价格随市，成本端承压时毛利波动</td></tr>
@@ -871,7 +886,8 @@ td span { color: var(--muted); font-size: 12px; }
 受益结果：飞荣达液冷板/CDU/3D-VC 批量交付，订单同比+环比双增
     ↓  量化：2026H1 归母净利 2.40–2.60 亿（+44.5%~56.54%）；Q2 环比 +110%~136%</code></pre>
 <p><strong>确定性评估（高）</strong>：</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:140px"><col style="width:300px"><col style="width:328px"></colgroup>
 <thead><tr><th>维度</th><th>判断</th><th>依据</th></tr></thead>
 <tbody>
 <tr><td>需求确定性</td><td>高</td><td>AI 芯片功耗趋势不可逆，液冷刚需明确</td></tr>
@@ -892,7 +908,8 @@ td span { color: var(--muted); font-size: 12px; }
 受益结果：新能源板块营收稳定增长，新项目定点稳步推进</code></pre>
 <p><strong>确定性评估（中）</strong>：定点订单已落地并放量，但新能源车价格战可能传导至零部件降价压力。</p>
 <h4>客户结构对冲验证</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-2">
+<colgroup><col style="width:170px"><col style="width:559px"></colgroup>
 <thead><tr><th>对冲维度</th><th>表现</th></tr></thead>
 <tbody>
 <tr><td>客户行业分散</td><td>消费电子 / 通信 / 新能源 / AI服务器 / 机器人 五轮驱动，单一行业波动可被对冲</td></tr>
@@ -902,7 +919,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:167px"><col style="width:340px"><col style="width:349px"></colgroup>
 <thead><tr><th>环节</th><th>主要竞争对手</th><th>与飞荣达关系</th></tr></thead>
 <tbody>
 <tr><td>电磁屏蔽 / 导热材料</td><td><strong>中石科技（300684）</strong>、<strong>领益智造（002600）</strong>、方邦股份（688020，屏蔽膜）</td><td>直接竞对，同属国产替代第一梯队</td></tr>
@@ -910,7 +928,8 @@ td span { color: var(--muted); font-size: 12px; }
 <tr><td>基站天线 / 功能件</td><td>东山精密、信维通信等</td><td>部分重叠</td></tr>
 </tbody></table></div>
 <h4>6.2 SWOT 对比矩阵（飞荣达 vs 中石科技 vs 领益智造）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:244px"><col style="width:286px"></colgroup>
 <thead><tr><th>维度</th><th>飞荣达（300602）</th><th>中石科技（300684）</th><th>领益智造（002600）</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>电磁屏蔽+热管理双龙头；全链条自研（材料→模组→系统）；华为近30年绑定；843专利</td><td>导热/EMI材料技术强，苹果链深耕</td><td>消费电子精密制造平台，客户广、规模大</td></tr>
@@ -928,7 +947,8 @@ td span { color: var(--muted); font-size: 12px; }
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:92px"><col style="width:380px"><col style="width:216px"></colgroup>
 <thead><tr><th>类型</th><th>事项</th><th>与飞荣达相关性</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>AI 服务器液冷渗透率从 20% 提至 50%+，未来三年 CAGR &gt;40%，增量空间广阔</td><td>直接（液冷核心供应商）</td></tr>
@@ -943,7 +963,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>八条国产替代核心驱动因素（定义）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -1009,7 +1030,8 @@ td span { color: var(--muted); font-size: 12px; }
 </ul>
 <hr>
 <h3>第二章：八条驱动因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>判定</th><th>一句话判定依据</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>光纤非当前被&quot;断供&quot;最严重领域；但预制棒早年依赖海外、自主可控有底色</td></tr>
@@ -1053,7 +1075,8 @@ td span { color: var(--muted); font-size: 12px; }
 </ul>
 <hr>
 <h3>第四章：核心客户 / 供应商清单（量化）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:111px"><col style="width:230px"><col style="width:398px"><col style="width:174px"></colgroup>
 <thead><tr><th>类别</th><th>对象</th><th>量化 / 说明</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>下游-地区</td><td>中国大陆</td><td>79.52 亿元（55.80%）</td><td>2025 年报</td></tr>
@@ -1082,7 +1105,8 @@ td span { color: var(--muted); font-size: 12px; }
     ↓
 2026H1 归母净利润 24–30 亿元（同比 +711%~914%）；扣非 20–26 亿（+1349%~1784%）</code></pre>
 <h4>5.2 关键价格数据（需求侧弹性来源）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:240px"><col style="width:321px"><col style="width:150px"></colgroup>
 <thead><tr><th>指标</th><th>数值</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>中国 G652.D 裸光纤现货价（2026-03）</td><td>83.40 元/芯公里，环比 +165%，同比 +418%</td><td>CRU / 华鑫证券</td></tr>
@@ -1091,7 +1115,8 @@ td span { color: var(--muted); font-size: 12px; }
 <tr><td>G.657.A2 算力专用弯曲不敏感光纤</td><td>国内市占超 40%，年内价格涨幅高达 650%</td><td>格隆汇龙头盘点</td></tr>
 </tbody></table></div>
 <h4>5.3 受益确定性评估</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:321px"><col style="width:92px"><col style="width:426px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
 <tbody>
 <tr><td>传统光纤量价齐升（G652.D/G.657.A2）</td><td>高</td><td>价格已涨 4 倍+，供给侧扩产周期长，2026H1 已兑现</td></tr>
@@ -1108,7 +1133,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:279px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
 <thead><tr><th>维度</th><th>长飞光纤</th><th>亨通光电(600487)</th><th>中天科技(600522)</th><th>烽火通信(600498)</th><th>国际：康宁/普睿司曼/住友</th></tr></thead>
 <tbody>
 <tr><td>预制棒自给</td><td><strong>100%（三技术唯一）</strong></td><td>&gt;95%</td><td>棒纤缆一体化</td><td>&gt;80%</td><td>技术领先，未退出中国</td></tr>
@@ -1119,7 +1145,8 @@ td span { color: var(--muted); font-size: 12px; }
 <tr><td>AI 光互联定位</td><td>无源光纤材料领地</td><td>光纤+海缆+液冷</td><td>空芯 NPO 独家</td><td>算力网络干线</td><td>材料/光纤巨头</td></tr>
 </tbody></table></div>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:251px"><col style="width:265px"></colgroup>
 <thead><tr><th>维度</th><th>长飞光纤</th><th>亨通光电</th><th>中天科技</th></tr></thead>
 <tbody>
 <tr><td><strong>优势 S</strong></td><td>预制棒三技术全球唯一、9 年第一、空芯先发、全球产能</td><td>光棒+跨洋海缆双龙头、英伟达长单</td><td>空芯 NPO 华为独家、G.654 海缆第一</td></tr>
@@ -1138,7 +1165,8 @@ td span { color: var(--muted); font-size: 12px; }
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（简化，仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:92px"><col style="width:195px"><col style="width:489px"></colgroup>
 <thead><tr><th>类别</th><th>项</th><th>说明</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>AI 光纤超级周期</td><td>万卡集群光纤用量 5–10 倍，光棒扩产 18–24 月，供需偏紧持续</td></tr>
@@ -1153,7 +1181,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>八条国产替代核心驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -1216,7 +1245,8 @@ td span { color: var(--muted); font-size: 12px; }
 <blockquote>本地 KB 关联：G1 假设（AI CAPEX 高景气，吴梓豪台积电/CoWoS 模型 certainty 90%）把 PCB 列为&quot;国内制造链最容易承接的可见成本池&quot;之一；R1 假设将 PCB 归入&quot;服务器与互联&quot;兑现环节。</blockquote>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属判定</th><th>核心依据（简要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>美国限制高端 GPU 对华出口，但胜宏出口占比 77% 吃的是全球 AI CAPEX，国产化采购底线对国内份额有托底，非&quot;断供倒逼替代&quot;主逻辑</td></tr>
@@ -1259,7 +1289,8 @@ td span { color: var(--muted); font-size: 12px; }
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 核心客户（按公开披露可确认度）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:307px"><col style="width:300px"><col style="width:340px"><col style="width:160px"></colgroup>
 <thead><tr><th>客户/客户群</th><th>关系性质</th><th>量化/状态</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>NVIDIA</td><td>Tier-1 核心供应商（全球 AI 头部）</td><td>AI 服务器 PCB 全球份额 50%–55%；Rubin 主板供应商之一</td><td>2025 年报 / 吴梓豪</td></tr>
@@ -1269,7 +1300,8 @@ td span { color: var(--muted); font-size: 12px; }
 </tbody></table></div>
 <blockquote>注：前五大客户具体名称与收入占比公司未完整披露，上表按&quot;可公开确认&quot;口径列示，不臆测。</blockquote>
 <h4>4.2 上游供应商（采购依赖）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:216px"><col style="width:260px"><col style="width:342px"></colgroup>
 <thead><tr><th>环节</th><th>主要供应商/来源</th><th>依赖度说明</th></tr></thead>
 <tbody>
 <tr><td>覆铜板 CCL / 基材</td><td>台系（台光电、联茂、台耀）为主，日系（松下、昭和）高端料</td><td>高端 M8/M9 材料仍外部依赖，是供应链短板</td></tr>
@@ -1292,7 +1324,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
     ↓
 量化测算：AI 相关收入 2025 已达 83.4 亿，按 GB300/Rubin 放量节奏，2026 全年 AI PCB 收入弹性仍显著高于行业</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:272px"><col style="width:92px"><col style="width:440px"><col style="width:300px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>关键证据</th><th>风险/不确定</th></tr></thead>
 <tbody>
 <tr><td>GB300 量产带动高端 PCB 放量</td><td>高</td><td>NVIDIA 2026 主力平台、TrendForce 2026 AI 服务器 +28.3%</td><td>量产节奏/良率</td></tr>
@@ -1310,7 +1343,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:223px"></colgroup>
 <thead><tr><th>维度</th><th>胜宏科技</th><th>沪电股份</th><th>深南电路</th><th>东山精密</th><th>臻鼎/欣兴/Ibiden（台/日系）</th></tr></thead>
 <tbody>
 <tr><td>定位</td><td>AI 高端 PCB 龙头</td><td>AI 服务器 PCB 强</td><td>载板/通信 PCB</td><td>多点布局（FPC/光模块/PCB）</td><td>Rubin 正交背板主供</td></tr>
@@ -1321,7 +1355,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <tr><td>出海</td><td>出口 76.83%</td><td>高</td><td>中</td><td>高</td><td>天然全球</td></tr>
 </tbody></table></div>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:237px"><col style="width:237px"></colgroup>
 <thead><tr><th>维度</th><th>胜宏科技</th><th>沪电股份</th><th>深南电路</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>AI PCB 全球份额第一、HDI 国内最强、出口 77%、泰国本地化</td><td>高多层技术深厚、NVIDIA 链稳定</td><td>载板/封装基板能力、通信客户广</td></tr>
@@ -1340,7 +1375,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:92px"><col style="width:370px"><col style="width:510px"><col style="width:160px"></colgroup>
 <thead><tr><th>类别</th><th>事项</th><th>与胜宏的关联</th><th>时间窗</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>GB300 量产 + Rubin 平台迭代</td><td>直接拉动高端 PCB 量价齐升</td><td>短期（2026–2027）</td></tr>
@@ -1355,7 +1391,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>8.1 八条驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -1375,7 +1412,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <li><strong>引用规范</strong>：市场价格 ≠ 公司产品价格（如 HDI 均价为公司产品口径，TrendForce 为行业出货口径）；送样认证 ≠ 定点 ≠ 量产（本报告所列均为已量产/已供货状态）；客户占比用公开数据，不臆测。</li>
 </ul>
 <h4>8.3 归属判定小结</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:258px"><col style="width:216px"><col style="width:314px"></colgroup>
 <thead><tr><th>强相关（✅）</th><th>弱相关（⚠️）</th><th>不相关（❌）</th></tr></thead>
 <tbody>
 <tr><td>国产能力成熟、近水楼台、出海能力</td><td>地缘断供倒逼、政策合规底线</td><td>国家补贴兜底、巨头产能退出、设备折旧归零</td></tr>
@@ -1423,7 +1461,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <blockquote>本地 KB 关联：G1 假设（AI CAPEX 高景气 certainty 90%）把光模块、PCB 同列为&quot;未来确定且有业绩支撑的方向&quot;；R1 假设将光模块/PCB 归入&quot;服务器与互联&quot;兑现环节。</blockquote>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属判定</th><th>核心依据（简要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>AI 光互连&quot;铜撑不住、必须用光&quot;是真实产业推力（吴梓豪），但东山以海外并购（索尔思/Multek）切入，非被动国产替代；关税摩擦仍是风险</td></tr>
@@ -1466,7 +1505,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 核心客户（按板块）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:237px"><col style="width:150px"><col style="width:150px"></colgroup>
 <thead><tr><th>板块</th><th>主要客户/客户群</th><th>状态</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>FPC/软板</td><td>苹果（核心软板供应商）</td><td>全球 FPC 第二，新机型 2026H2 放量</td><td>2025 年报 / 花旗</td></tr>
@@ -1475,7 +1515,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <tr><td>精密制造/汽车</td><td>特斯拉等国际车企</td><td>GMD 并表，车载显示+结构件</td><td>2025 年报</td></tr>
 </tbody></table></div>
 <h4>4.2 上游供应商 / 依赖</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:167px"><col style="width:160px"><col style="width:342px"></colgroup>
 <thead><tr><th>环节</th><th>来源</th><th>说明</th></tr></thead>
 <tbody>
 <tr><td>光芯片外延（MOCVD）</td><td>全球设备厂（紧缺）</td><td>2026Q2 锁定订单，2027Q1 交付；激光器产线自建</td></tr>
@@ -1498,7 +1539,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
     ↓
 量化测算：光模块并表 + AI PCB 扩产，2026 全年&quot;光模块+AI PCB&quot;双引擎弹性显著高于传统 FPC</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:244px"><col style="width:92px"><col style="width:412px"><col style="width:314px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>关键证据</th><th>风险/不确定</th></tr></thead>
 <tbody>
 <tr><td>光模块并表放量</td><td>高</td><td>2025Q4 营收 14.36 亿、毛利率 36.74%；2026Q1 净利 +143%</td><td>索尔思竞争力曾被吴梓豪评为&quot;第一梯队末流&quot;</td></tr>
@@ -1516,7 +1558,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵（分板块）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
 <thead><tr><th>维度</th><th>东山精密</th><th>中际旭创</th><th>新易盛</th><th>胜宏科技</th><th>沪电股份</th></tr></thead>
 <tbody>
 <tr><td>定位</td><td>平台型（光模块+PCB+FPC）</td><td>光模块龙头</td><td>光模块头部</td><td>AI PCB 龙头</td><td>AI PCB 强</td></tr>
@@ -1527,7 +1570,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <tr><td>2025 营收</td><td>401 亿</td><td>—</td><td>—</td><td>193 亿</td><td>—</td></tr>
 </tbody></table></div>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:237px"><col style="width:265px"></colgroup>
 <thead><tr><th>维度</th><th>东山精密</th><th>中际旭创</th><th>胜宏科技</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>光模块+PCB 垂直整合唯一供应商、全球化资产、A+H 融资、苹果/特斯拉客户</td><td>光模块份额全球领先、1.6T 量产</td><td>AI PCB 全球份额第一、HDI 国内最强</td></tr>
@@ -1545,7 +1589,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:92px"><col style="width:251px"><col style="width:342px"><col style="width:160px"></colgroup>
 <thead><tr><th>类别</th><th>事项</th><th>与东山的关联</th><th>时间窗</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>AI 光互连&quot;铜转光&quot;加速</td><td>索尔思直接受益，吴梓豪称&quot;光必须最快推进落地&quot;</td><td>短期–中期</td></tr>
@@ -1560,7 +1605,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>8.1 八条驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -1580,7 +1626,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <li><strong>引用规范</strong>：并表营收/毛利率为公司披露口径；吴梓豪语录标注&quot;半导体大佬的会议室&quot;；行业出货预测（TrendForce 2026 AI 服务器 +28.3%）标注来源；送样≠定点≠量产区分清楚（本报告所列光模块已并表、AI PCB 为一期释放预期）。</li>
 </ul>
 <h4>8.3 归属判定小结</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:258px"><col style="width:216px"><col style="width:314px"></colgroup>
 <thead><tr><th>强相关（✅）</th><th>弱相关（⚠️）</th><th>不相关（❌）</th></tr></thead>
 <tbody>
 <tr><td>国产能力成熟、近水楼台、出海能力</td><td>地缘断供倒逼、政策合规底线</td><td>国家补贴兜底、巨头产能退出、设备折旧归零</td></tr>
@@ -1631,7 +1678,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <p><strong>下游集中度：</strong> 前五大客户高度集中，最大客户字节跳动占据绝对主导（2025 年思元系列 90% 以上供应头部互联网客户，字节为最大）。客户集中是核心风险点（本地 KB 风险提示）。</p>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据（摘要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>✅ 强相关</td><td>美国高端 AI 芯片出口管制持续升级（H800/H20 受限），大厂算力供给收紧，国产替代从&quot;降本选项&quot;变&quot;生存必选项&quot;</td></tr>
@@ -1669,7 +1717,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>核心客户（按采购规模）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:170px"><col style="width:340px"><col style="width:260px"></colgroup>
 <thead><tr><th>客户</th><th>角色</th><th>部署情况</th><th>数据来源</th></tr></thead>
 <tbody>
 <tr><td>字节跳动</td><td>第一大客户</td><td>累计超 10 万张思元 590/690；2026 采购预算 250–300 亿；590 ~10 万张 + 690 ~10 万张 + 低价 590 ~30 万张</td><td>本地 KB（IMA 专家访谈 2026-07-05）</td></tr>
@@ -1680,7 +1729,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 </tbody></table></div>
 <blockquote>客户对冲验证：多客户（字节+阿里+腾讯+百度+运营商）结构可对冲单一客户风险，但<strong>字节仍占绝对主导</strong>（2025 年思元系列 90% 以上供应头部互联网客户），集中度风险未解。</blockquote>
 <h4>核心供应商（上游依赖）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:140px"><col style="width:251px"><col style="width:447px"></colgroup>
 <thead><tr><th>环节</th><th>主要供应商</th><th>依赖度 / 风险</th></tr></thead>
 <tbody>
 <tr><td>晶圆代工</td><td>中芯国际 / 中芯南方（N+2）</td><td>高度依赖；产能分配中华为占大头，寒武纪分得有限（本地 KB）</td></tr>
@@ -1703,7 +1753,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
         ↓
 预期全年营收上探百亿级（吴梓豪模型：成长曲线延续则&quot;明年 400–500 亿也可成立&quot;）</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:230px"><col style="width:92px"><col style="width:447px"></colgroup>
 <thead><tr><th>传导节点</th><th>确定性</th><th>依据</th></tr></thead>
 <tbody>
 <tr><td>地缘断供延续（国产替代政策）</td><td>高</td><td>美出口管制持续升级，自主可控成&quot;生存必选项&quot;</td></tr>
@@ -1719,7 +1770,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 国产 AI 加速卡出货量格局（2025）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:174px"><col style="width:170px"><col style="width:170px"><col style="width:244px"></colgroup>
 <thead><tr><th>厂商</th><th>2025 出货量（约）</th><th>市占率</th><th>定位</th></tr></thead>
 <tbody>
 <tr><td>华为昇腾</td><td>~81 万张</td><td>~49%</td><td>压倒性第一，全栈+生态+产能领先</td></tr>
@@ -1731,7 +1783,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 </tbody></table></div>
 <blockquote>关键洞察：寒武纪<strong>份额并非最大（仅约 3%），但是对外市场化供应、全栈自研能力最完整的厂商之一</strong>。华为靠自用+生态碾压份额，寒武纪靠&quot;纯商用第三方 AI 芯片原厂&quot;定位差异化。（来源：凤凰网/清科 2026）</blockquote>
 <h4>6.2 SWOT 对比矩阵（寒武纪 vs 华为昇腾 vs 海光信息）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:340px"><col style="width:340px"></colgroup>
 <thead><tr><th>维度</th><th>寒武纪</th><th>华为昇腾</th><th>海光信息</th></tr></thead>
 <tbody>
 <tr><td><strong>S（优势）</strong></td><td>全栈自研最完整（架构/指令集/编译器/软件）；DSA 推理能效比高；互联网大厂深度绑定；业绩拐点已现</td><td>份额近半（49%）、一年一代算力翻倍；CANN+MindSpore 全栈生态（400 万开发者）；CloudMatrix 超节点；中芯产能分配占优</td><td>CPU+DCU 双芯；x86/类 CUDA 生态兼容、迁移成本低；安全可靠市场稳固</td></tr>
@@ -1749,7 +1802,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:92px"><col style="width:380px"><col style="width:340px"></colgroup>
 <thead><tr><th>类型</th><th>事项</th><th>与寒武纪相关性</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>推理算力爆发（TrendForce：2026 北美推理 +122% vs 训练 +56%；IDC 预测 2029 中国推理占比近八成）</td><td>直接：寒武纪 DSA 推理路线最受益</td></tr>
@@ -1828,7 +1882,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <blockquote>本地 KB 关联：G1 假设（AI CAPEX 高景气，吴梓豪台积电/CoWoS 模型 certainty 90%）把 PCB 列为&quot;国内制造链最容易承接的可见成本池&quot;之一；R1 假设将 PCB 归入&quot;服务器与互联&quot;兑现环节（NVL72 BOM 中 Substrate+PCB 占约 3.0%，加部分 PCB/电源模块上限约 10.2%）。<code>02-kb/entities/东山精密.md</code> 将沪电股份列为 AI 服务器 PCB 主要竞争对手。</blockquote>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属判定</th><th>核心依据（简要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>美国限制高端 GPU 对华出口，但沪电外销占比 82% 吃的是全球 AI CAPEX，国产化采购底线对国内份额有托底，非&quot;断供倒逼替代&quot;主逻辑</td></tr>
@@ -1871,7 +1926,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 核心客户（按公开披露可确认度）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:216px"><col style="width:314px"><col style="width:340px"><col style="width:174px"></colgroup>
 <thead><tr><th>客户/客户群</th><th>关系性质</th><th>量化/状态</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>NVIDIA</td><td>服务器系统背板核心供应商（全球 AI 头部）</td><td>直接配套 GB300/Rubin 顶级算力平台；全球 AI 服务器 PCB 市占率超 40%（第三方估算）</td><td>新浪财经/格隆汇/雪球</td></tr>
@@ -1883,7 +1939,8 @@ AI 光互连&quot;铜转光&quot;加速（吴梓豪：&quot;铜已撑不住 AI �
 </tbody></table></div>
 <blockquote>注：前五大客户具体名称与收入占比公司未完整披露（媒体估算前五大约 49.78%），上表按&quot;可公开确认&quot;口径列示，不臆测。</blockquote>
 <h4>4.2 上游供应商（采购依赖）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:240px"><col style="width:260px"><col style="width:517px"></colgroup>
 <thead><tr><th>环节</th><th>主要供应商/来源</th><th>依赖度说明</th></tr></thead>
 <tbody>
 <tr><td>覆铜板 CCL / 基材</td><td>台系（台光电、联茂、台耀）为主，日系（松下、昭和）高端料</td><td>高端 M8/M9 材料仍外部依赖，是供应链短板（吴梓豪：&quot;CCL 也是台厂主供&quot;）</td></tr>
@@ -1906,7 +1963,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
     ↓
 量化测算：2026H1 预告归母 28.30–30.00 亿（+68.17%~78.28%），Q2 单季 15.88–17.58 亿（环比 +27.86%~41.55%）</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:349px"><col style="width:92px"><col style="width:517px"><col style="width:300px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>关键证据</th><th>风险/不确定</th></tr></thead>
 <tbody>
 <tr><td>GB300/Rubin 量产带动高速背板/服务器 PCB 放量</td><td>高</td><td>英伟达系统背板核心供应商、224G 2026Q1 落地</td><td>量产节奏/良率</td></tr>
@@ -1924,7 +1982,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:307px"><col style="width:286px"><col style="width:220px"><col style="width:220px"><col style="width:223px"></colgroup>
 <thead><tr><th>维度</th><th>沪电股份</th><th>胜宏科技</th><th>深南电路</th><th>东山精密</th><th>臻鼎/欣兴/Ibiden（台/日系）</th></tr></thead>
 <tbody>
 <tr><td>定位</td><td>高速背板/交换机 PCB 龙头</td><td>AI 算力卡/HDI 龙头</td><td>载板/通信 PCB</td><td>平台型（光模块+PCB）</td><td>Rubin 正交背板主供</td></tr>
@@ -1936,7 +1995,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 </tbody></table></div>
 <blockquote>吴梓豪差异化界定：Rubin &quot;正交背板主供是台厂的臻鼎、欣兴與日本 ibiden，主板则是胜宏，沪电，金像电&quot;；&quot;整个 Rubin 的 PCB，正交背板跟载板等还是台厂为主……HDI 国内的胜宏较强&quot;——即沪电卡位<strong>主板/高速背板</strong>、胜宏卡位 <strong>HDI</strong>，二者在 Rubin 时代共同受益。</blockquote>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:340px"><col style="width:328px"></colgroup>
 <thead><tr><th>维度</th><th>沪电股份</th><th>胜宏科技</th><th>深南电路</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>高速背板/交换机 PCB 全球第一、英伟达系统背板核心供应、客户结构更分散、外销 82% 全球化</td><td>AI PCB 全球份额第一、HDI 国内最强、出口 77%、泰国本地化</td><td>载板/封装基板能力、通信客户广、FC-BGA 量产</td></tr>
@@ -1955,7 +2015,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:92px"><col style="width:335px"><col style="width:489px"><col style="width:209px"></colgroup>
 <thead><tr><th>类别</th><th>事项</th><th>与沪电的关联</th><th>时间窗</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>GB300 量产 + Rubin 平台迭代</td><td>直接拉动高速背板/服务器 PCB 量价齐升</td><td>短期（2026–2027）</td></tr>
@@ -1971,7 +2032,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>8.1 八条驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -1991,7 +2053,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <li><strong>引用规范</strong>：市场价格 ≠ 公司产品价格（本报告营收/毛利率为公司披露口径，份额为第三方估算已标注）；送样认证 ≠ 定点 ≠ 量产（所列沪电产品均为已量产/已供货状态）；客户占比用公开数据，不臆测；份额类数据凡非公司官方披露均标注&quot;第三方估算/媒体口径&quot;。</li>
 </ul>
 <h4>8.3 归属判定小结</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:258px"><col style="width:216px"><col style="width:314px"></colgroup>
 <thead><tr><th>强相关（✅）</th><th>弱相关（⚠️）</th><th>不相关（❌）</th></tr></thead>
 <tbody>
 <tr><td>国产能力成熟、近水楼台、出海能力</td><td>地缘断供倒逼、政策合规底线</td><td>国家补贴兜底、巨头产能退出、设备折旧归零</td></tr>
@@ -2040,7 +2103,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <blockquote>本地 KB 关联：G1 假设（AI CAPEX 高景气，certainty 90%）把光模块、PCB、硅光同列为&quot;未来确定且有业绩支撑的方向&quot;；R1 假设将光模块归入&quot;服务器与互联&quot;兑现环节。实体档案标注中际旭创为 D1-Trend(H1.1 Capex 高增长) 🟢核心受益者、D7-Chain(H7.1 价值迁移) 🟢推理需求拉动 800G/1.6T。</blockquote>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属判定</th><th>核心依据（简要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>中际旭创靠成本/技术优势在全球拿份额、境外收入 90.58%，并非被动国产替代；美方对光互连环节&quot;始终未动手&quot;（今日头条行业文 2026）。反而若美限制光模块出口将成风险；国内算力自主可控仅形成底线托底</td></tr>
@@ -2084,7 +2148,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 核心客户（按公开披露可确认度）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:279px"><col style="width:300px"><col style="width:340px"><col style="width:209px"></colgroup>
 <thead><tr><th>客户/客户群</th><th>关系性质</th><th>量化/状态</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>NVIDIA</td><td>第一大客户；1.6T 核心/独家供应商</td><td>占中际旭创收入约 35%（2025 境外口径）/2026Q1 第一大客户 24.06%；1.6T 份额约 70%–80%；订单排至 2027</td><td>2026Q1 财报/腾讯/今日头条</td></tr>
@@ -2095,7 +2160,8 @@ NVIDIA GB300 / Rubin 平台量产 + ASIC 架构服务器占比提升（TrendForc
 </tbody></table></div>
 <blockquote>注：上述占比为公开披露/研报口径，公司未完整披露各客户精确收入；不臆测。</blockquote>
 <h4>4.2 上游供应商（采购依赖）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:240px"><col style="width:260px"><col style="width:545px"></colgroup>
 <thead><tr><th>环节</th><th>主要供应商/来源</th><th>依赖度说明</th></tr></thead>
 <tbody>
 <tr><td>高端 EML / CW 激光器（光芯片）</td><td>Lumentum、Coherent 等海外；源杰科技等本土补充</td><td>国产化率不足 5%，全球缺口 40%–60%，缺货周期长；公司用长期协议+预付款锁料</td></tr>
@@ -2123,7 +2189,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 量化测算：1.6T 2026 产量预计 1500–1700 万只；订单排至 2027–2028
           （英伟达/谷歌/Meta/AWS 长协，客户已给 2026–2027 需求指引）</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:272px"><col style="width:92px"><col style="width:489px"><col style="width:300px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>关键证据</th><th>风险/不确定</th></tr></thead>
 <tbody>
 <tr><td>800G/1.6T 放量带动高端模块量价齐升</td><td>高</td><td>800G 市占 40%+、1.6T 50%–70% 全球唯一批量供货；2026Q1 归母 +262%</td><td>物料（EML）紧缺、产能爬坡</td></tr>
@@ -2141,7 +2208,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵（出货 / 份额）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
 <thead><tr><th>维度</th><th>中际旭创</th><th>新易盛</th><th>天孚通信</th><th>光迅科技</th><th>华工科技</th></tr></thead>
 <tbody>
 <tr><td>定位</td><td>全球光模块龙头</td><td>全球第二高速模块</td><td>光器件/CPO 光引擎龙头</td><td>IDM 全产业链</td><td>光模块+光芯片双轮</td></tr>
@@ -2153,7 +2221,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <tr><td>出海</td><td>境外 90.58%</td><td>高（泰国产能）</td><td>高</td><td>中</td><td>中</td></tr>
 </tbody></table></div>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:420px"><col style="width:419px"><col style="width:420px"><col style="width:420px"></colgroup>
 <thead><tr><th>维度</th><th>中际旭创</th><th>新易盛</th><th>天孚通信</th><th>东山精密（索尔思）</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>全球光模块绝对龙头、1.6T 唯一批量、硅光全球第一、英伟达核心供应商、交付规模最强</td><td>800G LPO 领先、毛利率更高（49.16%）、亚马逊/Meta 绑定深</td><td>光器件/CPO 光引擎龙头、不直接内卷模块价格、毛利率行业高位、CPO 时代价值量提升</td><td>光芯片+光模块垂直整合唯一、全球化资产、A+H 融资</td></tr>
@@ -2172,7 +2241,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:92px"><col style="width:380px"><col style="width:560px"><col style="width:202px"></colgroup>
 <thead><tr><th>类别</th><th>事项</th><th>与中际旭创的关联</th><th>时间窗</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>全球 AI CAPEX 高景气（G1 certainty 90%；九大云厂 Capex 8300 亿美元）</td><td>直接拉动 800G/1.6T 量价齐升</td><td>短期–中期（2026–2028）</td></tr>
@@ -2187,7 +2257,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>8.1 八条驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -2207,7 +2278,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <li><strong>引用规范</strong>：市场价格 ≠ 公司产品价格（本文所列均为公司产品/出货量口径）；<strong>送样 ≠ 定点 ≠ 量产</strong>（3.2T 已送测英伟达属送样阶段，未量产，已明确区分）；客户占比用公开披露/研报数据，不臆测；未给出任何目标价、评级或投资建议。</li>
 </ul>
 <h4>8.3 归属判定小结</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:258px"><col style="width:216px"><col style="width:314px"></colgroup>
 <thead><tr><th>强相关（✅）</th><th>弱相关（⚠️）</th><th>不相关（❌）</th></tr></thead>
 <tbody>
 <tr><td>国产能力成熟、近水楼台、出海能力</td><td>地缘断供倒逼、政策合规底线</td><td>国家补贴兜底、巨头产能退出、设备折旧归零</td></tr>
@@ -2252,7 +2324,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <blockquote>本地 KB 关联：02-kb/entities/兆易创新.md 将其定位为&quot;国产存储生态链重要一环&quot;，Flash 产品线稳健、DRAM 受益于长鑫代工关系，并标记其对 H1.2（存储→成长）、H6.1（国产替代）假设形成支持。</blockquote>
 <hr>
 <h3>第二章：因素归属总结表</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>归属判定</th><th>核心依据（简要）</th></tr></thead>
 <tbody>
 <tr><td>1</td><td><strong>地缘断供倒逼</strong></td><td>✅ <strong>强相关</strong></td><td>美光在华遭网络安全审查禁采、海外大厂收缩利基产能，国产 NOR/利基 DRAM 直接承接空缺</td></tr>
@@ -2308,7 +2381,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <hr>
 <h3>第四章：客户 / 供应商清单</h3>
 <h4>4.1 核心客户（按下游应用）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:300px"><col style="width:300px"><col style="width:340px"><col style="width:153px"></colgroup>
 <thead><tr><th>客户/客户群</th><th>关系性质</th><th>量化/状态</th><th>来源</th></tr></thead>
 <tbody>
 <tr><td>消费电子品牌（三星/华为/小米/苹果链）</td><td>NOR/MCU/NAND 供应商</td><td>早期凭 SPI NOR 打破垄断切入，TWS 等市占曾居全球第三</td><td>北京商报</td></tr>
@@ -2319,7 +2393,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 </tbody></table></div>
 <blockquote>注：前五大客户具体名称与收入占比公司未完整披露，上表按&quot;可公开确认&quot;口径列示，不臆测。</blockquote>
 <h4>4.2 上游供应商（采购依赖）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:160px"><col style="width:260px"><col style="width:545px"></colgroup>
 <thead><tr><th>环节</th><th>主要供应商/来源</th><th>依赖度说明</th></tr></thead>
 <tbody>
 <tr><td>利基 DRAM 晶圆代工</td><td>长鑫存储（CXMT，虚拟 IDM 产能绑定）</td><td>2026 预计采购金额约 <strong>57 亿元</strong>（中报预告/吴梓豪 #52 印证）；关联交易高度集中</td></tr>
@@ -2345,7 +2420,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
     ↓
 风险回摆：吴梓豪判断 DDR4/SLC 或于 2026Q2 见顶，Q2 现货价已现松动 → 3Q26 环比或持平</code></pre>
 <h4>5.2 受益确定性评估表</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:223px"><col style="width:104px"><col style="width:412px"><col style="width:300px"></colgroup>
 <thead><tr><th>受益场景</th><th>确定性</th><th>关键证据</th><th>风险/不确定</th></tr></thead>
 <tbody>
 <tr><td>利基 DRAM/SLC NAND 涨价放量</td><td>高（短期）</td><td>巨头退出供给缺口、2026Q1 净利 +522%、中报 +1099%</td><td>吴梓豪/公司均提示价格或 Q2 见顶</td></tr>
@@ -2364,7 +2440,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <hr>
 <h3>第六章：竞争对手分析</h3>
 <h4>6.1 竞争对手矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-6">
+<colgroup><col style="width:140px"><col style="width:265px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
 <thead><tr><th>维度</th><th>兆易创新</th><th>普冉股份</th><th>北京君正（ISSI）</th><th>华邦电子</th><th>旺宏电子</th></tr></thead>
 <tbody>
 <tr><td>定位</td><td>Fabless 存储+MCU 全品类</td><td>NOR/EEPROM 细分</td><td>车规存储+MCU（并购 ISSI）</td><td>利基存储 IDM</td><td>利基存储 IDM</td></tr>
@@ -2376,7 +2453,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 </tbody></table></div>
 <blockquote>注：NOR 市占口径存在差异——公司/Frost&amp;Sullivan 披露&quot;全球第二、中国第一&quot;；部分 2024 份额测算为华邦 34.8% &gt; 旺宏 27.6% &gt; 兆易 18.5%（即按份额为第三），本报告以公司披露口径（全球第二/中国第一）为基准并提示分歧。</blockquote>
 <h4>6.2 SWOT 对比矩阵</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:340px"><col style="width:335px"></colgroup>
 <thead><tr><th>维度</th><th>兆易创新</th><th>北京君正（ISSI）</th><th>华邦电子</th></tr></thead>
 <tbody>
 <tr><td><strong>S 优势</strong></td><td>NOR/MCU/利基 DRAM 全品类领先、长鑫虚拟 IDM 产能锁定、车规认证完整、全球第一无晶圆厂 Flash、A+H 融资</td><td>车规存储+MCU 深度布局（ISSI）、车规客户壁垒高</td><td>利基存储 IDM 龙头、自有产能、成本与供给可控</td></tr>
@@ -2395,7 +2473,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 </ol>
 <hr>
 <h3>第七章：行业机会与挑战（仅列直接相关）</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:92px"><col style="width:380px"><col style="width:560px"><col style="width:160px"></colgroup>
 <thead><tr><th>类别</th><th>事项</th><th>与兆易的关联</th><th>时间窗</th></tr></thead>
 <tbody>
 <tr><td>机会</td><td>巨头退出利基存储（三星/美光/SK海力士转 DDR5/HBM）</td><td>利基 DRAM/SLC NAND 量价齐升核心驱动</td><td>短期（2025–2026）</td></tr>
@@ -2410,7 +2489,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <hr>
 <h3>第八章：分析方法说明</h3>
 <h4>8.1 八条驱动因素定义（判定基准）</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:335px"></colgroup>
 <thead><tr><th>序号</th><th>驱动因素</th><th>定义</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>地缘断供倒逼</td><td>国际技术封锁/供应链中断迫使下游寻求国产替代</td></tr>
@@ -2436,7 +2516,8 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 <li><strong>引用规范</strong>：公司产品营收/占比为公司正式披露口径；行业市占率标注 Frost&amp;Sullivan/券商来源；市场价格 ≠ 公司产品价格（利基 DRAM/SLC NAND 现货价为行业周期口径，TrendForce/公司公告区分清楚）；吴梓豪语录标注&quot;半导体大佬的会议室&quot;及日期；送样认证 ≠ 定点 ≠ 量产（本报告所列均为已量产/已供货或公司明确流片节点）。</li>
 </ul>
 <h4>8.3 归属判定小结</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:340px"><col style="width:216px"><col style="width:170px"></colgroup>
 <thead><tr><th>强相关（✅）</th><th>弱相关（⚠️）</th><th>不相关（❌）</th></tr></thead>
 <tbody>
 <tr><td>地缘断供倒逼、国产能力成熟、近水楼台、出海能力、巨头产能退出</td><td>国家补贴兜底、政策合规底线</td><td>设备折旧归零</td></tr>

@@ -16,17 +16,8 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-LOCAL_PROJECT_DIR = Path(r"D:\WorkBuddy\Claw\2026-07-16-08-52-07")
-if os.environ.get("TRACKER_PROJECT_DIR"):
-    PROJECT_DIR = Path(os.environ["TRACKER_PROJECT_DIR"]).resolve()
-elif LOCAL_PROJECT_DIR.exists():
-    PROJECT_DIR = LOCAL_PROJECT_DIR.resolve()
-else:
-    PROJECT_DIR = Path(__file__).resolve().parent
-
+PROJECT_DIR = Path(os.environ.get("TRACKER_PROJECT_DIR", Path(__file__).resolve().parent)).resolve()
 BUILD_SCRIPT = PROJECT_DIR / "build_single_page_research_site.py"
-if not BUILD_SCRIPT.exists():
-    BUILD_SCRIPT = Path(r"C:\Users\Annette Zhang\Documents\Codex\2026-07-18\referenced-chatgpt-conversation-this-is-untrusted\work\build_single_page_research_site.py")
 SYNC_OBSERVATIONS_SCRIPT = PROJECT_DIR / "sync_ai_investing_observations.py"
 LOG_FILE = PROJECT_DIR / "行情更新日志.txt"
 
@@ -64,16 +55,14 @@ def session() -> requests.Session:
 
 def fetch_tencent_quote(item: dict, s: requests.Session) -> dict:
     symbol = TENCENT_PREFIX[item["market"]] + item["code"]
-    url = f"https://qt.gtimg.cn/q={symbol}"
-    response = s.get(url, timeout=15)
+    response = s.get(f"https://qt.gtimg.cn/q={symbol}", timeout=15)
     response.raise_for_status()
     text = response.content.decode("gbk", errors="ignore")
     payload = text.split('="', 1)[1].rstrip('";')
     fields = payload.split("~")
     price = float(fields[3])
     market_cap_yi = float(fields[45])
-    quote_time_raw = fields[30]
-    quote_time = datetime.strptime(quote_time_raw, "%Y%m%d%H%M%S").strftime("%Y-%m-%d %H:%M:%S")
+    quote_time = datetime.strptime(fields[30], "%Y%m%d%H%M%S").strftime("%Y-%m-%d %H:%M:%S")
     return {
         "code": item["code"],
         "name": item["name"],
@@ -120,15 +109,9 @@ def fetch_tencent_recent_high(item: dict, quote: dict, s: requests.Session) -> d
             continue
         trade_date = datetime.strptime(line[0], "%Y-%m-%d").date()
         if start_date <= trade_date <= quote_date:
-            rows.append(
-                {
-                    "date": line[0],
-                    "close": float(line[2]),
-                    "high": float(line[3]),
-                }
-            )
+            rows.append({"date": line[0], "close": float(line[2]), "high": float(line[3])})
     if not rows:
-        raise ValueError(f"{item['name']} 最近2个月日线为空")
+        raise ValueError(f"{item['name']}: 最近 2 个月日线为空")
     high_row = max(rows, key=lambda row: row["high"])
     high_price = float(high_row["high"])
     drawdown = (float(quote["price"]) - high_price) / high_price * 100
@@ -164,11 +147,12 @@ def main() -> None:
             quote.update(retry(lambda item=item, quote=quote: fetch_tencent_recent_high(item, quote, s)))
         except Exception as error:
             quote["recent_high_error"] = str(error)
-            checks.append(f"{item['name']}: 最近2个月最高价未返回")
+            checks.append(f"{item['name']}: 最近 2 个月最高价未返回")
+
         em_cap = fetch_eastmoney_market_cap_yi(item, s)
         if em_cap is None:
             quote["eastmoney_check"] = "not_available"
-            checks.append(f"{item['name']}: 东方财富校验未返回")
+            checks.append(f"{item['name']}: 东方财富市值校验未返回")
         else:
             diff_pct = abs(quote["market_cap_yi"] - em_cap) / quote["market_cap_yi"] * 100
             quote["eastmoney_market_cap_yi"] = round(em_cap, 2)
@@ -176,6 +160,7 @@ def main() -> None:
             quote["eastmoney_check"] = "pass" if diff_pct <= 0.2 else "review"
             if diff_pct > 0.2:
                 checks.append(f"{item['name']}: 双源总市值差异 {diff_pct:.2f}%")
+
         quotes[item["code"]] = quote
 
     validation = "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。"
@@ -194,12 +179,20 @@ def main() -> None:
     observations_status = "未找到 ai-investing 观察同步脚本。"
     if SYNC_OBSERVATIONS_SCRIPT.exists():
         try:
-            result = subprocess.run([sys.executable, str(SYNC_OBSERVATIONS_SCRIPT)], check=True, capture_output=True, text=True, encoding="utf-8", errors="ignore")
+            result = subprocess.run(
+                [sys.executable, str(SYNC_OBSERVATIONS_SCRIPT)],
+                check=True,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="ignore",
+            )
             observations_status = result.stdout.strip() or "ai-investing 观察已同步。"
         except Exception as error:
             observations_status = f"ai-investing 观察同步失败，已继续更新行情：{error}"
 
     subprocess.run([sys.executable, str(BUILD_SCRIPT)], check=True)
+
     lines = [
         f"更新时间：{output['updated_at']}",
         f"主源：{output['primary_source']}",
@@ -212,8 +205,14 @@ def main() -> None:
     for quote in quotes.values():
         high_text = "最高价未返回"
         if quote.get("recent_high_price") is not None:
-            high_text = f"近2个月最高价 {quote['recent_high_price']}（{quote.get('recent_high_date', '')}），距高点 {quote.get('drawdown_from_recent_high_pct', 0):+.1f}%"
-        lines.append(f"- {quote['name']} {quote['code']}：价格 {quote['price']}，总市值 {quote['market_cap_yi']:.2f} 亿，行情时间 {quote['quote_time']}，{high_text}")
+            high_text = (
+                f"近 2 个月最高价 {quote['recent_high_price']}（{quote.get('recent_high_date', '')}），"
+                f"距高点 {quote.get('drawdown_from_recent_high_pct', 0):+.1f}%"
+            )
+        lines.append(
+            f"- {quote['name']} {quote['code']}：价格 {quote['price']}，"
+            f"总市值 {quote['market_cap_yi']:.2f} 亿，行情时间 {quote['quote_time']}，{high_text}"
+        )
     lines.extend(["", "校验说明：", output["validation"]])
     LOG_FILE.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines))
