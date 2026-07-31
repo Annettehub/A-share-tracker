@@ -489,7 +489,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
                 <th class="metric-cell">距最高点<br>下跌幅度</th>
                 <th class="metric-cell">2026 年底<br>目标市值</th>
                 <th class="metric-cell">目前至<br>年底空间</th>
-                <th style="width:300px;">原图说明摘录</th>
+                <th style="width:300px;">图片说明摘录</th>
               </tr>
             </thead>
             <tbody>{rows}</tbody>

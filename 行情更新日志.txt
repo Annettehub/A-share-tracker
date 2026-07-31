@@ -1,10 +1,9 @@
-更新时间：2026-07-31 19:14:58
+更新时间：2026-07-31 19:27:02
 主源：Tencent qt.gtimg.cn
 校验源：Eastmoney push2.eastmoney.com
 网页：D:\WorkBuddy\Claw\2026-07-16-08-52-07\2026 H2 吴梓豪A股公司追踪 2026.7.html
-ai-investing观察：ai-investing 刷新失败，使用本地缓存：fatal: unable to access 'https://github.com/Annettehub/ai-investing.git/': Failed to connect to github.com:443 after 21088 ms: Could not connect to server
-已同步 ai-investing 观察：市场 10 条，公司 15 条。
-来源提交：6a0fba139a57be9a09fe8dd89c23fe793f05a5e5
+ai-investing观察：已同步 ai-investing 观察：市场 10 条，公司 15 条。
+来源提交：3abcaf78d2c3b1c769936821d1c4f816f6329f04
 
 本次行情：
 - 飞荣达 300602：价格 31.72，总市值 186.02 亿，行情时间 2026-07-31 16:14:24，近 2 个月最高价 52.92（2026-06-26），距高点 -40.1%
