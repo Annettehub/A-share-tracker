@@ -7,7 +7,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from build_research_site import IMAGE_SOURCE, OUTPUTS, DEST, SITE_TITLE, cap, prepare
+from build_research_site import IMAGE_SOURCE, OUTPUTS, DEST, SITE_TITLE, cap, prepare, prepare_dashboard_companies
 
 TARGET_HTML = "2026 H2 吴梓豪A股公司追踪 2026.7.html"
 MARKET_DATA = DEST / "market-data.json"
@@ -102,6 +102,14 @@ def render_company_observations(data: dict | None, companies: list[dict]) -> str
     return "\n".join(blocks)
 
 
+def dashboard_company_cell(company: dict) -> str:
+    name = html.escape(str(company["name"]))
+    code = html.escape(str(company["code"]))
+    if company.get("content"):
+        return f'<a href="#{company["id"]}" data-target="{company["id"]}">{name}</a><span>{code}</span>'
+    return f'<strong class="plain-company">{name}</strong><span>{code}</span>'
+
+
 def apply_market_data(companies: list[dict]) -> dict | None:
     if not MARKET_DATA.exists():
         return None
@@ -187,13 +195,13 @@ section, .research-article { padding: 24px 26px; }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+table { width: 100%; min-width: 1600px; border-collapse: collapse; background: #fff; table-layout: fixed; }
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
 th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
-td a { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
+td a, .plain-company { display: block; color: var(--teal-dark); font-weight: 800; margin-bottom: 3px; }
 td span { color: var(--muted); font-size: 12px; }
 .weekly { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .monitor-box { padding: 16px; border: 1px solid var(--line); border-radius: 6px; background: #fbfcfb; }
@@ -237,15 +245,15 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 1290px; }
+  table { min-width: 1400px; }
 }
 """
 
 
-def render(companies: list[dict]) -> str:
-    market_data = apply_market_data(companies)
+def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
+    market_data = apply_market_data(dashboard_companies)
     weekly_data = load_weekly_observations()
-    quote_day = quote_day_label(companies)
+    quote_day = quote_day_label(dashboard_companies)
     market_note = "当前市值暂等于起点市值。接入行情快照后，这里会显示抓取时间、来源与校验结果。"
     if market_data:
         validation_text = str(market_data.get("validation", ""))
@@ -304,8 +312,9 @@ def render(companies: list[dict]) -> str:
     rows = "\n".join(
         f"""
         <tr>
-          <td><a href="#{c['id']}" data-target="{c['id']}">{c['name']}</a><span>{c['code']}</span></td>
+          <td>{dashboard_company_cell(c)}</td>
           <td>{c['track']}</td>
+          <td class="baseline metric-cell">{c.get('start_date', '2026-07-17')}</td>
           <td class="baseline metric-cell">{price(c['start_price'])}</td>
           <td class="baseline metric-cell">{cap(c['start_market_cap'])}</td>
           <td class="metric-cell">{price(c.get('current_price', c['start_price']))}</td>
@@ -317,7 +326,7 @@ def render(companies: list[dict]) -> str:
           <td>{c['source_note']}</td>
         </tr>
         """
-        for c in companies
+        for c in dashboard_companies
     )
     company_views = "\n".join(
         f"""
@@ -417,7 +426,7 @@ def render(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
+            <p>原 8 家公司以 2026-07-17 为起点；后续从新图新增的公司以 2026-07-25 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -427,8 +436,9 @@ def render(companies: list[dict]) -> str:
               <tr>
                 <th style="width:140px;">公司</th>
                 <th style="width:150px;">强相关方向</th>
-                <th class="baseline metric-cell">07/17<br>股价</th>
-                <th class="baseline metric-cell">07/17<br>市值</th>
+                <th class="baseline metric-cell">起点<br>日期</th>
+                <th class="baseline metric-cell">起点<br>股价</th>
+                <th class="baseline metric-cell">起点<br>市值</th>
                 <th class="metric-cell">{quote_day}<br>收盘价</th>
                 <th class="metric-cell">{quote_day}<br>市值</th>
                 <th class="metric-cell">距起点<br>变化</th>
@@ -496,8 +506,8 @@ def render(companies: list[dict]) -> str:
 """
 
 
-def write_single_page(base: Path, companies: list[dict]) -> None:
-    html_text = render(companies)
+def write_single_page(base: Path, companies: list[dict], dashboard_companies: list[dict]) -> None:
+    html_text = render(companies, dashboard_companies)
     (base / TARGET_HTML).write_text(html_text, encoding="utf-8", newline="\n")
     (base / "index.html").write_text(html_text, encoding="utf-8", newline="\n")
 
@@ -505,8 +515,9 @@ def write_single_page(base: Path, companies: list[dict]) -> None:
 def main() -> None:
     companies = prepare()
     trim_repeated_company_heading(companies)
-    write_single_page(OUTPUTS, companies)
-    write_single_page(DEST, companies)
+    dashboard_companies = prepare_dashboard_companies(companies)
+    write_single_page(OUTPUTS, companies, dashboard_companies)
+    write_single_page(DEST, companies, dashboard_companies)
 
 
 if __name__ == "__main__":

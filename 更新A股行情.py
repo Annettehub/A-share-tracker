@@ -39,6 +39,11 @@ COMPANIES = [
     {"code": "002463", "market": "SZ", "name": "沪电股份", "start_market_cap_yi": 2459.0},
     {"code": "300308", "market": "SZ", "name": "中际旭创", "start_market_cap_yi": 10900.0},
     {"code": "603986", "market": "SH", "name": "兆易创新", "start_market_cap_yi": 3250.0},
+    {"code": "688372", "market": "SH", "name": "伟测科技", "start_market_cap_yi": 201.0},
+    {"code": "688808", "market": "SH", "name": "联讯仪器", "start_market_cap_yi": 2007.0},
+    {"code": "000938", "market": "SZ", "name": "紫光股份", "start_market_cap_yi": 1185.0},
+    {"code": "300548", "market": "SZ", "name": "长芯博创", "start_market_cap_yi": 435.0},
+    {"code": "300408", "market": "SZ", "name": "三环集团", "start_market_cap_yi": 2093.0},
 ]
 
 TENCENT_PREFIX = {"SZ": "sz", "SH": "sh"}

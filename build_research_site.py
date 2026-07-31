@@ -35,14 +35,85 @@ COMPANIES = [
     ("gigadevice", "兆易创新", "603986.SH", "存储 / MCU", "463", 3250, 3720, "14.5%", "下半年存储可能出现高点，年底 PE 是否调整为观察点。", PROJECT_DIR / "8.兆易创新_驱动因素分析_2026年.md"),
 ]
 
+DASHBOARD_ONLY_COMPANIES = [
+    {
+        "id": "willsemi-test",
+        "name": "伟测科技",
+        "code": "688372.SH",
+        "track": "封装测试",
+        "start_date": "2026-07-25",
+        "start_price": "118.9",
+        "start_market_cap": 201,
+        "year_end_market_cap": 216,
+        "space": "7%",
+        "source_note": "对标台湾京元电，看好国内AI芯片测试，100以下找低位接。",
+    },
+    {
+        "id": "lianxun-instrument",
+        "name": "联讯仪器",
+        "code": "688808.SH",
+        "track": "封测设备",
+        "start_date": "2026-07-25",
+        "start_price": "1955",
+        "start_market_cap": 2007,
+        "year_end_market_cap": 1650,
+        "space": "-18%",
+        "source_note": "示波器与高速误码分析仪在1.6T光通讯有不错竞争力，未来持续高增长，1600以下可建仓。",
+    },
+    {
+        "id": "unisplendour",
+        "name": "紫光股份",
+        "code": "000938.SZ",
+        "track": "芯片设计 / 服务器 / 交换机",
+        "start_date": "2026-07-25",
+        "start_price": "41.5",
+        "start_market_cap": 1185,
+        "year_end_market_cap": 1118,
+        "space": "-6%",
+        "source_note": "新华三在服务器跟交换机发挥作用，尤其是高速数据中心交换机。",
+    },
+    {
+        "id": "eoptolink",
+        "name": "长芯博创",
+        "code": "300548.SZ",
+        "track": "光器件",
+        "start_date": "2026-07-25",
+        "start_price": "147.7",
+        "start_market_cap": 435,
+        "year_end_market_cap": 390,
+        "space": "-10%",
+        "source_note": "高密度MPO避开太辰光与仕佳，AOC有源光缆谷歌三供，这两年靠这两块支撑增长，6.4T以后MCF-FAU有新增量，走小而精技术路线。",
+    },
+    {
+        "id": "sanhuan",
+        "name": "三环集团",
+        "code": "300408.SZ",
+        "track": "被动元件 / MLCC / 陶瓷件",
+        "start_date": "2026-07-25",
+        "start_price": "105",
+        "start_market_cap": 2093,
+        "year_end_market_cap": 2090,
+        "space": "0%",
+        "source_note": "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。",
+    },
+]
+
 
 def as_dict(row: tuple) -> dict:
     keys = ["id", "name", "code", "track", "start_price", "start_market_cap", "year_end_market_cap", "space", "source_note", "file"]
     data = dict(zip(keys, row))
     data["file"] = Path(data["file"])
+    data["start_date"] = "2026-07-17"
     data["current_market_cap"] = data["start_market_cap"]
     data["change_from_start"] = "0.0%"
     return data
+
+
+def dashboard_only_as_dict(data: dict) -> dict:
+    item = dict(data)
+    item["current_market_cap"] = item["start_market_cap"]
+    item["change_from_start"] = "0.0%"
+    return item
 
 
 def inline_markdown(text: str) -> str:
@@ -316,6 +387,12 @@ def prepare() -> list[dict]:
         markdown = company["file"].read_text(encoding="utf-8")
         company["summary"] = first_summary(markdown)
         company["content"] = markdown_to_html(markdown)
+    return companies
+
+
+def prepare_dashboard_companies(research_companies: list[dict] | None = None) -> list[dict]:
+    companies = [dict(company) for company in (research_companies or [as_dict(row) for row in COMPANIES])]
+    companies.extend(dashboard_only_as_dict(row) for row in DASHBOARD_ONLY_COMPANIES)
     return companies
 
 
