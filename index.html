@@ -65,7 +65,7 @@ section, .research-article { padding: 24px 26px; }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 1600px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #fff; table-layout: fixed; }
 .markdown-body .table-wrap { width: fit-content; max-width: 100%; overflow-x: auto; }
 .markdown-body table { width: auto; min-width: 0; max-width: none; table-layout: fixed; }
 .markdown-body th, .markdown-body td { box-sizing: border-box; white-space: normal; overflow-wrap: break-word; word-break: normal; }
@@ -74,7 +74,7 @@ th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal;
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
- .rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
+.rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
 .rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
 .rank-down-2 { background: #ffe4c2; color: #734000; box-shadow: inset 0 0 0 1px #e7b46f; }
 .rank-down-3 { background: #fff0b8; color: #604a00; box-shadow: inset 0 0 0 1px #d9bf4c; }
@@ -125,7 +125,7 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 1400px; }
+  table { min-width: 1290px; }
   .markdown-body table { min-width: 680px; }
 }
 </style>
@@ -168,7 +168,6 @@ td span { color: var(--muted); font-size: 12px; }
             <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
           </div>
           <div class="hero-metrics">
-            <div class="metric"><span>起点日期</span><strong>2026-07-17</strong></div>
             <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
             <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
             <div class="metric"><span>页面结构</span><strong>单文件切换</strong></div>
@@ -278,8 +277,8 @@ td span { color: var(--muted); font-size: 12px; }
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>原 8 家公司以 2026-07-17 为起点；后续从新图新增的公司以 2026-07-25 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
-            <p>行情快照：2026-07-31 18:58:05｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
+            <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
+            <p>行情快照：2026-07-31 19:14:58｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -288,9 +287,8 @@ td span { color: var(--muted); font-size: 12px; }
               <tr>
                 <th style="width:140px;">公司</th>
                 <th style="width:150px;">强相关方向</th>
-                <th class="baseline metric-cell">起点<br>日期</th>
-                <th class="baseline metric-cell">起点<br>股价</th>
-                <th class="baseline metric-cell">起点<br>市值</th>
+                <th class="baseline metric-cell">07/17<br>股价</th>
+                <th class="baseline metric-cell">07/17<br>市值</th>
                 <th class="metric-cell">07/31<br>收盘价</th>
                 <th class="metric-cell">07/31<br>市值</th>
                 <th class="metric-cell">距起点<br>变化</th>
@@ -304,7 +302,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#frd" data-target="frd">飞荣达</a><span>300602.SZ</span></td>
           <td>散热 / 液冷 / 电磁屏蔽</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">36.6</td>
           <td class="baseline metric-cell">215 亿</td>
           <td class="metric-cell">31.7</td>
@@ -320,7 +317,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#yofc" data-target="yofc">长飞光纤</a><span>601869.SH / 06869.HK</span></td>
           <td>光纤光缆 / 光通信材料</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">361.0</td>
           <td class="baseline metric-cell">2,993 亿</td>
           <td class="metric-cell">271.5</td>
@@ -336,7 +332,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#shkj" data-target="shkj">胜宏科技</a><span>300476.SZ</span></td>
           <td>AI PCB</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">241.5</td>
           <td class="baseline metric-cell">2,373 亿</td>
           <td class="metric-cell">190.4</td>
@@ -352,7 +347,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#dsjm" data-target="dsjm">东山精密</a><span>002384.SZ</span></td>
           <td>PCB / 光模块相关</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">241.9</td>
           <td class="baseline metric-cell">4,431 亿</td>
           <td class="metric-cell">171.5</td>
@@ -368,7 +362,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#cambricon" data-target="cambricon">寒武纪</a><span>688256.SH</span></td>
           <td>AI 芯片</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">1190.0</td>
           <td class="baseline metric-cell">7,480 亿</td>
           <td class="metric-cell">1106.0</td>
@@ -384,7 +377,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#hudian" data-target="hudian">沪电股份</a><span>002463.SZ</span></td>
           <td>AI PCB</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">127.0</td>
           <td class="baseline metric-cell">2,459 亿</td>
           <td class="metric-cell">103.8</td>
@@ -400,7 +392,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#innolight" data-target="innolight">中际旭创</a><span>300308.SZ</span></td>
           <td>高速光模块</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">979.0</td>
           <td class="baseline metric-cell">10,900 亿</td>
           <td class="metric-cell">902.0</td>
@@ -416,7 +407,6 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><a href="#gigadevice" data-target="gigadevice">兆易创新</a><span>603986.SH</span></td>
           <td>存储 / MCU</td>
-          <td class="baseline metric-cell">2026-07-17</td>
           <td class="baseline metric-cell">463.0</td>
           <td class="baseline metric-cell">3,250 亿</td>
           <td class="metric-cell">378.6</td>
@@ -432,12 +422,11 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><strong class="plain-company">伟测科技</strong><span>688372.SH</span></td>
           <td>封装测试</td>
-          <td class="baseline metric-cell">2026-07-25</td>
-          <td class="baseline metric-cell">118.9</td>
-          <td class="baseline metric-cell">201 亿</td>
+          <td class="baseline metric-cell">120.7</td>
+          <td class="baseline metric-cell">204 亿</td>
           <td class="metric-cell">108.9</td>
           <td class="metric-cell">184 亿</td>
-          <td class="metric-cell">-8.5%</td>
+          <td class="metric-cell">-9.8%</td>
           <td class="metric-cell">-45.5%</td>
           <td class="metric-cell">216 亿</td>
           <td class="metric-cell">+17.4%</td>
@@ -448,12 +437,11 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><strong class="plain-company">联讯仪器</strong><span>688808.SH</span></td>
           <td>封测设备</td>
-          <td class="baseline metric-cell">2026-07-25</td>
-          <td class="baseline metric-cell">1955.0</td>
-          <td class="baseline metric-cell">2,007 亿</td>
+          <td class="baseline metric-cell">1586.4</td>
+          <td class="baseline metric-cell">1,629 亿</td>
           <td class="metric-cell">1640.0</td>
           <td class="metric-cell">1,684 亿</td>
-          <td class="metric-cell">-16.1%</td>
+          <td class="metric-cell">+3.4%</td>
           <td class="metric-cell">-41.0%</td>
           <td class="metric-cell">1,650 亿</td>
           <td class="metric-cell">-2.0%</td>
@@ -464,12 +452,11 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><strong class="plain-company">紫光股份</strong><span>000938.SZ</span></td>
           <td>芯片设计 / 服务器 / 交换机</td>
-          <td class="baseline metric-cell">2026-07-25</td>
-          <td class="baseline metric-cell">41.5</td>
-          <td class="baseline metric-cell">1,185 亿</td>
+          <td class="baseline metric-cell">35.1</td>
+          <td class="baseline metric-cell">1,005 亿</td>
           <td class="metric-cell">34.9</td>
           <td class="metric-cell">998 亿</td>
-          <td class="metric-cell">-15.8%</td>
+          <td class="metric-cell">-0.7%</td>
           <td class="metric-cell">-23.8%</td>
           <td class="metric-cell">1,118 亿</td>
           <td class="metric-cell">+12.0%</td>
@@ -480,12 +467,11 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><strong class="plain-company">长芯博创</strong><span>300548.SZ</span></td>
           <td>光器件</td>
-          <td class="baseline metric-cell">2026-07-25</td>
-          <td class="baseline metric-cell">147.7</td>
-          <td class="baseline metric-cell">435 亿</td>
+          <td class="baseline metric-cell">166.2</td>
+          <td class="baseline metric-cell">490 亿</td>
           <td class="metric-cell">140.5</td>
           <td class="metric-cell">414 亿</td>
-          <td class="metric-cell">-4.8%</td>
+          <td class="metric-cell">-15.5%</td>
           <td class="metric-cell"><span class="rank-badge rank-down-3">-54.6%</span></td>
           <td class="metric-cell">390 亿</td>
           <td class="metric-cell">-5.8%</td>
@@ -496,12 +482,11 @@ td span { color: var(--muted); font-size: 12px; }
         <tr>
           <td><strong class="plain-company">三环集团</strong><span>300408.SZ</span></td>
           <td>被动元件 / MLCC / 陶瓷件</td>
-          <td class="baseline metric-cell">2026-07-25</td>
-          <td class="baseline metric-cell">105.0</td>
-          <td class="baseline metric-cell">2,093 亿</td>
+          <td class="baseline metric-cell">99.0</td>
+          <td class="baseline metric-cell">1,968 亿</td>
           <td class="metric-cell">111.7</td>
           <td class="metric-cell">2,220 亿</td>
-          <td class="metric-cell">+6.1%</td>
+          <td class="metric-cell">+12.8%</td>
           <td class="metric-cell">-38.1%</td>
           <td class="metric-cell">2,090 亿</td>
           <td class="metric-cell">-5.9%</td>
@@ -519,7 +504,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
             <p>自动扫描 Annettehub/ai-investing 中与 8 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
-            <p>已同步 Annettehub/ai-investing；快照时间：2026-07-31 18:58:42；来源提交：6a0fba1。</p>
+            <p>已同步 Annettehub/ai-investing；快照时间：2026-07-31 19:15:36；来源提交：6a0fba1。</p>
           </div>
         </div>
         <div class="weekly">

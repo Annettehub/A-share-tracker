@@ -38,9 +38,8 @@ DASHBOARD_ONLY_COMPANIES = [
         "name": "伟测科技",
         "code": "688372.SH",
         "track": "封装测试",
-        "start_date": "2026-07-25",
-        "start_price": "118.9",
-        "start_market_cap": 201,
+        "start_price": "120.73",
+        "start_market_cap": 204.0,
         "year_end_market_cap": 216,
         "space": "7%",
         "source_note": "对标台湾京元电，看好国内AI芯片测试，100以下找低位接。",
@@ -50,9 +49,8 @@ DASHBOARD_ONLY_COMPANIES = [
         "name": "联讯仪器",
         "code": "688808.SH",
         "track": "封测设备",
-        "start_date": "2026-07-25",
-        "start_price": "1955",
-        "start_market_cap": 2007,
+        "start_price": "1586.42",
+        "start_market_cap": 1628.7,
         "year_end_market_cap": 1650,
         "space": "-18%",
         "source_note": "示波器与高速误码分析仪在1.6T光通讯有不错竞争力，未来持续高增长，1600以下可建仓。",
@@ -62,9 +60,8 @@ DASHBOARD_ONLY_COMPANIES = [
         "name": "紫光股份",
         "code": "000938.SZ",
         "track": "芯片设计 / 服务器 / 交换机",
-        "start_date": "2026-07-25",
-        "start_price": "41.5",
-        "start_market_cap": 1185,
+        "start_price": "35.13",
+        "start_market_cap": 1004.7,
         "year_end_market_cap": 1118,
         "space": "-6%",
         "source_note": "新华三在服务器跟交换机发挥作用，尤其是高速数据中心交换机。",
@@ -74,9 +71,8 @@ DASHBOARD_ONLY_COMPANIES = [
         "name": "长芯博创",
         "code": "300548.SZ",
         "track": "光器件",
-        "start_date": "2026-07-25",
-        "start_price": "147.7",
-        "start_market_cap": 435,
+        "start_price": "166.21",
+        "start_market_cap": 490.0,
         "year_end_market_cap": 390,
         "space": "-10%",
         "source_note": "高密度MPO避开太辰光与仕佳，AOC有源光缆谷歌三供，这两年靠这两块支撑增长，6.4T以后MCF-FAU有新增量，走小而精技术路线。",
@@ -86,9 +82,8 @@ DASHBOARD_ONLY_COMPANIES = [
         "name": "三环集团",
         "code": "300408.SZ",
         "track": "被动元件 / MLCC / 陶瓷件",
-        "start_date": "2026-07-25",
-        "start_price": "105",
-        "start_market_cap": 2093,
+        "start_price": "99.01",
+        "start_market_cap": 1968.2,
         "year_end_market_cap": 2090,
         "space": "0%",
         "source_note": "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。",
@@ -100,7 +95,6 @@ def as_dict(row: tuple) -> dict:
     keys = ["id", "name", "code", "track", "start_price", "start_market_cap", "year_end_market_cap", "space", "source_note", "file"]
     data = dict(zip(keys, row))
     data["file"] = Path(data["file"])
-    data["start_date"] = "2026-07-17"
     data["current_market_cap"] = data["start_market_cap"]
     data["change_from_start"] = "0.0%"
     return data
@@ -523,7 +517,6 @@ def index_page(companies: list[dict]) -> str:
           <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
         </div>
         <div class="hero-metrics">
-          <div class="metric"><span>起点日期</span><strong>2026-07-17</strong></div>
           <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
           <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
           <div class="metric"><span>价格呈现</span><strong>市值表格</strong></div>

@@ -230,7 +230,7 @@ section, .research-article { padding: 24px 26px; }
 .company-card span, .company-card em { color: var(--muted); font-style: normal; font-size: 13px; line-height: 1.5; }
 .card-kicker { color: var(--blue) !important; font-weight: 700; }
 .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
-table { width: 100%; min-width: 1600px; border-collapse: collapse; background: #fff; table-layout: fixed; }
+table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #fff; table-layout: fixed; }
 .markdown-body .table-wrap { width: fit-content; max-width: 100%; overflow-x: auto; }
 .markdown-body table { width: auto; min-width: 0; max-width: none; table-layout: fixed; }
 .markdown-body th, .markdown-body td { box-sizing: border-box; white-space: normal; overflow-wrap: break-word; word-break: normal; }
@@ -239,7 +239,7 @@ th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal;
 th.baseline, td.baseline { background: var(--baseline); }
 th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
- .rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
+.rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
 .rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
 .rank-down-2 { background: #ffe4c2; color: #734000; box-shadow: inset 0 0 0 1px #e7b46f; }
 .rank-down-3 { background: #fff0b8; color: #604a00; box-shadow: inset 0 0 0 1px #d9bf4c; }
@@ -290,7 +290,7 @@ td span { color: var(--muted); font-size: 12px; }
   h2 { font-size: 21px; }
   .hero-metrics, .weekly, .company-grid { grid-template-columns: 1fr; }
   .section-head, .article-head { display: grid; }
-  table { min-width: 1400px; }
+  table { min-width: 1290px; }
   .markdown-body table { min-width: 680px; }
 }
 """
@@ -361,7 +361,6 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
         <tr>
           <td>{dashboard_company_cell(c)}</td>
           <td>{c['track']}</td>
-          <td class="baseline metric-cell">{c.get('start_date', '2026-07-17')}</td>
           <td class="baseline metric-cell">{price(c['start_price'])}</td>
           <td class="baseline metric-cell">{cap(c['start_market_cap'])}</td>
           <td class="metric-cell">{price(c.get('current_price', c['start_price']))}</td>
@@ -426,7 +425,6 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
             <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
           </div>
           <div class="hero-metrics">
-            <div class="metric"><span>起点日期</span><strong>2026-07-17</strong></div>
             <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
             <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
             <div class="metric"><span>页面结构</span><strong>单文件切换</strong></div>
@@ -473,7 +471,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>原 8 家公司以 2026-07-17 为起点；后续从新图新增的公司以 2026-07-25 为起点。灰色列为起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
+            <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -483,9 +481,8 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
               <tr>
                 <th style="width:140px;">公司</th>
                 <th style="width:150px;">强相关方向</th>
-                <th class="baseline metric-cell">起点<br>日期</th>
-                <th class="baseline metric-cell">起点<br>股价</th>
-                <th class="baseline metric-cell">起点<br>市值</th>
+                <th class="baseline metric-cell">07/17<br>股价</th>
+                <th class="baseline metric-cell">07/17<br>市值</th>
                 <th class="metric-cell">{quote_day}<br>收盘价</th>
                 <th class="metric-cell">{quote_day}<br>市值</th>
                 <th class="metric-cell">距起点<br>变化</th>
