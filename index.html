@@ -137,7 +137,7 @@ td span { color: var(--muted); font-size: 12px; }
       <option value="home">README 首页</option>
       <option value="dashboard">公司池仪表盘</option>
       <option value="weekly">周度观察</option>
-      <option value="frd">飞荣达</option><option value="yofc">长飞光纤</option><option value="shkj">胜宏科技</option><option value="dsjm">东山精密</option><option value="cambricon">寒武纪</option><option value="hudian">沪电股份</option><option value="innolight">中际旭创</option><option value="gigadevice">兆易创新</option>
+      <option value="frd">飞荣达</option><option value="yofc">长飞光纤</option><option value="shkj">胜宏科技</option><option value="dsjm">东山精密</option><option value="cambricon">寒武纪</option><option value="hudian">沪电股份</option><option value="innolight">中际旭创</option><option value="gigadevice">兆易创新</option><option value="weice">伟测科技</option><option value="lianxun">联讯仪器</option><option value="unisplendour">紫光股份</option><option value="eoptolink">长芯博创</option><option value="sanhuan">三环集团</option>
     </select>
   </div>
   <div class="app">
@@ -158,6 +158,11 @@ td span { color: var(--muted); font-size: 12px; }
 <a href="#hudian" class="nav-company" data-target="hudian"><span>沪电股份</span><small>AI PCB</small></a>
 <a href="#innolight" class="nav-company" data-target="innolight"><span>中际旭创</span><small>高速光模块</small></a>
 <a href="#gigadevice" class="nav-company" data-target="gigadevice"><span>兆易创新</span><small>存储 / MCU</small></a>
+<a href="#weice" class="nav-company" data-target="weice"><span>伟测科技</span><small>封装测试</small></a>
+<a href="#lianxun" class="nav-company" data-target="lianxun"><span>联讯仪器</span><small>封测设备</small></a>
+<a href="#unisplendour" class="nav-company" data-target="unisplendour"><span>紫光股份</span><small>芯片设计 / 服务器 / 交换机</small></a>
+<a href="#eoptolink" class="nav-company" data-target="eoptolink"><span>长芯博创</span><small>光器件</small></a>
+<a href="#sanhuan" class="nav-company" data-target="sanhuan"><span>三环集团</span><small>被动元件 / MLCC / 陶瓷件</small></a>
     </aside>
     <main class="content">
       <div class="view" id="home">
@@ -168,7 +173,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
           </div>
           <div class="hero-metrics">
-            <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
+            <div class="metric"><span>已接入资料</span><strong>13 家公司</strong></div>
             <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
             <div class="metric"><span>页面结构</span><strong>单文件切换</strong></div>
           </div>
@@ -201,7 +206,7 @@ td span { color: var(--muted); font-size: 12px; }
           <div class="section-head">
             <div>
               <p class="eyebrow">Company Pool</p>
-              <h2>8 家公司资料入口</h2>
+              <h2>13 家公司资料入口</h2>
               <p>点击公司卡片会在当前 HTML 中切换到对应公司资料，不跳到新网页，也不会滚动到长页面下方。</p>
             </div>
           </div>
@@ -268,6 +273,46 @@ td span { color: var(--muted); font-size: 12px; }
           <span>存储 / MCU</span>
           <em>起点市值 3,250 亿</em>
         </a>
+        
+
+        <a class="company-card" href="#weice" data-target="weice">
+          <span class="card-kicker">688372.SH</span>
+          <strong>伟测科技</strong>
+          <span>封装测试</span>
+          <em>起点市值 204 亿</em>
+        </a>
+        
+
+        <a class="company-card" href="#lianxun" data-target="lianxun">
+          <span class="card-kicker">688808.SH</span>
+          <strong>联讯仪器</strong>
+          <span>封测设备</span>
+          <em>起点市值 1,629 亿</em>
+        </a>
+        
+
+        <a class="company-card" href="#unisplendour" data-target="unisplendour">
+          <span class="card-kicker">000938.SZ</span>
+          <strong>紫光股份</strong>
+          <span>芯片设计 / 服务器 / 交换机</span>
+          <em>起点市值 1,005 亿</em>
+        </a>
+        
+
+        <a class="company-card" href="#eoptolink" data-target="eoptolink">
+          <span class="card-kicker">300548.SZ</span>
+          <strong>长芯博创</strong>
+          <span>光器件</span>
+          <em>起点市值 490 亿</em>
+        </a>
+        
+
+        <a class="company-card" href="#sanhuan" data-target="sanhuan">
+          <span class="card-kicker">300408.SZ</span>
+          <strong>三环集团</strong>
+          <span>被动元件 / MLCC / 陶瓷件</span>
+          <em>起点市值 1,968 亿</em>
+        </a>
         </div>
         </section>
       </div>
@@ -278,7 +323,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
             <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
-            <p>行情快照：2026-07-31 19:27:02｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
+            <p>行情快照：2026-08-01 14:47:40｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -420,7 +465,7 @@ td span { color: var(--muted); font-size: 12px; }
         
 
         <tr>
-          <td><strong class="plain-company">伟测科技</strong><span>688372.SH</span></td>
+          <td><a href="#weice" data-target="weice">伟测科技</a><span>688372.SH</span></td>
           <td>封装测试</td>
           <td class="baseline metric-cell">120.7</td>
           <td class="baseline metric-cell">204 亿</td>
@@ -435,7 +480,7 @@ td span { color: var(--muted); font-size: 12px; }
         
 
         <tr>
-          <td><strong class="plain-company">联讯仪器</strong><span>688808.SH</span></td>
+          <td><a href="#lianxun" data-target="lianxun">联讯仪器</a><span>688808.SH</span></td>
           <td>封测设备</td>
           <td class="baseline metric-cell">1586.4</td>
           <td class="baseline metric-cell">1,629 亿</td>
@@ -450,7 +495,7 @@ td span { color: var(--muted); font-size: 12px; }
         
 
         <tr>
-          <td><strong class="plain-company">紫光股份</strong><span>000938.SZ</span></td>
+          <td><a href="#unisplendour" data-target="unisplendour">紫光股份</a><span>000938.SZ</span></td>
           <td>芯片设计 / 服务器 / 交换机</td>
           <td class="baseline metric-cell">35.1</td>
           <td class="baseline metric-cell">1,005 亿</td>
@@ -465,7 +510,7 @@ td span { color: var(--muted); font-size: 12px; }
         
 
         <tr>
-          <td><strong class="plain-company">长芯博创</strong><span>300548.SZ</span></td>
+          <td><a href="#eoptolink" data-target="eoptolink">长芯博创</a><span>300548.SZ</span></td>
           <td>光器件</td>
           <td class="baseline metric-cell">166.2</td>
           <td class="baseline metric-cell">490 亿</td>
@@ -480,7 +525,7 @@ td span { color: var(--muted); font-size: 12px; }
         
 
         <tr>
-          <td><strong class="plain-company">三环集团</strong><span>300408.SZ</span></td>
+          <td><a href="#sanhuan" data-target="sanhuan">三环集团</a><span>300408.SZ</span></td>
           <td>被动元件 / MLCC / 陶瓷件</td>
           <td class="baseline metric-cell">99.0</td>
           <td class="baseline metric-cell">1,968 亿</td>
@@ -503,8 +548,8 @@ td span { color: var(--muted); font-size: 12px; }
           <div>
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
-            <p>自动扫描 Annettehub/ai-investing 中与 8 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
-            <p>已同步 Annettehub/ai-investing；快照时间：2026-07-31 19:27:19；来源提交：3abcaf7。</p>
+            <p>自动扫描 Annettehub/ai-investing 中与 13 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
+            <p>已同步 Annettehub/ai-investing；快照时间：2026-08-01 14:48:05；来源提交：3abcaf7。</p>
           </div>
         </div>
         <div class="weekly">
@@ -528,15 +573,15 @@ td span { color: var(--muted); font-size: 12px; }
             
 
             <div class="observation-item">
-              <div class="observation-meta">2026-07-27 · AI算力/CAPEX</div>
+              <div class="observation-meta">2026-07-27 · AI算力/CAPEX / 半导体测试/仪器 / 被动元件/MLCC</div>
               <strong>2026-W27 周度复盘（测试版）</strong>
-              <p>L4/L5 AI 算力需求持续 → L3 数据中心/服务器 → L2 芯片/被动元件（MLCC）受益 村田涨价事件说明：AI 服务器高端 MLCC 供需紧绷，国内 MLCC 厂商可能获得订单转移机会</p>
+              <p>假设 周初 周末 变化 原因 H1 65% 67% +2% AI国产化支撑中芯7nm需求 H7 45% 新增 村田MLCC涨价，国内供应链有望受益</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/04-output/weekly/2026-W27.md" target="_blank" rel="noopener">04-output/weekly/2026-W27.md</a>
             </div>
             
 
             <div class="observation-item">
-              <div class="observation-meta">2026-07-27 · AI算力/CAPEX / 存储/HBM / AI芯片/国产替代</div>
+              <div class="observation-meta">2026-07-27 · AI算力/CAPEX / 存储/HBM / AI芯片/国产替代 / 半导体测试/仪器</div>
               <strong>G2 存储成长与周期分层长期跟踪表</strong>
               <p>AI 正在推动高端存储成长性，但没有消灭存储行业周期。HBM 是成长性最强的部分，服务器 DDR5 是二级传导，企业 SSD / AI SSD 是需要持续验证其成长性的新变量，消费存储目前仍然处于周期性而非成长性。</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/04-output/tracking/H1.2-storage-tracking.md" target="_blank" rel="noopener">04-output/tracking/H1.2-storage-tracking.md</a>
@@ -560,7 +605,7 @@ td span { color: var(--muted); font-size: 12px; }
             
 
             <div class="observation-item">
-              <div class="observation-meta">2026-07-27 · 液冷/散热 / 存储/HBM / AI芯片/国产替代</div>
+              <div class="observation-meta">2026-07-27 · 液冷/散热 / 存储/HBM / AI芯片/国产替代 / 半导体测试/仪器</div>
               <strong>中国限制稀土出口 全球半导体影响几何</strong>
               <p>更新一代的钐铁氮永磁，利用稀土元素钐制作永磁材料，比如F35战机就采用了该永磁材料，不过目前钐铁氮永磁只能制备成粉末或者薄膜，虽然无法制作成较大型的工业器件，但未来在MEMS微机电或者芯片散热风伞这类微加工的应用有挺大的潜力。</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md" target="_blank" rel="noopener">03-raw/zsxq/id_za1s7or3l3qn_中国限制稀土出口 全球半导体影响几何.md</a>
@@ -584,7 +629,7 @@ td span { color: var(--muted); font-size: 12px; }
             
 
             <div class="observation-item">
-              <div class="observation-meta">2026-07-27 · 存储/HBM</div>
+              <div class="observation-meta">2026-07-27 · 存储/HBM / 半导体测试/仪器</div>
               <strong>全球竞争激烈快速推进 , 国产HBM将如何自处?</strong>
               <p>2022年的1007法案，美国BIS明确对我国限制18nm DRAM制程的法案。</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/zsxq/id_wwsoej85lmn0_%E5%85%A8%E7%90%83%E7%AB%9E%E4%BA%89%E6%BF%80%E7%83%88%E5%BF%AB%E9%80%9F%E6%8E%A8%E8%BF%9B%20%2C%20%E5%9B%BD%E4%BA%A7HBM%E5%B0%86%E5%A6%82%E4%BD%95%E8%87%AA%E5%A4%84_.md" target="_blank" rel="noopener">03-raw/zsxq/id_wwsoej85lmn0_全球竞争激烈快速推进 , 国产HBM将如何自处_.md</a>
@@ -648,7 +693,7 @@ td span { color: var(--muted); font-size: 12px; }
             
 
             <div class="observation-item">
-              <div class="observation-meta">2026-07-27 · 寒武纪</div>
+              <div class="observation-meta">2026-07-27 · 寒武纪 / 半导体测试/仪器</div>
               <strong>Info</strong>
               <p>AI is fundamentally reshaping enterprise software by shifting the focus from static, human led data analysis to agent driven, self serve workflows. Organizations are moving away from traditional BI tools—often described ...</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/feishu/SaaStr%20863%20The%20Enterprise%20AI%20Reality%20Check%20From%20Dashboard%20Graveyards%20to%2030-Day%20Migrations%20with%20Databricks%27%20Co-Founder%20and%20SVP%20of%20Field%20Engineering.md" target="_blank" rel="noopener">03-raw/feishu/SaaStr 863 The Enterprise AI Reality Check From Dashboard Graveyards to 30-Day Migrations with Databricks&#x27; Co-Founder and SVP of Field Engineering.md</a>
@@ -739,6 +784,77 @@ td span { color: var(--muted); font-size: 12px; }
               <strong>603986.SH 兆易创新 — 实体档案</strong>
               <p>项目 内容 全称 兆易创新科技集团股份有限公司 股票代码 603986.SH 总部 北京 业务 NOR Flash + NAND Flash + MCU + DRAM(代工) 关联方 长鑫存储(CXMT) — DRAM代工关系，关联交易额57亿 上市状态 ✅ A股上市</p>
               <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/02-kb/entities/%E5%85%86%E6%98%93%E5%88%9B%E6%96%B0.md" target="_blank" rel="noopener">02-kb/entities/兆易创新.md</a>
+            </div>
+            </div>
+            </div>
+            
+
+            <div class="company-observation-group">
+              <h4>伟测科技</h4>
+              <div class="observation-list">
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 伟测科技 / AI算力/CAPEX / 光模块/CPO / AI PCB</div>
+              <strong>Annette投研系统投研 — Annette 股票池</strong>
+              <p>ticker name market hypothesis notes 00981.HK 中芯国际 HK H1 H6 主投研标的；7nm产能/28nm折旧/光刻胶断供 NVDA NVIDIA US — AI芯片景气风向标；Rubin平台/CoWoS供给 TSM 台积电 US H1,H2,H5 先进制程定价权；CoWoS产能；折旧策略 300308.SZ 中际旭创 CN — 光模块龙头；800G/1.6T放量；AI算力基建 688372....</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/config/watchlist.md" target="_blank" rel="noopener">config/watchlist.md</a>
+            </div>
+            
+
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 伟测科技</div>
+              <strong>603986.SH 兆易创新 — 实体档案</strong>
+              <p>创建日期: 2026 07 04 最后更新: 2026 07 04 状态: 📗 待跟踪</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/02-kb/entities/%E5%85%86%E6%98%93%E5%88%9B%E6%96%B0.md" target="_blank" rel="noopener">02-kb/entities/兆易创新.md</a>
+            </div>
+            
+
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 伟测科技 / 半导体测试/仪器</div>
+              <strong>688372.SH 伟测科技 — 实体档案</strong>
+              <p>项目 内容 全称 伟测科技股份有限公司 股票代码 688372.SH (科创板) 总部 上海 业务 晶圆测试(CP) + 芯片成品测试(FT) + 先进封装测试 定位 A股第三方芯片测试龙头</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/02-kb/entities/688372-%E4%BC%9F%E6%B5%8B%E7%A7%91%E6%8A%80.md" target="_blank" rel="noopener">02-kb/entities/688372-伟测科技.md</a>
+            </div>
+            </div>
+            </div>
+            
+
+            <div class="company-observation-group">
+              <h4>紫光股份</h4>
+              <div class="observation-list">
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 紫光股份 / AI芯片/国产替代</div>
+              <strong>2026-07-10 全球AI算力产业链中外对标纪要</strong>
+              <p>国内格局：华为系（含河南鲲鹏等）占比约30%，浪潮信息占比超30%，华勤占比约10%，曙光、新华三亦具备相关能力。</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/wechat/20260710-NOTE-%E5%85%A8%E7%90%83AI%E7%AE%97%E5%8A%9B%E4%BA%A7%E4%B8%9A%E9%93%BE%E4%B8%AD%E5%A4%96%E5%AF%B9%E6%A0%87%E7%BA%AA%E8%A6%81.md" target="_blank" rel="noopener">03-raw/wechat/20260710-NOTE-全球AI算力产业链中外对标纪要.md</a>
+            </div>
+            </div>
+            </div>
+            
+
+            <div class="company-observation-group">
+              <h4>三环集团</h4>
+              <div class="observation-list">
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 三环集团 / 被动元件/MLCC</div>
+              <strong>2026-W27 周度复盘（测试版）</strong>
+              <p>假设 周初 周末 变化 原因 H1 65% 67% +2% AI国产化支撑中芯7nm需求 H7 45% 新增 村田MLCC涨价，国内供应链有望受益</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/04-output/weekly/2026-W27.md" target="_blank" rel="noopener">04-output/weekly/2026-W27.md</a>
+            </div>
+            
+
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 三环集团</div>
+              <strong>中国限制稀土出口 全球半导体影响几何</strong>
+              <p>当时的过程是F35的发动机润滑泵的某部分材料采用中科院旗下北京中科三环的钐钴合金原料，再经由日本爱普生磁件公司进行磁化处理，然后交给Magentics公司制作成磁体组件后向honywell销售，honywell制作成发动机的润滑泵组件销售给洛克希德马丁。</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md" target="_blank" rel="noopener">03-raw/zsxq/id_za1s7or3l3qn_中国限制稀土出口 全球半导体影响几何.md</a>
+            </div>
+            
+
+            <div class="observation-item">
+              <div class="observation-meta">2026-07-27 · 三环集团</div>
+              <strong>20VC: Leo Aschenbrenner&#x27;s Largest Holding: Inside the $90BN Bloom Energy | Why Electricity, Not AI Models, Will Decide the Winners of the AI Race | Why We Are Not in an AI Capex Bubble | Energy Sovereignty and The Future of Power with KR Sridhar</strong>
+              <p>[09:56] KR Sridhar 所以，在这里我们建造接下来的 10 个，接下来的 20 个。它们都在现场表现得很糟糕。 这让人震惊，因为在早期阶段，它们是昂贵的第一批产品。 名声岌岌可危。 所以，我想，这个不能扩展。 所以，我就停止了生产。 我给我的董事会打电话，我说，我需要帮助。 我需要人来帮我。 告诉我如何进行生产。 我不知道。 来的人中有安迪·格罗夫，他成了我的好朋友、导师和硅谷传奇。 还有其他一些制造专家。 其中一个是在我...</p>
+              <a href="https://github.com/Annettehub/ai-investing/blob/3abcaf78d2c3b1c769936821d1c4f816f6329f04/03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md" target="_blank" rel="noopener">03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md</a>
             </div>
             </div>
             </div>
@@ -2509,6 +2625,913 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
 </tbody></table></div>
 <hr>
 <p><em>本报告为基于公开与半公开信息的结构化研究分析，不构成任何投资建议。业绩、份额与采购数据以公司正式披露及吴梓豪知识星球公开内容为准，存储周期价格走势存在显著不确定性。</em></p></div>
+        </article>
+        
+
+        <article class="view research-article" id="weice">
+          <div class="article-head">
+            <div>
+              <p class="eyebrow">688372.SH · 封装测试</p>
+              <h1>伟测科技</h1>
+            </div>
+          </div>
+          <div class="markdown-body"><h2>（688372.SH）AI 国产赛道投研分析报告</h2>
+<blockquote>分析时间：2026-08-01 | 分析基准：2026 年 | 性质：纯研究分析，不含投资建议</blockquote>
+<blockquote>数据来源：GitHub 知识库 <code>Annettehub/ai-investing</code>（实体档案 <code>02-kb/entities/688372-伟测科技.md</code>、概念库、snapshot）、伟测科技 2025 年年报、机构调研纪要（财联社 2026-04-23）、知识星球「半导体大佬的会议室」（吴梓豪）</blockquote>
+<hr>
+<h3>第一章：产业链位置拆解</h3>
+<p>伟测科技是 <strong>独立第三方集成电路测试服务商</strong>（不属于芯片原厂/Fabless，亦非封测一体厂），处于半导体制造链条中&quot;晶圆制造→测试→封装→测试→整机&quot;的关键验证环节。</p>
+<pre><code>上游：测试设备与耗材
+    ├─ 测试机：爱德万(Advantest) / 泰瑞达(Teradyne)【进口主导，高依赖】
+    ├─ 分选机/探针台：东京精密 / 长川科技 / 华峰测控【国产替代进行中】
+    └─ 探针卡、耗材（部分国产）
+        ↓
+[ 独立第三方测试服务 ] ——— 【伟测科技】
+│   核心服务：CP 晶圆测试 + FT 芯片成品测试 + SLT 系统级测试 + 老化(Burn-in)测试
+│   覆盖：CPU/GPU/AI 芯片/MCU/FPGA/SoC/射频/存储/功率/传感器
+│   制程：12/8/6 英寸；高端+中端双轨（2025 高端占 71%）
+        ↓
+[ 芯片设计客户 ]（公司已有客户超 200 家）
+    ├─ 国产 AI/算力芯片设计公司：寒武纪、海光、紫光、华为昇腾生态等
+    ├─ 消费电子/工业/车规芯片设计公司
+    └─ 部分晶圆厂、封装厂、IDM 公司
+        ↓
+终端应用：AI 数据中心 / 智能手机 / 汽车电子 / 工业控制 / 消费电子 / IoT</code></pre>
+<p><strong>定位判定</strong>：独立第三方测试龙头（A 股纯度最高），区别于长电/通富/华天等&quot;封测一体&quot;厂的测试业务。其独立性是核心特征——不绑定单一封装产能，可同时服务多家设计公司与晶圆厂。</p>
+<hr>
+<h3>第二章：因素归属总结表</h3>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
+<thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>国产芯片产能扩张（中芯/华虹扩产、先进封装）间接受益，但测试本身未被直接&quot;断供&quot;</td></tr>
+<tr><td>2</td><td>国家补贴兜底</td><td>⚠️ 弱相关</td><td>大基金三期可能覆盖测试环节，但测试服务商非直接补贴重点对象</td></tr>
+<tr><td>3</td><td>国产能力成熟</td><td>✅ 强相关</td><td>国产测试设备（长川/华峰）替代爱德万/泰瑞达，伟测测试能力已达先进制程+先进封装</td></tr>
+<tr><td>4</td><td>近水楼台</td><td>✅ 强相关</td><td>本土服务响应优势，国产 AI 芯片客户（寒武纪/海光/紫光）首选第三方测试</td></tr>
+<tr><td>5</td><td>政策合规底线</td><td>❌ 不相关</td><td>测试环节无信创强制采购要求</td></tr>
+<tr><td>6</td><td>出海能力</td><td>❌ 不相关</td><td>目前以国内市场为主（2025 境外收入仅 2.14%）</td></tr>
+<tr><td>7</td><td>巨头产能退出</td><td>❌ 不相关</td><td>不适用</td></tr>
+<tr><td>8</td><td>设备折旧归零</td><td>⚠️ 弱相关</td><td>测试设备折旧周期 5–8 年，规模效应摊薄成本，但非核心驱动</td></tr>
+</tbody></table></div>
+<hr>
+<h3>第三章：核心驱动因素分析</h3>
+<h4>因素 3：国产能力成熟（✅ 强相关）</h4>
+<p><strong>测试服务能力成熟</strong>：伟测 2025 年晶圆测试（CP）收入 8.61 亿元（+40.12%，占 54.7%）、芯片成品测试（FT）收入 6.33 亿元（+72.66%，占 40.22%），并具备 SLT 系统级测试、老化测试全流程能力。测试芯片类型覆盖 CPU/GPU/AI 芯片/存储/射频等全谱系，制程覆盖 12/8/6 英寸，2025 年高端业务占比达 71%。</p>
+<p><strong>设备端国产替代红利</strong>：上游测试机长期由爱德万/泰瑞达垄断，分选机由东京精密等主导。随着长川科技、华峰测控等国产设备成熟，伟测作为测试服务商可获更低设备采购成本与更快交付（知识库 <code>国产替代全景</code>：量测/检测国产化率约 10–20%，封测设备国产化推进中）。公司 2025 年完成可转债发行募资，集中用于采购高端测试设备与厂房建设，体现&quot;国产产能扩张+设备国产替代&quot;的双重逻辑。</p>
+<blockquote>吴梓豪观点呼应：知识星球提及&quot;目前整个量测检测，以 28nm 这个…&quot;#656，指向国产量测检测能力正在 28nm 节点形成突破；伟测作为第三方测试龙头，直接承接该能力成熟带来的需求外溢。</blockquote>
+<h4>因素 4：近水楼台（✅ 强相关）</h4>
+<p><strong>国产 AI 芯片产能扩张直接拉动</strong>：2025 年被伟测定位为&quot;国产算力起步年&quot;。据机构调研纪要（财联社 2026-04-23），公司 2025 年算力类收入占比 20%，较 2024 年提升 13.6 个百分点；车规类收入从九千多万增至 2.2 亿元（+约 130%）。国产 AI 芯片（寒武纪、海光、紫光、昇腾生态）对测试要求更高（单颗测试时间更长、增加老化/系统级测试），拉长测试环节价值量。</p>
+<p><strong>本土服务响应壁垒</strong>：公司已在上海（总部）、无锡（三期）、南京、深圳、天津布局研发测试基地，贴近长三角/珠三角/京津冀客户群。独立第三方属性使其可同时服务数百家设计公司，规避封测一体厂的&quot;自产自测&quot;利益冲突，成为国产芯片设计公司的首选中立测试伙伴。</p>
+<blockquote>吴梓豪观点（来源：半导体大佬的会议室，#560）：&quot;刚好回答了其他会员问了兆亿跟伟测&quot;——侧面印证知识星球对伟测作为国产测试配套方的关注，但内容未深度展开，本分析据此标注为弱证据。</blockquote>
+<hr>
+<h3>第四章：客户/供应商清单</h3>
+<h4>核心客户（按公开披露结构）</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:188px"><col style="width:300px"><col style="width:300px"><col style="width:300px"><col style="width:195px"></colgroup>
+<thead><tr><th>客户类别</th><th>代表客户</th><th>关系</th><th>收入占比/说明</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>国产 AI/算力芯片设计</td><td>寒武纪、海光、紫光、昇腾生态</td><td>测试服务</td><td>算力类占 2025 营收 20%（+13.6pct）</td><td>机构调研纪要 2026-04-23</td></tr>
+<tr><td>消费/工业/车规芯片设计</td><td>200+ 家设计公司、部分晶圆厂/封装厂/IDM</td><td>测试服务</td><td>消费电子 59% / 工业 26% / 车规 15%</td><td>年报+调研</td></tr>
+<tr><td>前五大客户</td><td>未具名</td><td>测试服务</td><td>合计销售 6.23 亿元，占 39.59%</td><td>2025 年报</td></tr>
+</tbody></table></div>
+<p><strong>客户集中度</strong>：前五大客户 39.59%，客户基数广（&gt;200 家），单一客户依赖度低，结构健康。</p>
+<h4>核心供应商（上游设备依赖）</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:286px"><col style="width:170px"><col style="width:170px"><col style="width:260px"></colgroup>
+<thead><tr><th>供应商</th><th>供应内容</th><th>依赖度</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>爱德万(Advantest) / 泰瑞达(Teradyne)</td><td>高端测试机</td><td>高</td><td>行业常识+年报（前五供应商采购占 64.65%）</td></tr>
+<tr><td>长川科技 / 华峰测控 / 东京精密</td><td>分选机/探针台</td><td>中</td><td>国产替代逻辑推断</td></tr>
+<tr><td>探针卡/耗材厂商</td><td>测试耗材</td><td>中</td><td>推断</td></tr>
+</tbody></table></div>
+<p><strong>供应商集中度</strong>：前五大供应商合计采购 19.68 亿元，占年度采购总额 64.65%，反映高端测试机进口依赖仍高，是&quot;国产能力成熟&quot;因素的反面约束。</p>
+<hr>
+<h3>第五章：2026 年具体受益场景</h3>
+<h4>受益传导链（箭头文本框）</h4>
+<pre><code>国产 AI 芯片产能扩张（中芯南方 N+1/N+2、华虹、长存/长鑫）
+        ↓
+晶圆测试(CP)+成品测试(FT)需求增长，且 AI 芯片测试复杂度/时长提升
+        ↓
+伟测高端产能扩充（可转债募资、无锡三期、上海总部）+ ASP 提升
+        ↓
+2025 已验证：营收 +46.22%、归母净利 +136.45%
+        ↓
+2026 延续：算力类占比继续提升 + 车规类高增长</code></pre>
+<h4>受益确定性评估表</h4>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:220px"><col style="width:92px"><col style="width:560px"></colgroup>
+<thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>国产算力芯片测试需求增长</td><td>高</td><td>字节等云厂 2026 年国产芯片采购预算高增（知识库：字节国产芯片采购 250–300 亿给寒武纪、220–230 亿给昇腾），直接拉动测试</td></tr>
+<tr><td>车规芯片测试放量</td><td>高</td><td>2025 车规收入 2.2 亿，2026 新能源车智能化持续</td></tr>
+<tr><td>先进封装测试（CP 侧）</td><td>中高</td><td>先进封装 CoWoS-like 提升 CP 测试复杂度；但受 BIS 新规对部分先进节点 CP 的影响（2025 初生效）</td></tr>
+<tr><td>设备国产替代降本</td><td>中</td><td>长川/华峰成熟需时间，短期仍依赖进口设备</td></tr>
+</tbody></table></div>
+<h4>客户结构对冲验证</h4>
+<ul>
+<li><strong>多元客户对冲</strong>：&gt;200 家客户、前五大仅 39.59%，任一客户波动影响有限。</li>
+<li><strong>下游结构对冲</strong>：消费(59%)+工业(26%)+车规(15%)+算力(20%)组合，避免单一赛道周期风险。</li>
+<li><strong>风险对冲</strong>：BIS 新规主要影响 CP（2025 初生效致 CP 占比下降），但 FT 不受影响且量增，公司通过结构切换缓冲政策冲击。</li>
+</ul>
+<hr>
+<h3>第六章：竞争对手分析</h3>
+<h4>竞争对手矩阵</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
+<thead><tr><th>维度</th><th>伟测科技</th><th>长电科技</th><th>通富微电</th><th>华天科技</th></tr></thead>
+<tbody>
+<tr><td>定位</td><td>独立第三方测试</td><td>封测一体</td><td>封测一体</td><td>封测一体</td></tr>
+<tr><td>测试能力</td><td>CP+FT+SLT+老化</td><td>FT 为主</td><td>FT 为主</td><td>FT 为主</td></tr>
+<tr><td>独立性</td><td>高（中立）</td><td>低（自有封装）</td><td>低</td><td>低</td></tr>
+<tr><td>客户广度</td><td>200+ 设计公司</td><td>绑定自身封装客户</td><td>绑定 AMD 等</td><td>绑定自身客户</td></tr>
+</tbody></table></div>
+<h4>SWOT 对比矩阵表</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:230px"><col style="width:170px"></colgroup>
+<thead><tr><th>维度</th><th>伟测科技</th><th>长电科技</th><th>华天科技</th></tr></thead>
+<tbody>
+<tr><td>S(优势)</td><td>第三方中立、高端测试占比 71%、客户广</td><td>封测规模全球前列、先进封装强</td><td>成本优势、产能大</td></tr>
+<tr><td>W(劣势)</td><td>上游测试机进口依赖、规模小于封测巨头、KB 深度覆盖不足（实体档案自标&quot;数据不足&quot;）</td><td>测试非独立、与封装绑定</td><td>高端测试能力弱</td></tr>
+<tr><td>O(机会)</td><td>国产算力/车规测试爆发、设备国产替代</td><td>先进封装订单饱满</td><td>成熟制程封测回暖</td></tr>
+<tr><td>T(威胁)</td><td>封测厂向下延伸独立测试</td><td>自身测试内部化</td><td>价格竞争</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：伟测在&quot;独立第三方测试&quot;这一细分赛道具备稀缺性与先发优势，与封测一体厂形成差异化竞争；最大威胁来自长电/通富等将测试能力内部化，但其中立属性在国产芯片设计公司&quot;去绑定&quot;需求下反而强化。</p>
+<p><strong>护城河</strong>：① 客户广度与中立性（200+ 家）；② 高端测试产能与良率积累；③ 贴近客户的本地化服务网络；④ 与国产 AI 芯片设计公司共同成长的绑定关系。</p>
+<hr>
+<h3>第七章：行业机会与挑战</h3>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:92px"><col style="width:220px"><col style="width:130px"><col style="width:300px"><col style="width:150px"></colgroup>
+<thead><tr><th>类型</th><th>事项</th><th>时间窗口</th><th>与公司的关联</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>🟢 机会</td><td>国产芯片产能扩张</td><td>短期–中期</td><td>测试需求增长确定性高</td><td>年报/调研</td></tr>
+<tr><td>🟢 机会</td><td>先进封装 CP 测试需求</td><td>中期</td><td>技术壁垒与 ASP 提升</td><td>知识库概念</td></tr>
+<tr><td>🟢 机会</td><td>车规芯片测试</td><td>短期–中期</td><td>收入已从 0.9 亿→2.2 亿</td><td>调研纪要</td></tr>
+<tr><td>🔴 风险</td><td>封测一体化厂切入独立测试</td><td>中期</td><td>长电/通富向下延伸</td><td>推测</td></tr>
+<tr><td>🔴 风险</td><td>上游测试机进口依赖/制裁</td><td>中期</td><td>前五供应商占 64.65%</td><td>年报</td></tr>
+<tr><td>🔴 风险</td><td>BIS 新规对先进节点 CP 限制</td><td>短期</td><td>2025 已现 CP 占比下降</td><td>调研纪要</td></tr>
+</tbody></table></div>
+<hr>
+<h4>第七章补：核心风险的知识库双重检验</h4>
+<blockquote>双重检验方法：返回知识库 <code>Annettehub/ai-investing</code> 的伟测科技实体档案（<code>02-kb/entities/688372-伟测科技.md</code>）与概念库，逐一比对本文风险判定。</blockquote>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:300px"><col style="width:170px"><col style="width:560px"><col style="width:340px"></colgroup>
+<thead><tr><th>风险点</th><th>本文初判</th><th>知识库复核结论</th><th>处置</th></tr></thead>
+<tbody>
+<tr><td>封测一体化厂切入独立测试</td><td>T（中期）</td><td>实体档案<code>风险提示（反方证据）</code>明列「封测厂切入竞争｜中｜长电/通富可能向下延伸」，方向一致</td><td>维持；预警信号取&quot;封测厂测试收入占比提升&quot;</td></tr>
+<tr><td>上游测试机进口依赖/制裁</td><td>T（中期）</td><td>实体档案供应商&quot;爱德万&quot;标注为【推测】，KB 未确认具体型号占比；与年报&quot;前五供应商 64.65%&quot;可互证&quot;依赖高&quot;，但&quot;爱德万/泰瑞达具体占比&quot;为推断</td><td>维持，但将&quot;爱德万/泰瑞达&quot;具体归因降级为&quot;进口高端测试机&quot;</td></tr>
+<tr><td>知识库数据充分性</td><td>未单列</td><td>实体档案<code>风险提示</code>首条即「本地知识库数据不足｜高｜知识星球仅提及未深度分析」</td><td><strong>新增为元风险</strong>：本文对伟测的判定主要依赖 2025 年报+调研，KB 深度观点稀缺</td></tr>
+<tr><td>先进封装测试能力/客户集中度/产能利用率</td><td>据年报引用</td><td>实体档案<code>待验证</code>清单明确列：CP/FT 营收结构、核心客户名单及集中度、先进封装测试能力及技术壁垒、产能利用率和新产能投放——均&quot;需查财报/待验证&quot;</td><td><strong>新增数据质量提示</strong>：上述指标虽取自年报，但 KB 提醒须以财报原文交叉验证，避免引用口径偏差</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：伟测的核心风险（封测厂内部化、设备进口依赖）获 KB 支持且方向一致；但 KB 自身标注&quot;数据不足 + 多处待验证&quot;，意味着本报告对伟测的利好（国产算力测试爆发）同样缺乏 KB 深度佐证，需以 2026 中报/调研继续验证。</p>
+<h3>第八章：分析方法说明</h3>
+<h4>八条国产替代核心驱动因素定义</h4>
+<ol>
+<li><strong>地缘断供倒逼</strong>：国际技术封锁/供应链中断迫使下游寻求国产替代。</li>
+<li><strong>国家补贴兜底</strong>：政府补贴/产业基金保障企业生存和发展。</li>
+<li><strong>国产能力成熟</strong>：国内企业技术/产品达到或接近国际水平。</li>
+<li><strong>近水楼台</strong>：地理临近/服务响应优势获得本土客户。</li>
+<li><strong>政策合规底线</strong>：信创/安全合规要求必须采购国产产品。</li>
+<li><strong>出海能力</strong>：产品具备国际竞争力，成功进入海外市场。</li>
+<li><strong>巨头产能退出</strong>：国际巨头产能收缩/退出中国市场。</li>
+<li><strong>设备折旧归零</strong>：设备完成折旧，成本优势显著。</li>
+</ol>
+<h4>数据来源与交叉验证</h4>
+<ul>
+<li><strong>GitHub 知识库</strong> <code>Annettehub/ai-investing</code>：<code>02-kb/entities/688372-伟测科技.md</code>（实体档案，含产业链图谱与因素归属初判）、<code>02-kb/concepts/L2-芯片层/地缘政治/国产替代全景</code>（设备国产化率）、<code>02-kb/snapshot.md</code>（G1/S2 假设层）、<code>02-kb/entities/兆易创新.md</code>（提及 #560 伟测）。</li>
+<li><strong>公开信息</strong>：伟测科技 2025 年年报（营收 15.75 亿、归母净利 3.03 亿）、财联社机构调研纪要（2026-04-23，王沛回应）。</li>
+<li><strong>吴梓豪观点</strong>：知识星球 #560、#656 提及伟测/量测检测，但内容未深度展开，仅作弱证据引用。</li>
+<li><strong>交叉验证结论</strong>：公开年报数据与知识库实体档案的产业定位判断一致（独立第三方测试龙头、受益国产算力）；上游设备进口依赖在年报（前五供应商 64.65%）与知识库（量测检测国产化率 10–20%）相互印证。</li>
+</ul>
+<blockquote>注：本分析不包含投资建议，所有结论基于公开信息与知识库推断，部分供应商/客户占比为基于行业常识的合理推断，已在文中标注。</blockquote></div>
+        </article>
+        
+
+        <article class="view research-article" id="lianxun">
+          <div class="article-head">
+            <div>
+              <p class="eyebrow">688808.SH · 封测设备</p>
+              <h1>联讯仪器</h1>
+            </div>
+          </div>
+          <div class="markdown-body"><h2>（688808.SH）AI 国产赛道投研分析报告</h2>
+<blockquote>分析时间：2026-08-01 | 分析基准：2026 年 | 性质：纯研究分析，不含投资建议</blockquote>
+<blockquote>数据来源：GitHub 知识库 <code>Annettehub/ai-investing</code>（概念库、snapshot）、联讯仪器招股书及 2025 年报、腾讯新闻/搜狐财经 IPO 报道（2026-04）、Frost &amp; Sullivan 市场份额数据</blockquote>
+<hr>
+<h3>第一章：产业链位置拆解</h3>
+<p>联讯仪器是 <strong>高端测试仪器设备厂商</strong>，横跨&quot;半导体测试设备 + 电子测量仪器 + 测试部件&quot;三大类，处于半导体/光通信产业链的&quot;设备与仪器&quot;上游环节，是芯片与光器件出厂前的&quot;裁判员&quot;。</p>
+<pre><code>上游：核心元器件与部件
+    ├─ 精密源表/开关矩阵/高压源/脉冲源（自研核心板卡）
+    ├─ 超精密运动系统、高速信号处理芯片（部分自研）
+    └─ 光学/射频器件、结构件
+        ↓
+[ 测试设备/仪器制造 ] ——— 【联讯仪器】
+│   半导体测试设备（晶圆级老化、裸芯片分选测试）
+│   电子测量仪器（PXIe 源表、低漏电开关矩阵等）
+│   测试部件（探针卡、精密连接器等）
+        ↓
+[ 下游应用客户 ]
+    ├─ 光通信：光模块厂（中际旭创/新易盛/光迅）+ 国际器件厂（Lumentum/Coherent/Broadcom/住友）
+    ├─ 功率器件：比亚迪半导体/芯联集成/士兰微/ONSEMI/三安/长飞先进/株洲中车
+    └─ 集成电路：比亚迪半导体/燕东微/X-FAB
+        ↓
+终端：AI 数据中心光互联 / 新能源车功率半导体 / 工业与通信设备</code></pre>
+<p><strong>定位判定</strong>：平台型测试仪器设备商，以光通信测试为收入基本盘（占比近八成），正向半导体测试设备横向扩张。具备&quot;自主核心芯片+自研算法+模块化架构&quot;的平台级技术体系，是少数打破国际垄断（是德科技/泰克等）的本土高端仪器企业。</p>
+<hr>
+<h3>第二章：因素归属总结表</h3>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
+<thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>地缘断供倒逼</td><td>✅ 强相关</td><td>高端测试测量仪器长期被是德/泰克等美系垄断，自主可控刚需（创始人&quot;让中国高端测试设备不再受制于人&quot;）</td></tr>
+<tr><td>2</td><td>国家补贴兜底</td><td>⚠️ 弱相关</td><td>受益专精特新/大基金生态，但非直接大额补贴对象</td></tr>
+<tr><td>3</td><td>国产能力成熟</td><td>✅ 强相关</td><td>多数电子测量仪器打破国际垄断，部分核心指标达行业领先/接近领先</td></tr>
+<tr><td>4</td><td>近水楼台</td><td>✅ 强相关</td><td>深度绑定本土光模块与功率器件龙头，响应快、服务贴身</td></tr>
+<tr><td>5</td><td>政策合规底线</td><td>❌ 不相关</td><td>测试仪器无信创强制采购</td></tr>
+<tr><td>6</td><td>出海能力</td><td>⚠️ 弱相关</td><td>客户含 Lumentum/Coherent/Broadcom/住友等国际巨头（间接出海），自身品牌直接海外销售有限</td></tr>
+<tr><td>7</td><td>巨头产能退出</td><td>❌ 不相关</td><td>不适用</td></tr>
+<tr><td>8</td><td>设备折旧归零</td><td>❌ 不相关</td><td>设备商非重资产折旧模式</td></tr>
+</tbody></table></div>
+<hr>
+<h3>第三章：核心驱动因素分析</h3>
+<h4>因素 1：地缘断供倒逼（✅ 强相关）</h4>
+<p>高端测试测量仪器是半导体与光通信产业链的&quot;卡脖子&quot;环节之一，长期由是德科技（Keysight）、泰克（Tektronix）等美系巨头主导。联讯仪器创始人胡海洋曾任是德科技 15 年，深谙&quot;卡脖子之痛&quot;，创业的初心即&quot;让中国高端测试设备不再受制于人&quot;（来源：搜狐财经 2026-04）。</p>
+<p>知识库 <code>国产替代全景</code> 指出：半导体设备国产替代呈&quot;binding constraint 接力上移&quot;规律，量测/检测环节国产化率仅约 10–20%，是被列为最高瓶颈等级（★★★★☆）的环节之一。联讯所处的测试仪器，正是量测检测链条的关键组成，受地缘断供逻辑的强驱动。</p>
+<h4>因素 3：国产能力成熟（✅ 强相关）</h4>
+<p>据招股书与媒体报道，联讯仪器已掌握自主知识产权核心芯片、自研核心算法、硬件板卡、超精密运动系统等关键技术，形成以&quot;高速信号处理 + 微弱信号处理 + 超精密运动控制&quot;为核心的平台级技术体系。</p>
+<ul>
+<li><strong>市场地位量化</strong>：据 Frost &amp; Sullivan，2024 年中国光通信测试仪器市场海外企业主导（本土份额约 16%），联讯以 9.9% 份额位列第三、且为前五中唯一本土企业；在中国光电子器件测试设备市场份额排名第一。</li>
+<li><strong>产品突破</strong>：国内少数可提供 PXIe 插卡式源表、低漏电开关矩阵、高压源表、脉冲源多产品矩阵的厂商；国内少数同时实现晶圆级老化测试设备、裸芯片级分选测试设备产业化应用的厂商。</li>
+<li><strong>盈利验证</strong>：综合毛利率从 2022 年 43.61% 升至 2024 年 63.63%（2025Q1-3 为 59.14%），高于行业平均，反映产品技术壁垒与定价权。</li>
+</ul>
+<h4>因素 4：近水楼台（✅ 强相关）</h4>
+<p>联讯深度嵌入本土光通信与功率器件龙头供应链：</p>
+<ul>
+<li><strong>光通信</strong>：覆盖中际旭创、新易盛、光迅科技、海信集团、华工正源、赛丽科技，以及 Lumentum、Coherent、Broadcom、环球广电、日本住友、日本古河等国际客户。</li>
+<li><strong>功率器件</strong>：覆盖比亚迪半导体、芯联集成、士兰微、三安光电、芯聚能、长飞先进、株洲中车、瞻芯电子、ONSEMI、Power Master。</li>
+<li><strong>集成电路</strong>：比亚迪半导体、燕东微、士兰微、X-FAB 等。</li>
+</ul>
+<p>本土客户对交付周期、定制化、售后响应要求高，联讯的贴身服务能力构成对国际巨头的可替代优势。AI 算力驱动 800G/1.6T 光模块放量，直接拉动光通信测试设备需求，联讯作为本土测试龙头优先受益。</p>
+<hr>
+<h3>第四章：客户/供应商清单</h3>
+<h4>核心客户（按下游领域，来源：招股书/IPO 报道）</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:170px"><col style="width:340px"><col style="width:300px"><col style="width:300px"></colgroup>
+<thead><tr><th>领域</th><th>代表客户</th><th>关系</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>光通信测试</td><td>中际旭创、新易盛、光迅科技、海信、华工正源</td><td>设备供应</td><td>光通信领域收入占比近八成</td></tr>
+<tr><td>光通信（国际）</td><td>Lumentum、Coherent、Broadcom、日本住友、日本古河</td><td>设备供应</td><td>间接出海，进入全球光通信主链</td></tr>
+<tr><td>功率器件</td><td>比亚迪半导体、芯联集成、士兰微、三安光电、长飞先进、株洲中车、ONSEMI</td><td>设备供应</td><td>国产功率半导体扩产拉动</td></tr>
+<tr><td>集成电路</td><td>比亚迪半导体、燕东微、X-FAB</td><td>设备供应</td><td>半导体集成电路测试起步</td></tr>
+</tbody></table></div>
+<h4>核心供应商</h4>
+<div class="table-wrap"><table class="cols-2">
+<colgroup><col style="width:293px"><col style="width:260px"></colgroup>
+<thead><tr><th>供应内容</th><th>来源/依赖</th></tr></thead>
+<tbody>
+<tr><td>精密源表/开关矩阵/高压源等核心板卡</td><td><strong>自研为主</strong>（自主知识产权核心芯片+算法），这是其国产替代能力根本</td></tr>
+<tr><td>光学/射频器件、结构件、超精密运动部件</td><td>外采，部分进口</td></tr>
+</tbody></table></div>
+<p><strong>关键判断</strong>：联讯区别于多数本土设备厂的核心在于&quot;核心部件自研&quot;，使其在地缘断供下具备可持续交付能力，而非仅做系统集成。</p>
+<hr>
+<h3>第五章：2026 年具体受益场景</h3>
+<h4>受益传导链（箭头文本框）</h4>
+<pre><code>AI 算力驱动 800G/1.6T 光模块放量（中际旭创/新易盛等扩产）
+        ↓
+光通信测试设备需求增长（联讯光通信收入占比近八成）
+        ↓
+半导体测试设备横向扩张（晶圆级老化、裸芯片分选）+ 功率器件测试
+        ↓
+业绩已验证：2025 营收 11.94 亿（+51.41%）、扣非归母 1.70 亿（+28.54%）
+        ↓
+2026Q1 预告净利最高 1.25 亿（同比 +5 倍），国产替代加速</code></pre>
+<h4>受益确定性评估表</h4>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:220px"><col style="width:92px"><col style="width:426px"></colgroup>
+<thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>光通信测试设备放量</td><td>高</td><td>800G/1.6T 光模块扩产确定，联讯为本土测试龙头、客户全覆盖</td></tr>
+<tr><td>半导体测试设备突破</td><td>中高</td><td>晶圆级老化/分选设备已产业化，国产替代空间大</td></tr>
+<tr><td>功率器件测试增长</td><td>中高</td><td>新能源车功率半导体扩产（比亚迪/士兰微等）</td></tr>
+<tr><td>毛利率维持高位</td><td>中</td><td>核心部件自研支撑，但需警惕价格竞争</td></tr>
+</tbody></table></div>
+<h4>客户结构对冲验证</h4>
+<ul>
+<li><strong>多下游对冲</strong>：光通信（近八成）+ 功率 + IC 三轨，避免过度依赖单一赛道。</li>
+<li><strong>国内外对冲</strong>：国际客户（Lumentum/Broadcom/住友）提供高端验证与间接出海，本土客户提供放量基本盘；但国际客户若因地缘政治调整供应链，存在反向风险。</li>
+</ul>
+<hr>
+<h3>第六章：竞争对手分析</h3>
+<h4>竞争对手矩阵</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
+<thead><tr><th>维度</th><th>联讯仪器</th><th>是德科技(Keysight)</th><th>中科飞测</th><th>长川科技</th></tr></thead>
+<tbody>
+<tr><td>定位</td><td>光通信+半导体测试仪器平台</td><td>全球测试测量巨头</td><td>量测检测设备</td><td>半导体测试/分选设备</td></tr>
+<tr><td>光通信测试</td><td>中国第三/光电器件第一</td><td>全球领先</td><td>弱</td><td>弱</td></tr>
+<tr><td>核心部件自研</td><td>高（源表/算法/运动）</td><td>高</td><td>中</td><td>中</td></tr>
+<tr><td>本土化服务</td><td>强</td><td>弱</td><td>强</td><td>强</td></tr>
+</tbody></table></div>
+<h4>SWOT 对比矩阵表</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:170px"><col style="width:230px"></colgroup>
+<thead><tr><th>维度</th><th>联讯仪器</th><th>是德科技(Keysight)</th><th>中科飞测</th></tr></thead>
+<tbody>
+<tr><td>S(优势)</td><td>光通信测试本土第一、核心部件自研、客户全覆盖</td><td>全谱系领先、品牌强</td><td>量测检测国产替代、A 股纯标的</td></tr>
+<tr><td>W(劣势)</td><td>规模远小于国际巨头、直接海外品牌弱、KB 零实体覆盖（风险判定缺反方检验）</td><td>对华交付受地缘约束</td><td>光通信测试布局弱</td></tr>
+<tr><td>O(机会)</td><td>800G/1.6T 测试需求、半导体测试横向扩张</td><td>—</td><td>晶圆厂量测国产替代</td></tr>
+<tr><td>T(威胁)</td><td>国际巨头降价打压、国内同行追赶</td><td>地缘限制在华业务</td><td>行业价格竞争</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：联讯在&quot;光通信测试仪器&quot;这一细分赛道是本土稀缺龙头，凭借核心部件自研与全客户覆盖形成差异化；与是德科技相比规模仍小，但地缘断供逻辑下其国产替代弹性最大。</p>
+<p><strong>护城河</strong>：① 自主核心芯片+算法+超精密运动控制的平台级技术体系；② 光通信测试&quot;中国光电子器件测试设备第一&quot;的卡位；③ 深度嵌入全球光通信主链的客情与验证积累。</p>
+<hr>
+<h3>第七章：行业机会与挑战</h3>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:92px"><col style="width:258px"><col style="width:130px"><col style="width:300px"><col style="width:181px"></colgroup>
+<thead><tr><th>类型</th><th>事项</th><th>时间窗口</th><th>与公司的关联</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>🟢 机会</td><td>800G/1.6T 光模块扩产拉动测试设备</td><td>短期–中期</td><td>光通信收入占比近八成，直接受益</td><td>Frost &amp; Sullivan/报道</td></tr>
+<tr><td>🟢 机会</td><td>半导体测试设备国产替代</td><td>中期</td><td>晶圆级老化/分选设备产业化</td><td>招股书</td></tr>
+<tr><td>🟢 机会</td><td>新能源车功率半导体扩产</td><td>短期–中期</td><td>功率器件客户全覆盖</td><td>报道</td></tr>
+<tr><td>🔴 风险</td><td>国际巨头（是德/泰克）降价竞争</td><td>中期</td><td>毛利可能承压</td><td>推测</td></tr>
+<tr><td>🔴 风险</td><td>刚上市，估值与解禁波动</td><td>短期</td><td>IPO 2026-04，首日涨幅创纪录</td><td>报道</td></tr>
+<tr><td>🔴 风险</td><td>光通信资本开支周期波动</td><td>中期</td><td>收入近八成依赖光通信</td><td>年报结构</td></tr>
+</tbody></table></div>
+<hr>
+<h4>第七章补：核心风险的知识库双重检验</h4>
+<blockquote>双重检验方法：检索知识库全部实体与概念。</blockquote>
+<ul>
+<li><strong>数据覆盖缺口（元风险）</strong>：知识库 <code>Annettehub/ai-investing</code> <strong>无任何联讯仪器实体档案</strong>，仅<code>国产替代全景</code>概念在&quot;量测/检测&quot;环节以&quot;国产化率约 10–20%、瓶颈等级★★★★☆&quot;的笼统口径提及测试测量设备。即：本文对联讯的风险判定<strong>完全来自公开招股书/IPO 报道，缺乏 KB 深度观点交叉验证</strong>，结论置信度应相应下调。</li>
+<li><strong>&quot;设备商非终局控制点&quot;的延伸风险（KB 逻辑外推）</strong>：知识库<code>光互联大迁徙</code>明确指出——耦合/测试类设备&quot;属于必要环节，但不是最终控制点……最可能被替代、被二供化、甚至被内部化定制&quot;。该判断虽针对 CPO 耦合设备，但逻辑同样适用于联讯所处的&quot;测试仪器设备&quot;赛道：联讯当前凭核心部件自研获得卡位，但<strong>长期产业权力仍弱于系统定义者、核心芯片（DSP/高端源表）与标准联盟</strong>。若无法持续上探核心指标、被是德/泰克以降价或下一代标准压制，存在被&quot;二供化&quot;风险。</li>
+<li><strong>其他风险（公开信息，置信度高）</strong>：① 2026-04 刚 IPO，估值透支 + 解禁波动；② 收入近八成依赖光通信资本开支，若云厂 400G/800G 建设节奏放缓则业绩弹性反向；③ 国际巨头（是德科技/泰克）具备品牌+标准+全谱系优势，地缘缓和后客户回流风险。</li>
+</ul>
+<p><strong>结论</strong>：联讯的强相关驱动（地缘断供、国产能力成熟）成立，但 <strong>KB 零覆盖</strong>使风险侧缺乏反方检验；叠加&quot;设备商非控制点&quot;的产业结构风险，建议将&quot;核心部件自研→可持续壁垒&quot;视为需持续验证的假设，而非既成事实。</p>
+<h3>第八章：分析方法说明</h3>
+<h4>八条国产替代核心驱动因素定义</h4>
+<ol>
+<li><strong>地缘断供倒逼</strong>：国际技术封锁/供应链中断迫使下游寻求国产替代。</li>
+<li><strong>国家补贴兜底</strong>：政府补贴/产业基金保障企业生存和发展。</li>
+<li><strong>国产能力成熟</strong>：国内企业技术/产品达到或接近国际水平。</li>
+<li><strong>近水楼台</strong>：地理临近/服务响应优势获得本土客户。</li>
+<li><strong>政策合规底线</strong>：信创/安全合规要求必须采购国产产品。</li>
+<li><strong>出海能力</strong>：产品具备国际竞争力，成功进入海外市场。</li>
+<li><strong>巨头产能退出</strong>：国际巨头产能收缩/退出中国市场。</li>
+<li><strong>设备折旧归零</strong>：设备完成折旧，成本优势显著。</li>
+</ol>
+<h4>数据来源与交叉验证</h4>
+<ul>
+<li><strong>GitHub 知识库</strong> <code>Annettehub/ai-investing</code>：<code>02-kb/concepts/L2-芯片层/地缘政治/国产替代全景</code>（量测检测国产化率 10–20%、瓶颈等级）、<code>02-kb/snapshot.md</code>（S2 先进制造与国产替代假设）。</li>
+<li><strong>公开信息</strong>：联讯仪器招股书及 2025 年报（营收 11.94 亿、扣非归母 1.70 亿）、腾讯新闻/搜狐财经 IPO 报道（2026-04）、Frost &amp; Sullivan 份额数据。</li>
+<li><strong>交叉验证结论</strong>：知识库对&quot;量测检测是国产替代高瓶颈环节&quot;的判断，与联讯&quot;打破国际垄断、光电子器件测试设备份额第一&quot;的公开事实一致；AI 光模块扩产逻辑（知识库 <code>光互联大迁徙</code> 文章）与联讯光通信测试主业高度契合。</li>
+</ul>
+<blockquote>注：本分析不含投资建议。联讯仪器 2026-04 刚完成 IPO，部分数据为招股书/上市报道口径，投资者应关注上市后最新财报与解禁节奏。</blockquote></div>
+        </article>
+        
+
+        <article class="view research-article" id="unisplendour">
+          <div class="article-head">
+            <div>
+              <p class="eyebrow">000938.SZ · 芯片设计 / 服务器 / 交换机</p>
+              <h1>紫光股份</h1>
+            </div>
+          </div>
+          <div class="markdown-body"><h2>（000938.SZ）AI 国产赛道投研分析报告</h2>
+<blockquote>分析时间：2026-08-01 | 分析基准：2026 年 | 性质：纯研究分析，不含投资建议</blockquote>
+<blockquote>数据来源：GitHub 知识库 <code>Annettehub/ai-investing</code>（概念库 <code>国产算力替代</code>、snapshot）、紫光股份 2025 年年报（2026-04-14 发布）、中证/中国网/经济周刊报道、IDC 市场份额数据</blockquote>
+<hr>
+<h3>第一章：产业链位置拆解</h3>
+<p>紫光股份是 <strong>ICT 基础设施与解决方案商</strong>（原厂/品牌商），核心资产为控股子公司新华三（H3C）。处于&quot;算力×联接&quot;双主线，既是国产算力基础设施（AI 服务器、智算交换机、超节点）供应商，也是政企/运营商信创网络设备的核心供方。</p>
+<pre><code>上游：芯片与零部件
+    ├─ 通用/国产 CPU/GPU（Intel/AMD/鲲鹏/海光/昇腾等异构算力）
+    ├─ 交换芯片（自研+博通等）、光模块/光引擎（含自研 CPO/NPO）
+    └─ 存储颗粒、结构件、散热（液冷）
+        ↓
+[ ICT 产品与解决方案 ] ——— 【紫光股份 / 新华三】
+│   智能联接：交换机/路由器/WLAN/安全
+│   智慧计算：AI 服务器/超节点（UniPoD S80000）
+│   智慧存储/云与智能/主动安全/确定性网络
+        ↓
+[ 客户 ]（政企/运营商/互联网/金融/医疗/教育）
+    ├─ 国内：运营商、党政机关、国企、行业大客户
+    ├─ 海外：亚太/中东/非洲等渠道伙伴
+        ↓
+终端应用：智算中心 / 政企数字化转型 / 运营商网络 / 行业 AI 应用</code></pre>
+<p><strong>定位判定</strong>：品牌商+方案商，非芯片原厂。其国产替代价值在于&quot;系统级整合+信创合规+国产异构算力适配&quot;，是国产算力基础设施的&quot;总装厂&quot;与&quot;网络底座&quot;。</p>
+<hr>
+<h3>第二章：因素归属总结表</h3>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
+<thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>地缘断供倒逼</td><td>✅ 强相关</td><td>美国对高端 AI 芯片/设备限制，倒逼国产算力基础设施（服务器/交换机/超节点）自主建设</td></tr>
+<tr><td>2</td><td>国家补贴兜底</td><td>⚠️ 弱相关</td><td>智算中心/信创为国家投资方向，但上市公司直接补贴有限</td></tr>
+<tr><td>3</td><td>国产能力成熟</td><td>✅ 强相关</td><td>新华三交换机/WLAN 国内第一/第二；800G CPO 硅光交换机量产；国产 GPU 异构超节点落地</td></tr>
+<tr><td>4</td><td>近水楼台</td><td>✅ 强相关</td><td>政企/运营商本土渠道与客情优势；图灵小镇算力运营模式</td></tr>
+<tr><td>5</td><td>政策合规底线</td><td>✅ 强相关</td><td>信创合规要求党政军/国企采购国产设备，是核心驱动</td></tr>
+<tr><td>6</td><td>出海能力</td><td>⚠️ 弱相关</td><td>海外收入 +58.45% 但基数相对小，国际化推进中</td></tr>
+<tr><td>7</td><td>巨头产能退出</td><td>❌ 不相关</td><td>与思科/华为竞争，非巨头退出受益</td></tr>
+<tr><td>8</td><td>设备折旧归零</td><td>❌ 不相关</td><td>不适用</td></tr>
+</tbody></table></div>
+<hr>
+<h3>第三章：核心驱动因素分析</h3>
+<h4>因素 1：地缘断供倒逼（✅ 强相关）</h4>
+<p>知识库 <code>国产算力替代</code> 概念指出：美国对华 AI 芯片出口管制（H20 等特供版受限）使合规渠道需&quot;1:4 国产配套&quot;，直接拉动国产算力基础设施需求。紫光股份的新华三作为国产 AI 服务器、智算交换机、超节点供应商，处于该替代链条的&quot;交付端&quot;。</p>
+<p>2025 年被定义为&quot;国产算力起步年&quot;（伟测科技年报口径亦印证），三大运营商与互联网大厂资本开支向国产算力倾斜，新华三精准卡位智算建设核心环节，国内政企业务收入 2025 年同比 +48.84%。</p>
+<h4>因素 3：国产能力成熟（✅ 强相关）</h4>
+<ul>
+<li><strong>网络产品市场地位（IDC）</strong>：2025 年中国企业网交换机份额 36.1%（第一）、以太网交换机 34.5%（第二）、数据中心交换机 33.1%（第二）、企业网路由器 31.5%（第二）、企业级 WLAN 27.9%（连续十七年第一）。</li>
+<li><strong>AI 基础设施突破</strong>：发布 UniPoD S80000 超节点（32–1024 卡，匹配国内外多种 GPU 异构算力，向万卡演进）；800G 智算交换机、高密盒式交换机持续领跑；<strong>基于自研 CPO/NPO 光引擎技术的产品具备商业化交付能力，800G CPO 硅光交换机已实现量产商用</strong>（与知识库 <code>光互联大迁徙</code> 所述 CPO 量产节奏吻合）。</li>
+<li><strong>研发投入</strong>：2025 年研发投入 49.53 亿元，专利申请累计超 16000 件（90%+ 发明专利）。</li>
+</ul>
+<h4>因素 4：近水楼台（✅ 强相关）</h4>
+<p>新华三在国内政企/运营商市场深耕多年，渠道与客情壁垒深厚。2025 年联合运营商累计建成 48 个中大型智算中心，服务多家企业亿级智算项目；商业模式创新&quot;图灵小镇&quot;已达 8 个，集算力运营/产业孵化/技术赋能/应用落地于一体，形成&quot;贴近客户+运营粘性&quot;的本土优势。海外收入 2025 年 +58.45%，本地化一站式服务能力提升。</p>
+<h4>因素 5：政策合规底线（✅ 强相关）</h4>
+<p>信创（信息技术应用创新）要求党政军、国企及关键行业采购安全可控的国产设备，是紫光股份最硬的政策驱动。在&quot;AI for ALL&quot;战略下，公司将大模型与行业场景融合，在政务、金融、医疗、教育等行业实现 AI 解决方案落地，合规底线使其在政府与国企市场具备天然护城河。</p>
+<blockquote>吴梓豪观点呼应（来源：半导体大佬的会议室 <code>国产算力替代</code> 概念）：国产算力替代处于&quot;政策强制+需求拉动&quot;双重窗口期，新华三是国产算力基础设施核心交付方，与公开年报的政企业务 +48.84% 相互印证。</blockquote>
+<hr>
+<h3>第四章：客户/供应商清单</h3>
+<h4>核心客户</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:170px"><col style="width:258px"><col style="width:300px"><col style="width:300px"><col style="width:150px"></colgroup>
+<thead><tr><th>客户群</th><th>代表</th><th>关系</th><th>收入贡献/说明</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>运营商</td><td>中国移动/电信/联通</td><td>设备+解决方案</td><td>智算中心共建（累计 48 个）</td><td>年报/报道</td></tr>
+<tr><td>政企/国企</td><td>各级政府、国企、金融、医疗、教育</td><td>设备+方案</td><td>政企业务 658.46 亿（+48.84%）</td><td>年报</td></tr>
+<tr><td>互联网/云厂</td><td>国内大厂智算项目</td><td>AI 服务器/交换机</td><td>亿级智算项目</td><td>年报</td></tr>
+<tr><td>海外</td><td>亚太/中东/非洲渠道</td><td>ICT 设备</td><td>海外收入 46.20 亿（+58.45%）</td><td>年报</td></tr>
+</tbody></table></div>
+<h4>核心供应商（上游）</h4>
+<div class="table-wrap"><table class="cols-2">
+<colgroup><col style="width:340px"><col style="width:260px"></colgroup>
+<thead><tr><th>供应内容</th><th>来源/依赖</th></tr></thead>
+<tbody>
+<tr><td>通用/国产 CPU、GPU（Intel/AMD/海光/昇腾/鲲鹏等异构）</td><td>多元供应，国产 GPU 占比随政策提升</td></tr>
+<tr><td>交换芯片、光模块/光引擎</td><td>自研 CPO/NPO 光引擎 + 外采（博通等）</td></tr>
+<tr><td>存储、结构件、液冷</td><td>外采</td></tr>
+</tbody></table></div>
+<p><strong>关键判断</strong>：紫光股份作为系统整合商，上游芯片（尤其高端 GPU）仍部分依赖海外，是地缘断供下的双面性——既受益于国产替代需求，又受高端算力供给约束。其&quot;异构算力调度&quot;能力（匹配国内外多种 GPU）正是应对该约束的策略。</p>
+<hr>
+<h3>第五章：2026 年具体受益场景</h3>
+<h4>受益传导链（箭头文本框）</h4>
+<pre><code>美国高端 AI 芯片限制 + 信创合规要求
+        ↓
+政企/运营商国产算力基础设施刚需（服务器/交换机/超节点）
+        ↓
+新华三&quot;算力×联接&quot;全栈交付（UniPoD 超节点 + 800G CPO 交换机）
+        ↓
+2025 已验证：营收 967.48 亿（+22.43%）、新华三营收 759.81 亿（+37.96%）
+        ↓
+2026 延续：政企 +48.84%、海外 +58.45%，智算订单高增</code></pre>
+<h4>受益确定性评估表</h4>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:223px"><col style="width:92px"><col style="width:300px"></colgroup>
+<thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>信创/政企国产设备采购</td><td>高</td><td>政策合规底线，党政军/国企刚需</td></tr>
+<tr><td>智算中心建设（运营商/大厂）</td><td>高</td><td>2025 政企业务 +48.84%，48 个智算中心</td></tr>
+<tr><td>800G/CPO 交换机放量</td><td>中高</td><td>自研 CPO 量产商用，匹配算力网络升级</td></tr>
+<tr><td>海外业务增长</td><td>中</td><td>2025 +58.45% 但基数相对小</td></tr>
+</tbody></table></div>
+<h4>客户结构对冲验证</h4>
+<ul>
+<li><strong>多市场对冲</strong>：国内政企+运营商+互联网+海外四象限，降低单一政策/周期风险。</li>
+<li><strong>产品矩阵对冲</strong>：网络（交换机/WLAN 第一）+ 计算（AI 服务器）+ 存储 + 安全 + 云，单品类波动被组合平滑。</li>
+<li><strong>风险点</strong>：高端 GPU 供给若持续受限，将制约 AI 服务器交付上限（需关注国产 GPU 产能，参见知识库 G1/S2 假设）。</li>
+</ul>
+<hr>
+<h3>第六章：竞争对手分析</h3>
+<h4>竞争对手矩阵</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
+<thead><tr><th>维度</th><th>紫光股份(新华三)</th><th>华为(数通)</th><th>锐捷网络</th><th>浪潮信息</th></tr></thead>
+<tbody>
+<tr><td>定位</td><td>ICT 全栈方案商</td><td>全栈+自研芯片</td><td>网络设备商</td><td>服务器厂商</td></tr>
+<tr><td>交换机份额</td><td>企业网第一/数据中心第二</td><td>领先</td><td>强</td><td>弱</td></tr>
+<tr><td>AI 服务器</td><td>有（超节点）</td><td>有（昇腾）</td><td>弱</td><td>强</td></tr>
+<tr><td>信创优势</td><td>强</td><td>强</td><td>中</td><td>中</td></tr>
+</tbody></table></div>
+<h4>SWOT 对比矩阵表</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:170px"><col style="width:170px"></colgroup>
+<thead><tr><th>维度</th><th>紫光股份</th><th>华为数通</th><th>锐捷网络</th></tr></thead>
+<tbody>
+<tr><td>S(优势)</td><td>交换机第一、全栈、图灵小镇模式、CPO 量产</td><td>自研芯片、生态强</td><td>性价比、渠道下沉</td></tr>
+<tr><td>W(劣势)</td><td>高端 GPU 依赖、净利率偏低、AI 服务器非绝对领先（KB 纪要列于浪潮/华为之后）</td><td>受制裁限制海外</td><td>高端算力弱</td></tr>
+<tr><td>O(机会)</td><td>信创+智算双轮、海外拓展</td><td>国产算力全栈</td><td>政企数字化</td></tr>
+<tr><td>T(威胁)</td><td>华为/浪潮领先+份额追赶、芯片供给约束、重资产折旧侵蚀利润</td><td>地缘限制</td><td>价格战</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：紫光股份在&quot;算力×联接&quot;全栈与信创合规上具备稀缺性，是与华为并立的国产 ICT 双雄之一；相比浪潮偏服务器、锐捷偏网络，其矩阵最完整，但高端算力供给是共同约束。</p>
+<p><strong>护城河</strong>：① 交换机/WLAN 市场第一的份额壁垒；② 政企/运营商深度客情与图灵小镇运营粘性；③ 自研 CPO/NPO 光引擎与异构算力调度能力；④ 信创合规先发卡位。</p>
+<hr>
+<h3>第七章：行业机会与挑战</h3>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:92px"><col style="width:349px"><col style="width:130px"><col style="width:300px"><col style="width:150px"></colgroup>
+<thead><tr><th>类型</th><th>事项</th><th>时间窗口</th><th>与公司的关联</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>🟢 机会</td><td>信创深化+国产算力建设</td><td>短期–中期</td><td>政企/运营商刚需，核心驱动</td><td>年报/知识库</td></tr>
+<tr><td>🟢 机会</td><td>800G/1.6T 算力网络升级</td><td>中期</td><td>CPO 交换机量产领先</td><td>年报</td></tr>
+<tr><td>🟢 机会</td><td>海外业务拓展</td><td>中期</td><td>2025 +58.45%</td><td>年报</td></tr>
+<tr><td>🔴 风险</td><td>高端 GPU 供给受限</td><td>短期–中期</td><td>制约 AI 服务器交付</td><td>知识库 S2</td></tr>
+<tr><td>🔴 风险</td><td>华为/浪潮等激烈竞争</td><td>持续</td><td>份额与价格压力</td><td>推测</td></tr>
+<tr><td>🔴 风险</td><td>净利率偏低（归母 16.86 亿/营收 967 亿≈1.7%）</td><td>持续</td><td>规模大但盈利质量待提升</td><td>年报</td></tr>
+</tbody></table></div>
+<hr>
+<h4>第七章补：核心风险的知识库双重检验</h4>
+<blockquote>双重检验方法：知识库<code>Annettehub/ai-investing</code><strong>无紫光股份/新华三实体档案</strong>；可锚定的 KB 材料为<code>国产算力替代</code>概念与<code>全球AI算力产业链中外对标纪要</code>。</blockquote>
+<ul>
+<li><strong>数据覆盖缺口（元风险）</strong>：KB 无紫光实体，本文风险判定主要依赖 2025 年报+IDC 份额+公开报道，KB 仅提供&quot;制裁 1:4 国产配套&quot;&quot;信创合规&quot;等方向性支撑，<strong>缺乏针对紫光/新华三的 KB 深度反方观点</strong>。</li>
+<li><strong>AI 服务器地位弱于原写（KB 修正）</strong>：<code>全球AI算力产业链中外对标纪要</code>国内格局明确为&quot;华为系占比约 30%、浪潮信息占比超 30%、华勤约 10%，<strong>曙光、新华三亦具备相关能力</strong>&quot;。即新华三在 AI 服务器出货口径上<strong>并非领跑者</strong>，而是与曙光并列的&quot;具备能力者&quot;；原报告&quot;与华为并立双雄&quot;措辞偏高，华为/浪潮竞争风险应上调为&quot;份额追赶压力&quot;而非单纯价格战。</li>
+<li><strong>重资产折旧侵蚀利润（KB 原文风险）</strong>：同一纪要预警&quot;景气度下行期的<strong>巨额折旧将侵蚀利润</strong>&quot;。紫光股份作为 ICT 重资产整合商（服务器/交换机产能），在算力 capex 周期性回落时面临折旧压力，与原&quot;净利率偏低（≈1.7%）&quot;风险形成叠加。</li>
+<li><strong>高端 GPU 供给双面性（方向确认）</strong>：<code>国产算力替代</code>的&quot;1:4 国产配套&quot;逻辑在利好紫光国产算力交付的同时，也反向确认其<strong>受高端 GPU（含特供版）供给约束</strong>——这是真实的供给侧风险，非单纯推测。</li>
+</ul>
+<p><strong>结论</strong>：紫光的核心风险（高端 GPU 依赖、华为/浪潮竞争、净利率低）在 KB 中获得方向性支撑，且 KB 进一步提示了&quot;新华三 AI 服务器非绝对领先&quot;与&quot;重资产折旧&quot;两个被原报告低估的维度；但 KB 零实体覆盖意味着定量风险仍需以最新财报/份额数据持续验证。</p>
+<h3>第八章：分析方法说明</h3>
+<h4>八条国产替代核心驱动因素定义</h4>
+<ol>
+<li><strong>地缘断供倒逼</strong>：国际技术封锁/供应链中断迫使下游寻求国产替代。</li>
+<li><strong>国家补贴兜底</strong>：政府补贴/产业基金保障企业生存和发展。</li>
+<li><strong>国产能力成熟</strong>：国内企业技术/产品达到或接近国际水平。</li>
+<li><strong>近水楼台</strong>：地理临近/服务响应优势获得本土客户。</li>
+<li><strong>政策合规底线</strong>：信创/安全合规要求必须采购国产产品。</li>
+<li><strong>出海能力</strong>：产品具备国际竞争力，成功进入海外市场。</li>
+<li><strong>巨头产能退出</strong>：国际巨头产能收缩/退出中国市场。</li>
+<li><strong>设备折旧归零</strong>：设备完成折旧，成本优势显著。</li>
+</ol>
+<h4>数据来源与交叉验证</h4>
+<ul>
+<li><strong>GitHub 知识库</strong> <code>Annettehub/ai-investing</code>：<code>02-kb/concepts/L2-芯片层/地缘政治/国产算力替代</code>（制裁 1:4 国产配套、国产算力梯队）、<code>02-kb/snapshot.md</code>（G1 AI CAPEX、S2 先进制造）、<code>02-kb/entities/688372-伟测科技.md</code>（提及紫光为客户）。</li>
+<li><strong>公开信息</strong>：紫光股份 2025 年报（营收 967.48 亿、归母 16.86 亿、新华三 759.81 亿）、IDC 份额、中证/中国网/经济周刊报道（2026-04）。</li>
+<li><strong>交叉验证结论</strong>：知识库&quot;国产算力替代处于政策强制+需求拉动窗口期&quot;判断，与紫光股份政企业务 +48.84%、智算中心 48 个的公开数据一致；自研 CPO 量产与知识库 <code>光互联大迁徙</code> 所述 CPO 2026–2029 进入高端交换机主方案节奏吻合。</li>
+</ul>
+<blockquote>注：本分析不含投资建议。紫光股份规模大但净利率偏低，且高端 GPU 供给受地缘约束，需持续跟踪国产算力产能（知识库 G1/S2 假设）兑现节奏。</blockquote></div>
+        </article>
+        
+
+        <article class="view research-article" id="eoptolink">
+          <div class="article-head">
+            <div>
+              <p class="eyebrow">300548.SZ · 光器件</p>
+              <h1>长芯博创</h1>
+            </div>
+          </div>
+          <div class="markdown-body"><h2>（300548.SZ）AI 国产赛道投研分析报告</h2>
+<blockquote>分析时间：2026-08-01 | 分析基准：2026 年 | 性质：纯研究分析，不含投资建议</blockquote>
+<blockquote>数据来源：GitHub 知识库 <code>Annettehub/ai-investing</code>（吴梓豪 <code>光互联大迁徙</code> 长文、概念库）、长芯博创 2025 年报、长飞光纤 2025 年报、腾讯/企查查/亿渡报道（2025-2026）</blockquote>
+<hr>
+<h3>第一章：产业链位置拆解</h3>
+<p>长芯博创（原&quot;博创科技&quot;，2025 年 7 月更名）是 <strong>光通信模块与有源光缆（AOC）厂商</strong>，处于光互联产业链的&quot;模块整合&quot;环节，由长飞光纤（601869）控股，并与长芯盛（有源光缆）协同。其本质是高速光电混合系统的&quot;高级系统整合商&quot;。</p>
+<pre><code>上游：光电器件与材料
+    ├─ 激光器（DFB/EML/VCSEL）、探测器（PIN/APD）
+    ├─ 硅光芯片、DSP/Driver/TIA 芯片
+    ├─ 光纤/预制棒（长飞光纤——控股股东上游协同）
+    └─ 精密光学（透镜/隔离器/FAU）、连接器
+        ↓
+[ 光模块 / 有源光缆(AOC) 整合 ] ——— 【长芯博创】
+│   产品：400G/800G AEC、多模 400G SR4、800G SR8、电信/数据通信模块
+│   体系：&quot;1+3&quot;全球协同（印尼 + 嘉兴/成都/汉川）
+        ↓
+[ 下游客户 ]
+    ├─ 数据通信/云计算（北美云厂供应链、国内数据中心）
+    ├─ 电信（中兴等设备商）
+    └─ 消费及工业互联
+        ↓
+终端应用：AI 数据中心光互联 / 电信承载网 / 工业互联</code></pre>
+<p><strong>定位判定</strong>：模块整合商（非系统架构定义者、非 DSP/SerDes 控制者、非硅光 Foundry）。在吴梓豪的&quot;控制点分层&quot;框架中，属于&quot;必要但可替代的工程层&quot;，而非产业终局主导权层。</p>
+<hr>
+<h3>第二章：因素归属总结表</h3>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
+<thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>地缘断供倒逼</td><td>⚠️ 弱相关</td><td>AI 光互联需求受美国限制间接拉动国产光模块，但公司市场化竞争为主</td></tr>
+<tr><td>2</td><td>国家补贴兜底</td><td>❌ 不相关</td><td>光模块非补贴重点</td></tr>
+<tr><td>3</td><td>国产能力成熟</td><td>✅ 强相关</td><td>800G AEC/SR8 批量供货，国产光模块全球竞争力（中际旭创/新易盛领跑，博创追赶）</td></tr>
+<tr><td>4</td><td>近水楼台</td><td>⚠️ 弱相关</td><td>长飞光纤产业链协同（光纤/预制棒上游），国内数据中心客户配套</td></tr>
+<tr><td>5</td><td>政策合规底线</td><td>❌ 不相关</td><td>光模块无信创强制</td></tr>
+<tr><td>6</td><td>出海能力</td><td>✅ 强相关</td><td>境外收入占比 59.44%，深度嵌入北美云厂供应链</td></tr>
+<tr><td>7</td><td>巨头产能退出</td><td>❌ 不相关</td><td>不适用</td></tr>
+<tr><td>8</td><td>设备折旧归零</td><td>❌ 不相关</td><td>不适用</td></tr>
+</tbody></table></div>
+<hr>
+<h3>第三章：核心驱动因素分析</h3>
+<h4>因素 3：国产能力成熟（✅ 强相关）</h4>
+<p>长芯博创已构建&quot;印尼 + 嘉兴、成都、汉川&quot;的&quot;1+3&quot;全球协同生产体系，400G/800G AEC 系列、多模 400G SR4、800G SR8 等高速产品具备批量供货能力（来源：长飞光纤 2025 年报）。2025 年长飞光纤&quot;光互联组件&quot;分部收入 31.44 亿元（同比 +48.58%），毛利率 39.73%（+10.45pct），主要由长芯博创贡献，验证其产品放量能力。</p>
+<p>2025 年长芯博创自身营收 25.33 亿元（较 2024 年 17.47 亿显著增长），归母净利润 3.35 亿元（2024 年仅 7207 万，大幅扭亏/增长）。研发投入占营收比例超 5%。产品结构中，数据通信/消费及工业互联市场收入 20.39 亿元（占 80.50%），电信市场 4.81 亿元（占 18.98%），显示 AI 数据中心是核心增长引擎。</p>
+<h4>因素 6：出海能力（✅ 强相关）</h4>
+<p>长芯博创境外收入 15.05 亿元（占 59.44%），是五家公司中出海能力最强的。其通过长飞光纤全球 6 国 8 大生产基地的本地化运营，以及 AOC/光模块进入北美云厂供应链，实现深度出海。这与知识库 <code>光互联大迁徙</code> 的判断一致：中国企业在&quot;光模块、部分无源器件、部分连接与配套材料&quot;已有不错位置，模块整合与细分器件是中国当前最具全球竞争力的环节之一。</p>
+<h4>⚠️ 关键反方视角：CPO 价值链迁移风险（吴梓豪核心判断）</h4>
+<blockquote>吴梓豪（来源：半导体大佬的会议室《光互联大迁徙》，2026-04-17）：&quot;真正长期掌握定价权与节奏权的，不会是单一模组商，也不会是单一设备商，而是系统架构定义者、DSP/SerDes 控制者、硅光与先进封装制造平台，以及少数能卡住光源、材料与关键接口标准的公司。&quot;</blockquote>
+<blockquote>同一来源：&quot;到了 CPO/OIO 时代，整个产业的最终集成从中国主导的光模块变成了晶圆厂……光模块厂商在 6.4T 的完全体 CPO 面世之际，几乎没有太大参与权……12.8T 是 CPO 坐实主体地位的节点……光模块厂家明确失去市场增量，业绩下滑。市场对它们的估值逻辑应更偏制造与交付能力，而不是掌握产业终局。&quot;</blockquote>
+<p><strong>对本公司的含义</strong>：长芯博创当前的高增长建立在&quot;可插拔/LPO 光模块 + AEC 有源光缆&quot;的窗口期。吴梓豪的判断是——2026–2029 年 CPO 在高端交换机侧开始具备不可替代性，2028–2032 年 6.4T/12.8T 推进，光模块厂将逐步失去最高端市场、增速放缓。<strong>长芯博创的 2025 高景气需放在&quot;技术路线代际切换&quot;的时间轴上理解</strong>：短期（1–3 年）受益明确，中长期需观察其能否从纯模块整合向&quot;硅光/先进封装/关键器件&quot;上移，否则将面临估值逻辑重估。</p>
+<hr>
+<h3>第四章：客户/供应商清单</h3>
+<h4>核心客户（按市场结构，来源：年报）</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:170px"><col style="width:335px"><col style="width:300px"><col style="width:300px"><col style="width:209px"></colgroup>
+<thead><tr><th>客户市场</th><th>代表</th><th>关系</th><th>收入占比/说明</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>数据通信/云计算</td><td>北美云厂供应链（含 AEC 客户）、国内数据中心</td><td>光模块/AOC</td><td>数据通信+消费工业 20.39 亿（80.50%）</td><td>2025 年报</td></tr>
+<tr><td>电信</td><td>中兴通讯等设备商</td><td>电信模块</td><td>电信市场 4.81 亿（18.98%）</td><td>年报/博创获中兴绿色创新奖</td></tr>
+<tr><td>海外</td><td>境外客户（占 59.44%）</td><td>直接/间接出口</td><td>境外 15.05 亿</td><td>年报</td></tr>
+</tbody></table></div>
+<h4>核心供应商（上游）</h4>
+<div class="table-wrap"><table class="cols-2">
+<colgroup><col style="width:188px"><col style="width:260px"></colgroup>
+<thead><tr><th>供应内容</th><th>来源/协同</th></tr></thead>
+<tbody>
+<tr><td>光纤/预制棒、特种光纤</td><td><strong>长飞光纤（控股股东）</strong>——上游材料协同，成本与供应保障</td></tr>
+<tr><td>激光器/探测器/DSP 芯片</td><td>外采（部分高端依赖海外，如 EML/CW laser 国产替代进行中）</td></tr>
+<tr><td>硅光芯片、精密光学</td><td>外采 + 自研探索</td></tr>
+</tbody></table></div>
+<p><strong>关键判断</strong>：长飞光纤控股带来&quot;光纤—预制棒—光互联组件&quot;垂直协同，是长芯博创区别于纯模块厂的重要护城河；但高端激光器/DSP 仍部分依赖海外，是地缘约束点。</p>
+<hr>
+<h3>第五章：2026 年具体受益场景</h3>
+<h4>受益传导链（箭头文本框）</h4>
+<pre><code>AI 数据中心 800G/1.6T 光模块 + AEC 有源光缆需求爆发
+        ↓
+长芯博创 400G/800G AEC、SR 系列批量供货 + 长飞协同降本
+        ↓
+2025 已验证：营收 25.33 亿（较 17.47 亿高增）、归母 3.35 亿
+        ↓
+2026 延续：北美云厂供应链 + 国内智算中心双轮
+        ↓
+但需警惕：CPO 在高端交换机侧 2026–2029 起量，模块厂增速中长期承压</code></pre>
+<h4>受益确定性评估表</h4>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:223px"><col style="width:104px"><col style="width:300px"></colgroup>
+<thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>800G/AEC 光模块放量（短期）</td><td>高</td><td>长飞光互联组件 +48.58%，博创批量供货</td></tr>
+<tr><td>北美云厂供应链出海</td><td>高</td><td>境外收入 59.44%，深度嵌入</td></tr>
+<tr><td>国内智算中心配套</td><td>中高</td><td>数据通信占 80.50%</td></tr>
+<tr><td>中长期 CPO 冲击</td><td>中（风险）</td><td>吴梓豪：高端市场 2028+ 向晶圆厂迁移</td></tr>
+</tbody></table></div>
+<h4>客户结构对冲验证</h4>
+<ul>
+<li><strong>地域对冲</strong>：境外 59% + 境内 41%，全球布局分散单一区域风险。</li>
+<li><strong>应用对冲</strong>：数据通信(80.5%) + 电信(19%)，避免纯电信周期波动。</li>
+<li><strong>技术路线对冲</strong>：AEC（有源铜缆光缆）/多模 SR/电信多品类，降低单一技术路线风险；但 CPO 代际冲击属系统性，难以靠品类完全对冲。</li>
+</ul>
+<hr>
+<h3>第六章：竞争对手分析</h3>
+<h4>竞争对手矩阵</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:223px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
+<thead><tr><th>维度</th><th>长芯博创</th><th>中际旭创</th><th>新易盛</th><th>光迅科技</th></tr></thead>
+<tbody>
+<tr><td>定位</td><td>光模块/AOC 整合商（长飞系）</td><td>全球光模块龙头</td><td>高速光模块龙头</td><td>光通信全链（器件+模块）</td></tr>
+<tr><td>全球竞争力</td><td>中（追赶）</td><td>领先</td><td>领先</td><td>中强</td></tr>
+<tr><td>上游协同</td><td>强（长飞光纤）</td><td>弱</td><td>弱</td><td>中（自研器件）</td></tr>
+<tr><td>出海占比</td><td>59.44%</td><td>高</td><td>高</td><td>中</td></tr>
+</tbody></table></div>
+<h4>SWOT 对比矩阵表</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:340px"><col style="width:223px"><col style="width:188px"></colgroup>
+<thead><tr><th>维度</th><th>长芯博创</th><th>中际旭创</th><th>新易盛</th></tr></thead>
+<tbody>
+<tr><td>S(优势)</td><td>长飞垂直协同、AEC 布局、出海 59%</td><td>规模/技术全球领先、客户顶级</td><td>高速模块性价比、弹性高</td></tr>
+<tr><td>W(劣势)</td><td>规模与技术较龙头有差距、高端激光器/DSP 结构性依赖（KB：未被列入模块整合核心名单，定位偏外围）</td><td>估值高、CPO 转型压力</td><td>单一品类、CPO 压力</td></tr>
+<tr><td>O(机会)</td><td>800G/AEC 放量、长飞全球化</td><td>1.6T/CPO 领先卡位</td><td>1.6T 突破</td></tr>
+<tr><td>T(威胁)</td><td>CPO 代际冲击、龙头挤压</td><td>CPO 价值链上移风险</td><td>同左</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：长芯博创在 A 股光模块阵营中属&quot;有特色的中坚&quot;——长飞上游协同 + AEC 差异化 + 高出海占比，但规模与技术落后于中际旭创/新易盛。其最大变量是 CPO 时代能否上移至硅光/封装层，否则将落入吴梓豪所言&quot;制造与交付能力&quot;估值逻辑。</p>
+<p><strong>护城河</strong>：① 长飞光纤垂直一体化（光纤/预制棒→光互联组件）；② AEC 有源光缆细分卡位；③ 全球&quot;1+3&quot;产能与 59% 出海客户粘性；④ 成都蓉博通信园区（5 万㎡）扩产能力。</p>
+<hr>
+<h3>第七章：行业机会与挑战</h3>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:92px"><col style="width:223px"><col style="width:130px"><col style="width:300px"><col style="width:167px"></colgroup>
+<thead><tr><th>类型</th><th>事项</th><th>时间窗口</th><th>与公司的关联</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>🟢 机会</td><td>800G/1.6T 光模块 + AEC 需求</td><td>短期–中期</td><td>核心增长引擎，已批量供货</td><td>长飞年报</td></tr>
+<tr><td>🟢 机会</td><td>AI 数据中心建设（国内外）</td><td>短期–中期</td><td>数据通信占 80.5%</td><td>年报</td></tr>
+<tr><td>🟢 机会</td><td>长飞全球化协同</td><td>中期</td><td>海外基地本地化</td><td>长飞年报</td></tr>
+<tr><td>🔴 风险</td><td>CPO/OIO 价值链上移</td><td>中期–长期</td><td>模块厂估值逻辑重估（吴梓豪）</td><td>知识库</td></tr>
+<tr><td>🔴 风险</td><td>高端激光器/DSP 进口依赖</td><td>中期</td><td>地缘约束点</td><td>知识库 <code>光互联大迁徙</code></td></tr>
+<tr><td>🔴 风险</td><td>龙头（旭创/新易盛）挤压</td><td>持续</td><td>规模与技术差距</td><td>推测</td></tr>
+</tbody></table></div>
+<hr>
+<h4>第七章补：核心风险的知识库双重检验</h4>
+<blockquote>双重检验方法：以知识库<code>光互联大迁徙</code>与<code>从 EML 到 CW/ELS 光源产业链</code>两篇吴梓豪长文为主锚，复核原报告风险判定。</blockquote>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:300px"><col style="width:170px"><col style="width:560px"><col style="width:340px"></colgroup>
+<thead><tr><th>风险点</th><th>本文初判</th><th>知识库复核结论</th><th>处置</th></tr></thead>
+<tbody>
+<tr><td>CPO 价值链上移→模块厂估值重估</td><td>T（中-长期）</td><td><code>光互联大迁徙</code>明确：&quot;光模块厂商在 6.4T 完全体 CPO 面世之际几乎无参与权；12.8T(2030+)明确失去市场增量、业绩下滑；估值逻辑应偏制造与交付能力&quot;。另补：&quot;3.2T NPO 给光模块厂续命，2028 年 6.4T 起增速减缓&quot;</td><td>维持并<strong>细化时间轴</strong>：短期(1-3 年)受益→2028 起增速放缓→2030+ 失增量</td></tr>
+<tr><td>高端激光器/DSP 进口依赖</td><td>T（中期）</td><td>两文均确认中国&quot;在高端 DSP、顶级 EML/CW laser、最先进硅光平台、最核心先进封装与系统定义权上仍与全球头部存在明显层级差距&quot;</td><td>升级为<strong>结构性短板</strong>（非 transient），且 CPO 时代光源外置化后该差距更关键</td></tr>
+<tr><td>龙头（旭创/新易盛）挤压</td><td>T（持续）</td><td><code>光互联大迁徙</code>的 A 股模块整合领导者清单为&quot;中际旭创、新易盛、光迅科技、海信宽带、华工科技&quot;——<strong>长芯博创（博创）未被列入</strong>，仅在材料层出现&quot;长飞光纤&quot;</td><td><strong>强化</strong>：长芯博创在 KB 权威分层中属&quot;有特色的中坚/外围&quot;，非核心控制点，龙头挤压风险高于原写</td></tr>
+<tr><td>贸易摩擦/关税（59% 出海）</td><td>未单列</td><td>KB 无直接条款，但 KB 内<code>小米被制裁</code>等文章显示对美科技制裁为活跃变量；59% 境外收入集中于北美云厂供应链，属地缘敏感敞口</td><td><strong>新增推断风险</strong>（标注为推理）：关税/出口管制升级将直接冲击其最大收入来源</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：原报告对长芯博创的风险框架方向正确，但 KB 双重检验<strong>显著强化了三点</strong>——① CPO 冲击有明确时间轴（2028/2030 节点）；② 上游高端器件依赖是结构性层级差距；③ 长芯博创未被 KB 列入模块整合核心名单，定位偏外围。这共同指向：其 2025 高景气需严格置于&quot;技术代际窗口期&quot;框架内理解。</p>
+<h3>第八章：分析方法说明</h3>
+<h4>八条国产替代核心驱动因素定义</h4>
+<ol>
+<li><strong>地缘断供倒逼</strong>：国际技术封锁/供应链中断迫使下游寻求国产替代。</li>
+<li><strong>国家补贴兜底</strong>：政府补贴/产业基金保障企业生存和发展。</li>
+<li><strong>国产能力成熟</strong>：国内企业技术/产品达到或接近国际水平。</li>
+<li><strong>近水楼台</strong>：地理临近/服务响应优势获得本土客户。</li>
+<li><strong>政策合规底线</strong>：信创/安全合规要求必须采购国产产品。</li>
+<li><strong>出海能力</strong>：产品具备国际竞争力，成功进入海外市场。</li>
+<li><strong>巨头产能退出</strong>：国际巨头产能收缩/退出中国市场。</li>
+<li><strong>设备折旧归零</strong>：设备完成折旧，成本优势显著。</li>
+</ol>
+<h4>数据来源与交叉验证</h4>
+<ul>
+<li><strong>GitHub 知识库</strong> <code>Annettehub/ai-investing</code>：吴梓豪《光互联大迁徙——从光纤、光模块、1.6T 到 CPO 与 OIO 的全产业链终局推演》（2026-04-17，半导体大佬的会议室），核心判断&quot;控制点向系统架构/硅光 Foundry/激光器收敛，模块整合层必要但可替代&quot;；<code>02-kb/snapshot.md</code>（G1 AI CAPEX）。</li>
+<li><strong>公开信息</strong>：长芯博创 2025 年报（营收 25.33 亿、归母 3.35 亿、境外 59.44%）、长飞光纤 2025 年报（光互联组件 31.44 亿、+48.58%、毛利率 39.73%）、更名揭牌报道（2025-07-11）、成都蓉博园区投产（2025-06）。</li>
+<li><strong>交叉验证结论</strong>：知识库&quot;中国企业在光模块/有源光缆已有不错位置&quot;与长芯博创 59% 出海、AEC 批量供货的公开事实一致；但知识库对&quot;CPO 时代模块厂估值逻辑需调整&quot;的警示，与长芯博创当前高景气形成重要对冲视角，本分析据此将 CPO 冲击列为中长期核心风险。</li>
+</ul>
+<blockquote>注：本分析不含投资建议。长芯博创 2025 高增部分源于低基数扭亏与长飞协同，且其身处 CPO 技术代际切换窗口，投资者应重点跟踪 1.6T/CPO 进展与高端器件自研进度。</blockquote></div>
+        </article>
+        
+
+        <article class="view research-article" id="sanhuan">
+          <div class="article-head">
+            <div>
+              <p class="eyebrow">300408.SZ · 被动元件 / MLCC / 陶瓷件</p>
+              <h1>三环集团</h1>
+            </div>
+          </div>
+          <div class="markdown-body"><h2>（300408.SZ）AI 国产赛道投研分析报告</h2>
+<blockquote>分析时间：2026-08-01 | 分析基准：2026 年 | 性质：纯研究分析，不含投资建议</blockquote>
+<blockquote>数据来源：GitHub 知识库 <code>Annettehub/ai-investing</code>（MLCC 涨价来源摘要 <code>SRC-MLCC-涨价-2026-07-04</code>、snapshot）、三环集团 2025 年年报（2026-03-27 发布）、腾讯财经/中国粉体网报道、TrendForce</blockquote>
+<hr>
+<h3>第一章：产业链位置拆解</h3>
+<p>三环集团是 <strong>电子陶瓷元件与材料龙头</strong>（原厂/制造商），处于电子信息产业链的&quot;基础材料与精密元件&quot;层，横跨通信陶瓷、MLCC、半导体陶瓷件三大赛道，是 AI 算力与新能源时代的&quot;底层材料基座&quot;。</p>
+<pre><code>上游：陶瓷粉体（自研自产）
+    ├─ 氧化铝/氧化锆/氮化铝等粉体配方与烧结
+    └─ 精密模具、成型与烧结设备
+        ↓
+[ 电子陶瓷元件制造 ] ——— 【三环集团】
+│   通信器件：光纤陶瓷插芯、MT 插芯、陶瓷管壳（光芯片封装）
+│   电子元件：MLCC（多尺寸高容/车规/48V 高容）
+│   设备组件 + 电子及陶瓷材料 + 泛半导体精密陶瓷结构件
+        ↓
+[ 下游客户 ]
+    ├─ 通信设备商（光模块/交换机/数据中心）
+    ├─ 半导体设备厂（精密陶瓷结构件）
+    ├─ 新能源车（车规 MLCC、功率）
+    └─ 消费电子/工业
+        ↓
+终端应用：AI 数据中心光互联 / 半导体设备 / 新能源汽车 / 消费电子</code></pre>
+<p><strong>定位判定</strong>：基础材料+精密元件原厂，核心竞争力是&quot;粉体+器件&quot;全链条能力（从粉料制备到成型、烧结、精加工全自主），工艺壁垒由 55 年研发沉淀形成，非资本短期可砸出。</p>
+<hr>
+<h3>第二章：因素归属总结表</h3>
+<div class="table-wrap"><table class="cols-4 index-table">
+<colgroup><col style="width:62px"><col style="width:170px"><col style="width:111px"><col style="width:560px"></colgroup>
+<thead><tr><th>序号</th><th>驱动因素</th><th>归属</th><th>判定依据</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>地缘断供倒逼</td><td>✅ 强相关</td><td>村田等日系 MLCC 涨价+供应紧张，国产 MLCC/陶瓷元件替代加速；半导体设备陶瓷部件国产化</td></tr>
+<tr><td>2</td><td>国家补贴兜底</td><td>⚠️ 弱相关</td><td>新材料/半导体材料受产业基金与政策扶持，但非直接大额补贴</td></tr>
+<tr><td>3</td><td>国产能力成熟</td><td>✅ 强相关</td><td>MLCC/插芯/管壳技术达国际水平（插芯打破垄断做到&lt;4 毛）；泛半导体陶瓷批量供货</td></tr>
+<tr><td>4</td><td>近水楼台</td><td>✅ 强相关</td><td>本土通信/半导体/新能源客户配套，光通信 MT 插芯+管壳进主流供应链</td></tr>
+<tr><td>5</td><td>政策合规底线</td><td>❌ 不相关</td><td>陶瓷元件无信创强制（但半导体设备陶瓷受益于国产替代）</td></tr>
+<tr><td>6</td><td>出海能力</td><td>⚠️ 弱相关</td><td>推进 H 股上市、光通信产品进全球客户供应链，但直接海外营收占比待提升</td></tr>
+<tr><td>7</td><td>巨头产能退出</td><td>⚠️ 弱相关</td><td>村田聚焦高端 AI/车规高容，部分中低端 MLCC 产能缺口让出</td></tr>
+<tr><td>8</td><td>设备折旧归零</td><td>❌ 不相关</td><td>不适用</td></tr>
+</tbody></table></div>
+<hr>
+<h3>第三章：核心驱动因素分析</h3>
+<h4>因素 1：地缘断供倒逼（✅ 强相关）</h4>
+<p>知识库 <code>SRC-MLCC-涨价-2026-07-04</code>（来源：东方财富/百度百家/电子发烧友/TrendForce，2026-06）明确显示：</p>
+<ul>
+<li><strong>村田（Murata）宣布 2026-07-01 起对 AI 服务器/高端车规高容 MLCC 涨价 10%–40%</strong>；</li>
+<li>村田产能利用率接近 95%，交期延长至 4 个月；</li>
+<li><strong>AI 服务器 MLCC 需求年增 30%+，现有产能仅为订单量的一半</strong>；</li>
+<li>太阳诱电 2026 财年营收预估 +8.1%、营业利润 +50.0%，反映行业景气。</li>
+</ul>
+<blockquote>吴梓豪观点呼应（来源：知识库 <code>国产替代全景</code>/存储周期）：日系 MLCC 龙头的涨价与产能紧张，本质是 AI 算力需求挤压下的结构性紧缺，为国产 MLCC（三环、风华高科）创造订单转移窗口。该来源标注&quot;待核实：风华高科/三环集团是否已有具体订单转移数据&quot;，本分析据此标注为机会待验证。</blockquote>
+<h4>因素 3：国产能力成熟（✅ 强相关）</h4>
+<p>三环集团在电子陶瓷元件领域有超 55 年研发经验（中邮证券研报），掌握各类陶瓷成型、烧结技术及精密模具设计。核心能力是<strong>&quot;粉体+器件&quot;全链条自主</strong>——从粉料制备到成型、烧结、精加工全部自完成，批次一致性可控（外购粉料易出问题）。</p>
+<ul>
+<li><strong>光纤陶瓷插芯</strong>：曾被国外巨头卖到 100 元/个，三环靠 20 年自主研发做到如今不到 4 毛，打破垄断。</li>
+<li><strong>MLCC</strong>：产品线覆盖 0201–2220 尺寸常规/中高压/车规产品，研发 M3L 系列、S 系列、柔性电极、高频 Cu 内电极等特色产品；已推出多尺寸高容 MLCC 及针对 48V 电源系统的多规格高容 MLCC（数据中心场景）。</li>
+<li><strong>光通信陶瓷</strong>：MT 插芯+导针与散件组合、专用于光芯片封装的高可靠性陶瓷管壳已推向市场，进入主流客户供应链。</li>
+<li><strong>泛半导体精密陶瓷结构件</strong>：获高端场景资质认证并实现批量供货，助力半导体设备性能升级与本土化。</li>
+</ul>
+<h4>因素 4：近水楼台（✅ 强相关）</h4>
+<p>三环受益于本土 AI 算力基础设施建设提速：</p>
+<ul>
+<li><strong>通信器件板块</strong> 2025 年收入 25.94 亿元（+12.50%），主要受益 AI 算力基建带动陶瓷插芯及 MT 插芯、陶瓷管壳需求增长。</li>
+<li><strong>电子元件板块</strong> 2025 年收入 33.08 亿元（+43.95%），是拉动增长的核心引擎，MLCC 在数据中心、汽车电子双轮放量。</li>
+<li>2026Q1 营收 26.81 亿（+46.25%）、归母 7.91 亿（+48.48%），主业动能强劲。</li>
+</ul>
+<h4>因素 7：巨头产能退出（⚠️ 弱相关）</h4>
+<p>村田在 AI/车规高容 MLCC 上聚焦高端、涨价控量，客观上让出部分中低端/标准品产能与利润空间，为三环等国产厂商提供替代窗口。该因素为弱相关（村田并非&quot;退出中国&quot;，而是结构性腾挪），但构成订单转移的有利背景。</p>
+<hr>
+<h3>第四章：客户/供应商清单</h3>
+<h4>核心客户（按下游，来源：年报/报道）</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:170px"><col style="width:216px"><col style="width:223px"><col style="width:300px"><col style="width:150px"></colgroup>
+<thead><tr><th>客户领域</th><th>代表</th><th>供应产品</th><th>收入贡献/说明</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>通信设备商</td><td>光模块/交换机/数据中心厂商</td><td>陶瓷插芯、MT 插芯、陶瓷管壳</td><td>通信器件 25.94 亿（+12.5%，受益 AI）</td><td>年报</td></tr>
+<tr><td>半导体设备厂</td><td>国产半导体设备商</td><td>泛半导体精密陶瓷结构件</td><td>已批量供货、资质认证</td><td>年报</td></tr>
+<tr><td>新能源车</td><td>车企/ Tier1</td><td>车规 MLCC、功率陶瓷</td><td>车规 MLCC 系列配套</td><td>年报/研报</td></tr>
+<tr><td>数据中心</td><td>服务器/电源厂商</td><td>多尺寸高容/48V MLCC</td><td>数据中心供应能力提升</td><td>年报</td></tr>
+</tbody></table></div>
+<h4>核心供应商（上游）</h4>
+<div class="table-wrap"><table class="cols-2">
+<colgroup><col style="width:272px"><col style="width:230px"></colgroup>
+<thead><tr><th>供应内容</th><th>来源/依赖</th></tr></thead>
+<tbody>
+<tr><td>陶瓷粉体（氧化铝/氧化锆/氮化铝等）</td><td><strong>自研自产</strong>（核心壁垒，全自主）</td></tr>
+<tr><td>贵金属/电极材料、设备</td><td>外采</td></tr>
+</tbody></table></div>
+<p><strong>关键判断</strong>：三环最大护城河即&quot;粉体自研+全链自制&quot;，使其不受外部粉料断供/一致性风险影响，是地缘断供逻辑下的&quot;受益方&quot;而非&quot;受害方&quot;。</p>
+<hr>
+<h3>第五章：2026 年具体受益场景</h3>
+<h4>受益传导链（箭头文本框）</h4>
+<pre><code>AI 服务器 MLCC 需求 +30% + 村田涨价 10–40%、交期 4 个月
+        ↓
+国产 MLCC 订单转移窗口打开（三环/风华）
+        ↓
+三环高容/车规/48V MLCC 放量 + 通信陶瓷（插芯/管壳）受益 AI 基建
+        ↓
+2025 已验证：营收 90.07 亿（+22.13%）、归母 26.18 亿（+19.54%）
+        ↓
+2026Q1 营收 26.81 亿（+46.25%）、归母 7.91 亿（+48.48%）加速</code></pre>
+<h4>受益确定性评估表</h4>
+<div class="table-wrap"><table class="cols-3">
+<colgroup><col style="width:237px"><col style="width:118px"><col style="width:560px"></colgroup>
+<thead><tr><th>受益场景</th><th>确定性</th><th>依据</th></tr></thead>
+<tbody>
+<tr><td>MLCC 国产替代（村田涨价窗口）</td><td>中（待验证）</td><td>村田 10–40% 涨价+交期 4 月，但 KB 来源卡标&quot;偏见风险中+订单转移数据待核实&quot;，确定性下调</td></tr>
+<tr><td>通信陶瓷受益 AI 基建</td><td>高</td><td>通信器件 +12.5%，插芯/管壳进主流供应链</td></tr>
+<tr><td>车规 MLCC 放量</td><td>中高</td><td>新能源车电子化，车规系列已配套</td></tr>
+<tr><td>泛半导体陶瓷批量供货</td><td>中</td><td>资质认证+批量供货，受益设备国产化</td></tr>
+</tbody></table></div>
+<h4>客户结构对冲验证</h4>
+<ul>
+<li><strong>多板块对冲</strong>：通信器件(28.8%)+电子元件(36.7%)+陶瓷材料(21.8%)+设备组件(6.7%)，降低单一赛道风险。</li>
+<li><strong>多下游对冲</strong>：AI 数据中心 + 新能源车 + 半导体设备 + 消费电子，需求来源分散。</li>
+<li><strong>风险点</strong>：MLCC 行业若产能过剩或村田恢复供应，价格与份额或承压；高端 MLCC 仍与村田/三星有差距。</li>
+</ul>
+<hr>
+<h3>第六章：竞争对手分析</h3>
+<h4>竞争对手矩阵</h4>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:140px"><col style="width:220px"><col style="width:220px"><col style="width:220px"><col style="width:220px"></colgroup>
+<thead><tr><th>维度</th><th>三环集团</th><th>风华高科</th><th>村田(Murata)</th><th>国瓷材料</th></tr></thead>
+<tbody>
+<tr><td>定位</td><td>电子陶瓷综合龙头</td><td>MLCC/片式元件</td><td>全球 MLCC 龙头</td><td>陶瓷粉体/材料</td></tr>
+<tr><td>MLCC</td><td>有（追赶）</td><td>有（国内前列）</td><td>绝对领先</td><td>粉体供应</td></tr>
+<tr><td>通信陶瓷</td><td>插芯/管壳强</td><td>弱</td><td>中</td><td>弱</td></tr>
+<tr><td>粉体自研</td><td>强（全链）</td><td>中</td><td>强</td><td>强（粉体）</td></tr>
+</tbody></table></div>
+<h4>SWOT 对比矩阵表</h4>
+<div class="table-wrap"><table class="cols-4">
+<colgroup><col style="width:140px"><col style="width:230px"><col style="width:170px"><col style="width:181px"></colgroup>
+<thead><tr><th>维度</th><th>三环集团</th><th>风华高科</th><th>村田(Murata)</th></tr></thead>
+<tbody>
+<tr><td>S(优势)</td><td>粉体全链+插芯垄断打破+多品类</td><td>国产 MLCC 规模</td><td>技术/规模全球绝对领先</td></tr>
+<tr><td>W(劣势)</td><td>高端 MLCC 与村田有差距</td><td>高端化待突破</td><td>涨价失份额、成本高</td></tr>
+<tr><td>O(机会)</td><td>AI/车规/半导体陶瓷三轮</td><td>国产替代窗口</td><td>聚焦高端、控量提价</td></tr>
+<tr><td>T(威胁)</td><td>村田恢复供应、价格战</td><td>同左</td><td>国产替代侵蚀中低端</td></tr>
+</tbody></table></div>
+<p><strong>结论</strong>：三环在&quot;通信陶瓷（插芯/管壳）&quot;具备全球级竞争力，在 MLCC 属国产第二梯队但全链自制优势突出；相比纯 MLCC 厂，其多品类+粉体自研的韧性更强，是与村田错位竞争的&quot;中国特色陶瓷平台&quot;。</p>
+<p><strong>护城河</strong>：① 55 年工艺沉淀与粉体配方/烧结全链自主；② 光纤陶瓷插芯打破垄断的成本与规模壁垒；③ 多品类（通信/MLCC/半导体陶瓷）分散周期；④ 推进 H 股上市强化全球客户与资本能力。</p>
+<hr>
+<h3>第七章：行业机会与挑战</h3>
+<div class="table-wrap"><table class="cols-5">
+<colgroup><col style="width:92px"><col style="width:293px"><col style="width:130px"><col style="width:300px"><col style="width:150px"></colgroup>
+<thead><tr><th>类型</th><th>事项</th><th>时间窗口</th><th>与公司的关联</th><th>来源</th></tr></thead>
+<tbody>
+<tr><td>🟢 机会</td><td>村田 MLCC 涨价+交期延长，国产替代窗口</td><td>短期–中期</td><td>MLCC 订单转移（待订单数据验证）</td><td>知识库 MLCC 来源</td></tr>
+<tr><td>🟢 机会</td><td>AI 算力基建拉动通信陶瓷</td><td>短期–中期</td><td>插芯/管壳进主流供应链</td><td>年报</td></tr>
+<tr><td>🟢 机会</td><td>新能源车电子化推升车规 MLCC</td><td>中期</td><td>车规系列配套</td><td>年报/研报</td></tr>
+<tr><td>🟢 机会</td><td>半导体设备陶瓷国产化</td><td>中期</td><td>泛半导体精密陶瓷批量供货</td><td>年报</td></tr>
+<tr><td>🔴 风险</td><td>MLCC 产能过剩/价格战</td><td>中期</td><td>行业景气回落冲击</td><td>推测</td></tr>
+<tr><td>🔴 风险</td><td>村田恢复供应/高端压制</td><td>中期</td><td>份额与价格承压</td><td>推测</td></tr>
+<tr><td>🔴 风险</td><td>高端 MLCC 技术差距</td><td>持续</td><td>仍落后村田/三星</td><td>年报</td></tr>
+</tbody></table></div>
+<hr>
+<h4>第七章补：核心风险的知识库双重检验</h4>
+<blockquote>双重检验方法：复核知识库<code>SRC-MLCC-涨价-2026-07-04</code>来源卡的质量评估与待验证项。</blockquote>
+<ul>
+<li><strong>MLCC 国产替代窗口的确定性被原报告高估（核心修正）</strong>：来源卡<code>质量评估</code>明确标注「<strong>偏见风险：中（新闻来源可能存在乐观倾向）</strong>」，并列两项<code>待验证</code>：① 风华高科/三环集团是否已有具体订单转移数据；② 村田涨价是否已实际执行（2026-07-01 后）。即&quot;村田涨价→国产 MLCC 订单转移&quot;在 KB 中<strong>仅是待验证假设</strong>，原报告将其评为&quot;高&quot;确定性偏高，应下调为&quot;中（待订单数据验证）&quot;。</li>
+<li><strong>机会与风险同源</strong>：村田涨价红利若因&quot;媒体乐观&quot;或&quot;涨价未实际执行/客户未转移&quot;而不及预期，则&quot;MLCC 国产替代&quot;机会与&quot;村田恢复供应/价格战&quot;风险需同步重估，二者皆取决于尚未兑现的订单数据。</li>
+<li><strong>结构性短板（维持）</strong>：高端 MLCC 与村田/三星仍有技术代差；若行业景气回落，价格战与产能过剩将压缩盈利——来源卡未否定此风险。</li>
+<li><strong>贸易摩擦（推理）</strong>：三环光通信陶瓷（插芯/管壳）已进入全球主流供应链，若地缘摩擦升级存在出口扰动，列为低置信度推断风险。</li>
+</ul>
+<p><strong>结论</strong>：三环的最大风险点不在&quot;有没有机会&quot;，而在&quot;机会的确定性未经 KB 与订单数据验证&quot;。建议将 MLCC 替代红利视作<strong>待证实的看涨期权</strong>，以 2026 中报 MLCC 收入结构与村田涨价执行进展为关键验证节点。</p>
+<h3>第八章：分析方法说明</h3>
+<h4>八条国产替代核心驱动因素定义</h4>
+<ol>
+<li><strong>地缘断供倒逼</strong>：国际技术封锁/供应链中断迫使下游寻求国产替代。</li>
+<li><strong>国家补贴兜底</strong>：政府补贴/产业基金保障企业生存和发展。</li>
+<li><strong>国产能力成熟</strong>：国内企业技术/产品达到或接近国际水平。</li>
+<li><strong>近水楼台</strong>：地理临近/服务响应优势获得本土客户。</li>
+<li><strong>政策合规底线</strong>：信创/安全合规要求必须采购国产产品。</li>
+<li><strong>出海能力</strong>：产品具备国际竞争力，成功进入海外市场。</li>
+<li><strong>巨头产能退出</strong>：国际巨头产能收缩/退出中国市场。</li>
+<li><strong>设备折旧归零</strong>：设备完成折旧，成本优势显著。</li>
+</ol>
+<h4>数据来源与交叉验证</h4>
+<ul>
+<li><strong>GitHub 知识库</strong> <code>Annettehub/ai-investing</code>：<code>02-kb/sources/SRC-MLCC-涨价-2026-07-04</code>（村田涨价 10–40%、产能利用率 95%、AI 服务器 MLCC +30%、关联三环/风华）、<code>02-kb/snapshot.md</code>（G2 存储与周期、S2 国产替代）、<code>02-kb/concepts/L2-芯片层/地缘政治/国产替代全景</code>（设备/材料国产化）。</li>
+<li><strong>公开信息</strong>：三环集团 2025 年报（营收 90.07 亿、归母 26.18 亿、各板块收入）、腾讯财经（2026-06-09，千亿陶瓷龙头、插芯&lt;4 毛、55 年研发）、中国粉体网（2026-03-27，MLCC/光通信产品进展）、中邮证券研报。</li>
+<li><strong>交叉验证结论</strong>：知识库&quot;村田涨价→国产 MLCC 替代窗口&quot;判断，与三环 2025 电子元件 +43.95%、2026Q1 归母 +48.48% 的公开高增相互印证；&quot;粉体全链自主是电子陶瓷核心壁垒&quot;在腾讯财经报道（插芯 20 年打破垄断）中得到事实支撑。</li>
+</ul>
+<blockquote>注：本分析不含投资建议。知识库 MLCC 来源明确标注&quot;待核实：风华高科/三环集团是否已有具体订单转移数据&quot;，国产替代红利的订单兑现程度仍需跟踪后续财报验证。</blockquote></div>
         </article>
         
     </main>

@@ -425,7 +425,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
             <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
           </div>
           <div class="hero-metrics">
-            <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
+            <div class="metric"><span>已接入资料</span><strong>{len(companies)} 家公司</strong></div>
             <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
             <div class="metric"><span>页面结构</span><strong>单文件切换</strong></div>
           </div>
@@ -458,7 +458,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <div class="section-head">
             <div>
               <p class="eyebrow">Company Pool</p>
-              <h2>8 家公司资料入口</h2>
+              <h2>{len(companies)} 家公司资料入口</h2>
               <p>点击公司卡片会在当前 HTML 中切换到对应公司资料，不跳到新网页，也不会滚动到长页面下方。</p>
             </div>
           </div>
@@ -503,7 +503,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
-            <p>自动扫描 Annettehub/ai-investing 中与 8 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
+            <p>自动扫描 Annettehub/ai-investing 中与 {len(companies)} 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
             <p>{weekly_note}</p>
           </div>
         </div>

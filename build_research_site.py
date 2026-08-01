@@ -30,65 +30,14 @@ COMPANIES = [
     ("hudian", "沪电股份", "002463.SZ", "AI PCB", "127", 2459, 3125, "27.1%", "原图：27 年增幅会高于 26 年为原图观察要点。新图：M9正交背板与Ibiden为全球双Tier1，但kyber可能微幅delay。AI交换机全球第一。27年业绩与利润增长会好于胜宏，95以下找低位建仓。", PROJECT_DIR / "6.沪电股份_驱动因素分析_2026年.md"),
     ("innolight", "中际旭创", "300308.SZ", "高速光模块", "979", 10900, 12495, "14.6%", "原图：CPO 渗透率与 26-27 年业绩增长是核心跟踪变量。新图：受CPO渗透率影响压制PE，越往后越低，但是业绩实打实超高增长，即便PE逐渐下降也能靠利润往上顶市值。27年PE下降至20倍也能有1.5万亿市值，如果某阶段有热点还能更高，850以下找低点布局，2q业绩发布应有激励。", PROJECT_DIR / "7.中际旭创_驱动因素分析_2026年.md"),
     ("gigadevice", "兆易创新", "603986.SH", "存储 / MCU", "463", 3250, 3720, "14.5%", "原图：下半年存储可能出现高点，年底 PE 是否调整为观察点。新图：长鑫上市后，兆易地位下降，预计有一波抛压，未来营收持续看好，350以下找低位接。", PROJECT_DIR / "8.兆易创新_驱动因素分析_2026年.md"),
+    ("weice", "伟测科技", "688372.SH", "封装测试", "120.73", 204.0, 216, "7%", "对标台湾京元电，看好国内AI芯片测试，100以下找低位接。", PROJECT_DIR / "9.伟测科技_驱动因素分析_2026年.md"),
+    ("lianxun", "联讯仪器", "688808.SH", "封测设备", "1586.42", 1628.7, 1650, "-18%", "示波器与高速误码分析仪在1.6T光通讯有不错竞争力，未来持续高增长，1600以下可建仓。", PROJECT_DIR / "10.联讯仪器_驱动因素分析_2026年.md"),
+    ("unisplendour", "紫光股份", "000938.SZ", "芯片设计 / 服务器 / 交换机", "35.13", 1004.7, 1118, "-6%", "新华三在服务器跟交换机发挥作用，尤其是高速数据中心交换机。", PROJECT_DIR / "11.紫光股份_驱动因素分析_2026年.md"),
+    ("eoptolink", "长芯博创", "300548.SZ", "光器件", "166.21", 490.0, 390, "-10%", "高密度MPO避开太辰光与仕佳，AOC有源光缆谷歌三供，这两年靠这两块支撑增长，6.4T以后MCF-FAU有新增量，走小而精技术路线。", PROJECT_DIR / "12.长芯博创_驱动因素分析_2026年.md"),
+    ("sanhuan", "三环集团", "300408.SZ", "被动元件 / MLCC / 陶瓷件", "99.01", 1968.2, 2090, "0%", "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。", PROJECT_DIR / "13.三环集团_驱动因素分析_2026年.md"),
 ]
 
-DASHBOARD_ONLY_COMPANIES = [
-    {
-        "id": "willsemi-test",
-        "name": "伟测科技",
-        "code": "688372.SH",
-        "track": "封装测试",
-        "start_price": "120.73",
-        "start_market_cap": 204.0,
-        "year_end_market_cap": 216,
-        "space": "7%",
-        "source_note": "对标台湾京元电，看好国内AI芯片测试，100以下找低位接。",
-    },
-    {
-        "id": "lianxun-instrument",
-        "name": "联讯仪器",
-        "code": "688808.SH",
-        "track": "封测设备",
-        "start_price": "1586.42",
-        "start_market_cap": 1628.7,
-        "year_end_market_cap": 1650,
-        "space": "-18%",
-        "source_note": "示波器与高速误码分析仪在1.6T光通讯有不错竞争力，未来持续高增长，1600以下可建仓。",
-    },
-    {
-        "id": "unisplendour",
-        "name": "紫光股份",
-        "code": "000938.SZ",
-        "track": "芯片设计 / 服务器 / 交换机",
-        "start_price": "35.13",
-        "start_market_cap": 1004.7,
-        "year_end_market_cap": 1118,
-        "space": "-6%",
-        "source_note": "新华三在服务器跟交换机发挥作用，尤其是高速数据中心交换机。",
-    },
-    {
-        "id": "eoptolink",
-        "name": "长芯博创",
-        "code": "300548.SZ",
-        "track": "光器件",
-        "start_price": "166.21",
-        "start_market_cap": 490.0,
-        "year_end_market_cap": 390,
-        "space": "-10%",
-        "source_note": "高密度MPO避开太辰光与仕佳，AOC有源光缆谷歌三供，这两年靠这两块支撑增长，6.4T以后MCF-FAU有新增量，走小而精技术路线。",
-    },
-    {
-        "id": "sanhuan",
-        "name": "三环集团",
-        "code": "300408.SZ",
-        "track": "被动元件 / MLCC / 陶瓷件",
-        "start_price": "99.01",
-        "start_market_cap": 1968.2,
-        "year_end_market_cap": 2090,
-        "space": "0%",
-        "source_note": "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。",
-    },
-]
+DASHBOARD_ONLY_COMPANIES = []
 
 
 def as_dict(row: tuple) -> dict:
@@ -517,7 +466,7 @@ def index_page(companies: list[dict]) -> str:
           <p>本页面以吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议图片为原始观察池，并接入 8 篇已经完成的个人研读资料。页面用途是长期理解公司、跟踪产业变化与记录市值相对起点的变化，不构成买卖建议。</p>
         </div>
         <div class="hero-metrics">
-          <div class="metric"><span>已接入资料</span><strong>8 家公司</strong></div>
+          <div class="metric"><span>已接入资料</span><strong>{len(companies)} 家公司</strong></div>
           <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
           <div class="metric"><span>价格呈现</span><strong>市值表格</strong></div>
         </div>
@@ -539,7 +488,7 @@ def index_page(companies: list[dict]) -> str:
         <div class="section-head">
           <div>
             <p class="eyebrow">Company Pool</p>
-            <h2>8 家公司资料入口</h2>
+            <h2>{len(companies)} 家公司资料入口</h2>
             <p>点击公司卡片会打开独立公司页面。当前版本保留资料原结构，暂不改写公司页内容。</p>
           </div>
         </div>
