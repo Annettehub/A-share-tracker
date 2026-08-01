@@ -349,8 +349,25 @@ td span { color: var(--muted); font-size: 12px; }
 .markdown-body code { font-family: "Consolas", "SFMono-Regular", monospace; font-size: .92em; }
 .markdown-body :not(pre) > code { padding: 2px 5px; border-radius: 4px; background: #edf1ef; color: #284144; }
 .markdown-body ul, .markdown-body ol { padding-left: 22px; }
-.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 14px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; }
-.mobile-bar select { width: 100%; margin-top: 8px; padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,.24); background: #173438; color: #fff; font-size: 14px; }
+.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 12px 12px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; box-shadow: 0 8px 22px rgba(16,36,38,.16); }
+.mobile-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mobile-top strong { min-width: 0; font-size: 18px; line-height: 1.35; }
+.mobile-menu-button { flex: 0 0 auto; min-height: 38px; padding: 0 13px; border-radius: 6px; border: 1px solid rgba(255,255,255,.25); background: #173438; color: #fff; font-size: 14px; font-weight: 700; }
+.mobile-details { position: relative; }
+.mobile-details summary { list-style: none; cursor: pointer; }
+.mobile-details summary::-webkit-details-marker { display: none; }
+.mobile-quick { display: flex; gap: 8px; overflow-x: auto; padding-top: 10px; scrollbar-width: none; }
+.mobile-quick::-webkit-scrollbar { display: none; }
+.mobile-chip { flex: 0 0 auto; min-height: 36px; padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: #e9f4f1; background: rgba(255,255,255,.07); font-size: 14px; font-weight: 700; }
+.mobile-chip.active { background: #e9f4f1; color: #103034; }
+.mobile-menu[hidden] { display: none; }
+.mobile-menu { margin-top: 10px; max-height: calc(100vh - 140px); overflow: auto; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: #f8faf8; color: var(--ink); box-shadow: 0 18px 38px rgba(0,0,0,.26); }
+.mobile-menu-title { margin: 0 0 10px; color: #526166; font-size: 12px; font-weight: 800; letter-spacing: 0; }
+.mobile-menu-grid, .mobile-company-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mobile-menu-link { display: grid; gap: 2px; min-height: 48px; align-content: center; padding: 9px 10px; border-radius: 6px; border: 1px solid var(--line); background: #fff; color: #183236; font-size: 14px; font-weight: 800; }
+.mobile-menu-link small { color: #5b6b70; font-size: 11px; font-weight: 500; line-height: 1.35; }
+.mobile-menu-link.active { border-color: var(--teal); background: #eaf4f2; color: var(--teal-dark); }
+.mobile-menu-section { margin: 14px 0 8px; color: #526166; font-size: 12px; font-weight: 800; }
 @media (max-width: 1080px) {
   .app { grid-template-columns: 240px minmax(0, 1fr); }
   .content { padding: 22px; }
@@ -412,16 +429,33 @@ def nav(companies: list[dict], active: str, prefix: str = "") -> str:
 
 
 def mobile(companies: list[dict], prefix: str = "") -> str:
-    options = "".join(f'<option value="{prefix}companies/{c["id"]}.html">{c["name"]}</option>' for c in companies)
+    company_links = "\n".join(
+        f'<a class="mobile-menu-link" href="{prefix}companies/{c["id"]}.html">{c["name"]}<small>{c["track"]}</small></a>'
+        for c in companies
+    )
     return f"""
     <div class="mobile-bar">
-      <strong>{SITE_TITLE}</strong>
-      <select aria-label="快速跳转" onchange="if(this.value) location.href=this.value">
-        <option value="{prefix}index.html">README 首页</option>
-        <option value="{prefix}dashboard.html">公司池仪表盘</option>
-        <option value="{prefix}weekly.html">周度观察</option>
-        {options}
-      </select>
+      <div class="mobile-top">
+        <strong>{SITE_TITLE}</strong>
+        <details class="mobile-details">
+          <summary class="mobile-menu-button">目录</summary>
+          <div class="mobile-menu">
+            <p class="mobile-menu-title">页面入口</p>
+            <div class="mobile-menu-grid">
+              <a class="mobile-menu-link" href="{prefix}index.html">README 首页</a>
+              <a class="mobile-menu-link" href="{prefix}dashboard.html">公司池仪表盘</a>
+              <a class="mobile-menu-link" href="{prefix}weekly.html">周度观察</a>
+            </div>
+            <div class="mobile-menu-section">公司资料</div>
+            <div class="mobile-company-grid">{company_links}</div>
+          </div>
+        </details>
+      </div>
+      <nav class="mobile-quick" aria-label="常用入口">
+        <a class="mobile-chip" href="{prefix}index.html">首页</a>
+        <a class="mobile-chip" href="{prefix}dashboard.html">仪表盘</a>
+        <a class="mobile-chip" href="{prefix}weekly.html">观察</a>
+      </nav>
     </div>
     """
 

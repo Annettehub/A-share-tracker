@@ -107,8 +107,22 @@ td span { color: var(--muted); font-size: 12px; }
 .markdown-body code { font-family: "Consolas", "SFMono-Regular", monospace; font-size: .92em; }
 .markdown-body :not(pre) > code { padding: 2px 5px; border-radius: 4px; background: #edf1ef; color: #284144; }
 .markdown-body ul, .markdown-body ol { padding-left: 22px; }
-.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 14px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; }
-.mobile-bar select { width: 100%; margin-top: 8px; padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,.24); background: #173438; color: #fff; font-size: 14px; }
+.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 12px 12px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; box-shadow: 0 8px 22px rgba(16,36,38,.16); }
+.mobile-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mobile-top strong { min-width: 0; font-size: 18px; line-height: 1.35; }
+.mobile-menu-button { flex: 0 0 auto; min-height: 38px; padding: 0 13px; border-radius: 6px; border: 1px solid rgba(255,255,255,.25); background: #173438; color: #fff; font-size: 14px; font-weight: 700; }
+.mobile-quick { display: flex; gap: 8px; overflow-x: auto; padding-top: 10px; scrollbar-width: none; }
+.mobile-quick::-webkit-scrollbar { display: none; }
+.mobile-chip { flex: 0 0 auto; min-height: 36px; padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: #e9f4f1; background: rgba(255,255,255,.07); font-size: 14px; font-weight: 700; }
+.mobile-chip.active { background: #e9f4f1; color: #103034; }
+.mobile-menu[hidden] { display: none; }
+.mobile-menu { margin-top: 10px; max-height: calc(100vh - 140px); overflow: auto; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: #f8faf8; color: var(--ink); box-shadow: 0 18px 38px rgba(0,0,0,.26); }
+.mobile-menu-title { margin: 0 0 10px; color: #526166; font-size: 12px; font-weight: 800; letter-spacing: 0; }
+.mobile-menu-grid, .mobile-company-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mobile-menu-link { display: grid; gap: 2px; min-height: 48px; align-content: center; padding: 9px 10px; border-radius: 6px; border: 1px solid var(--line); background: #fff; color: #183236; font-size: 14px; font-weight: 800; }
+.mobile-menu-link small { color: #5b6b70; font-size: 11px; font-weight: 500; line-height: 1.35; }
+.mobile-menu-link.active { border-color: var(--teal); background: #eaf4f2; color: var(--teal-dark); }
+.mobile-menu-section { margin: 14px 0 8px; color: #526166; font-size: 12px; font-weight: 800; }
 @media (max-width: 1080px) {
   .app { grid-template-columns: 240px minmax(0, 1fr); }
   .content { padding: 22px; }
@@ -132,13 +146,35 @@ td span { color: var(--muted); font-size: 12px; }
 </head>
 <body>
   <div class="mobile-bar">
-    <strong>2026 H2 吴梓豪A股公司追踪</strong>
-    <select aria-label="快速跳转" id="mobileNav">
-      <option value="home">README 首页</option>
-      <option value="dashboard">公司池仪表盘</option>
-      <option value="weekly">周度观察</option>
-      <option value="frd">飞荣达</option><option value="yofc">长飞光纤</option><option value="shkj">胜宏科技</option><option value="dsjm">东山精密</option><option value="cambricon">寒武纪</option><option value="hudian">沪电股份</option><option value="innolight">中际旭创</option><option value="gigadevice">兆易创新</option><option value="weice">伟测科技</option><option value="lianxun">联讯仪器</option><option value="unisplendour">紫光股份</option><option value="eoptolink">长芯博创</option><option value="sanhuan">三环集团</option>
-    </select>
+    <div class="mobile-top">
+      <strong>2026 H2 吴梓豪A股公司追踪</strong>
+      <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">目录</button>
+    </div>
+    <nav class="mobile-quick" aria-label="常用入口">
+      <a class="mobile-chip" href="#home" data-target="home">首页</a>
+<a class="mobile-chip" href="#dashboard" data-target="dashboard">仪表盘</a>
+<a class="mobile-chip" href="#weekly" data-target="weekly">观察</a>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <p class="mobile-menu-title">页面入口</p>
+      <div class="mobile-menu-grid"><a class="mobile-menu-link" href="#home" data-target="home">README 首页</a>
+<a class="mobile-menu-link" href="#dashboard" data-target="dashboard">公司池仪表盘</a>
+<a class="mobile-menu-link" href="#weekly" data-target="weekly">周度观察</a></div>
+      <div class="mobile-menu-section">公司资料</div>
+      <div class="mobile-company-grid"><a class="mobile-menu-link" href="#frd" data-target="frd">飞荣达<small>散热 / 液冷 / 电磁屏蔽</small></a>
+<a class="mobile-menu-link" href="#yofc" data-target="yofc">长飞光纤<small>光纤光缆 / 光通信材料</small></a>
+<a class="mobile-menu-link" href="#shkj" data-target="shkj">胜宏科技<small>AI PCB</small></a>
+<a class="mobile-menu-link" href="#dsjm" data-target="dsjm">东山精密<small>PCB / 光模块相关</small></a>
+<a class="mobile-menu-link" href="#cambricon" data-target="cambricon">寒武纪<small>AI 芯片</small></a>
+<a class="mobile-menu-link" href="#hudian" data-target="hudian">沪电股份<small>AI PCB</small></a>
+<a class="mobile-menu-link" href="#innolight" data-target="innolight">中际旭创<small>高速光模块</small></a>
+<a class="mobile-menu-link" href="#gigadevice" data-target="gigadevice">兆易创新<small>存储 / MCU</small></a>
+<a class="mobile-menu-link" href="#weice" data-target="weice">伟测科技<small>封装测试</small></a>
+<a class="mobile-menu-link" href="#lianxun" data-target="lianxun">联讯仪器<small>封测设备</small></a>
+<a class="mobile-menu-link" href="#unisplendour" data-target="unisplendour">紫光股份<small>芯片设计 / 服务器 / 交换机</small></a>
+<a class="mobile-menu-link" href="#eoptolink" data-target="eoptolink">长芯博创<small>光器件</small></a>
+<a class="mobile-menu-link" href="#sanhuan" data-target="sanhuan">三环集团<small>被动元件 / MLCC / 陶瓷件</small></a></div>
+    </div>
   </div>
   <div class="app">
     <aside class="sidebar">
@@ -323,7 +359,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
             <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
-            <p>行情快照：2026-08-01 14:51:27｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
+            <p>行情快照：2026-08-01 15:26:49｜主源：腾讯行情｜校验：东方财富暂未返回，已保留主源数据</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -549,7 +585,7 @@ td span { color: var(--muted); font-size: 12px; }
             <p class="eyebrow">Weekly Monitor</p>
             <h1>周度市场观察记录</h1>
             <p>自动扫描 Annettehub/ai-investing 中与 13 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
-            <p>已同步 Annettehub/ai-investing；快照时间：2026-08-01 14:52:46；来源提交：3abcaf7。</p>
+            <p>已同步 Annettehub/ai-investing；快照时间：2026-08-01 15:28:04；来源提交：3abcaf7。</p>
           </div>
         </div>
         <div class="weekly">
@@ -3539,22 +3575,28 @@ NVIDIA Blackwell/GB200/GB300 + Rubin 平台量产，1.6T 规模化上量
   <script>
     const views = Array.from(document.querySelectorAll(".view"));
     const navLinks = Array.from(document.querySelectorAll("[data-target]"));
-    const mobileNav = document.getElementById("mobileNav");
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
     const validIds = new Set(views.map((view) => view.id));
 
     function activate(id) {
       const target = validIds.has(id) ? id : "home";
       views.forEach((view) => view.classList.toggle("active", view.id === target));
       navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === target));
-      if (mobileNav) mobileNav.value = target;
+      if (mobileMenu && mobileMenuButton) {
+        mobileMenu.hidden = true;
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }
       document.querySelector(".content").scrollTop = 0;
       window.scrollTo(0, 0);
     }
 
     window.addEventListener("hashchange", () => activate(location.hash.slice(1)));
-    if (mobileNav) {
-      mobileNav.addEventListener("change", () => {
-        location.hash = mobileNav.value;
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        const opening = mobileMenu.hidden;
+        mobileMenu.hidden = !opening;
+        mobileMenuButton.setAttribute("aria-expanded", String(opening));
       });
     }
     activate(location.hash.slice(1));

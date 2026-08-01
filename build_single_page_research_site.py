@@ -272,8 +272,22 @@ td span { color: var(--muted); font-size: 12px; }
 .markdown-body code { font-family: "Consolas", "SFMono-Regular", monospace; font-size: .92em; }
 .markdown-body :not(pre) > code { padding: 2px 5px; border-radius: 4px; background: #edf1ef; color: #284144; }
 .markdown-body ul, .markdown-body ol { padding-left: 22px; }
-.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 14px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; }
-.mobile-bar select { width: 100%; margin-top: 8px; padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,.24); background: #173438; color: #fff; font-size: 14px; }
+.mobile-bar { display: none; position: sticky; top: 0; z-index: 5; padding: 10px 12px 12px; background: #102426; color: #fff; border-bottom: 1px solid #0b1b1d; box-shadow: 0 8px 22px rgba(16,36,38,.16); }
+.mobile-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mobile-top strong { min-width: 0; font-size: 18px; line-height: 1.35; }
+.mobile-menu-button { flex: 0 0 auto; min-height: 38px; padding: 0 13px; border-radius: 6px; border: 1px solid rgba(255,255,255,.25); background: #173438; color: #fff; font-size: 14px; font-weight: 700; }
+.mobile-quick { display: flex; gap: 8px; overflow-x: auto; padding-top: 10px; scrollbar-width: none; }
+.mobile-quick::-webkit-scrollbar { display: none; }
+.mobile-chip { flex: 0 0 auto; min-height: 36px; padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); color: #e9f4f1; background: rgba(255,255,255,.07); font-size: 14px; font-weight: 700; }
+.mobile-chip.active { background: #e9f4f1; color: #103034; }
+.mobile-menu[hidden] { display: none; }
+.mobile-menu { margin-top: 10px; max-height: calc(100vh - 140px); overflow: auto; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.18); background: #f8faf8; color: var(--ink); box-shadow: 0 18px 38px rgba(0,0,0,.26); }
+.mobile-menu-title { margin: 0 0 10px; color: #526166; font-size: 12px; font-weight: 800; letter-spacing: 0; }
+.mobile-menu-grid, .mobile-company-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mobile-menu-link { display: grid; gap: 2px; min-height: 48px; align-content: center; padding: 9px 10px; border-radius: 6px; border: 1px solid var(--line); background: #fff; color: #183236; font-size: 14px; font-weight: 800; }
+.mobile-menu-link small { color: #5b6b70; font-size: 11px; font-weight: 500; line-height: 1.35; }
+.mobile-menu-link.active { border-color: var(--teal); background: #eaf4f2; color: var(--teal-dark); }
+.mobile-menu-section { margin: 14px 0 8px; color: #526166; font-size: 12px; font-weight: 800; }
 @media (max-width: 1080px) {
   .app { grid-template-columns: 240px minmax(0, 1fr); }
   .content { padding: 22px; }
@@ -344,7 +358,24 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
         f'<a href="#{c["id"]}" class="nav-company" data-target="{c["id"]}"><span>{c["name"]}</span><small>{c["track"]}</small></a>'
         for c in companies
     )
-    mobile_options = "".join(f'<option value="{c["id"]}">{c["name"]}</option>' for c in companies)
+    mobile_main = "\n".join(
+        [
+            '<a class="mobile-chip" href="#home" data-target="home">首页</a>',
+            '<a class="mobile-chip" href="#dashboard" data-target="dashboard">仪表盘</a>',
+            '<a class="mobile-chip" href="#weekly" data-target="weekly">观察</a>',
+        ]
+    )
+    mobile_menu_main = "\n".join(
+        [
+            '<a class="mobile-menu-link" href="#home" data-target="home">README 首页</a>',
+            '<a class="mobile-menu-link" href="#dashboard" data-target="dashboard">公司池仪表盘</a>',
+            '<a class="mobile-menu-link" href="#weekly" data-target="weekly">周度观察</a>',
+        ]
+    )
+    mobile_companies = "\n".join(
+        f'<a class="mobile-menu-link" href="#{c["id"]}" data-target="{c["id"]}">{c["name"]}<small>{c["track"]}</small></a>'
+        for c in companies
+    )
     cards = "\n".join(
         f"""
         <a class="company-card" href="#{c['id']}" data-target="{c['id']}">
@@ -398,13 +429,19 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
 </head>
 <body>
   <div class="mobile-bar">
-    <strong>{SITE_TITLE}</strong>
-    <select aria-label="快速跳转" id="mobileNav">
-      <option value="home">README 首页</option>
-      <option value="dashboard">公司池仪表盘</option>
-      <option value="weekly">周度观察</option>
-      {mobile_options}
-    </select>
+    <div class="mobile-top">
+      <strong>{SITE_TITLE}</strong>
+      <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">目录</button>
+    </div>
+    <nav class="mobile-quick" aria-label="常用入口">
+      {mobile_main}
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <p class="mobile-menu-title">页面入口</p>
+      <div class="mobile-menu-grid">{mobile_menu_main}</div>
+      <div class="mobile-menu-section">公司资料</div>
+      <div class="mobile-company-grid">{mobile_companies}</div>
+    </div>
   </div>
   <div class="app">
     <aside class="sidebar">
@@ -525,22 +562,28 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
   <script>
     const views = Array.from(document.querySelectorAll(".view"));
     const navLinks = Array.from(document.querySelectorAll("[data-target]"));
-    const mobileNav = document.getElementById("mobileNav");
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
     const validIds = new Set(views.map((view) => view.id));
 
     function activate(id) {{
       const target = validIds.has(id) ? id : "home";
       views.forEach((view) => view.classList.toggle("active", view.id === target));
       navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === target));
-      if (mobileNav) mobileNav.value = target;
+      if (mobileMenu && mobileMenuButton) {{
+        mobileMenu.hidden = true;
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+      }}
       document.querySelector(".content").scrollTop = 0;
       window.scrollTo(0, 0);
     }}
 
     window.addEventListener("hashchange", () => activate(location.hash.slice(1)));
-    if (mobileNav) {{
-      mobileNav.addEventListener("change", () => {{
-        location.hash = mobileNav.value;
+    if (mobileMenuButton && mobileMenu) {{
+      mobileMenuButton.addEventListener("click", () => {{
+        const opening = mobileMenu.hidden;
+        mobileMenu.hidden = !opening;
+        mobileMenuButton.setAttribute("aria-expanded", String(opening));
       }});
     }}
     activate(location.hash.slice(1));
