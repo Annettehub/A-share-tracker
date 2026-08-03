@@ -19,6 +19,8 @@ jobs:
     env:
       TZ: Asia/Shanghai
       TRACKER_PROJECT_DIR: ${{ github.workspace }}
+      # 手动触发（workflow_dispatch）时强制刷新；定时触发保留幂等，避免重复提交
+      FORCE_UPDATE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
 
     steps:
       - name: Checkout
