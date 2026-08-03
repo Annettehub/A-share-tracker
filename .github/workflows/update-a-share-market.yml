@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-a-share-market
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -30,6 +34,37 @@ jobs:
 
       - name: Update market data and HTML
         run: python "更新A股行情.py"
+
+      - name: Validate update
+        run: |
+          if [ -f SKIP_REASON.txt ]; then
+            echo "今日跳过更新：$(cat SKIP_REASON.txt)"
+            exit 0
+          fi
+          python - <<'PY'
+          import datetime as _dt
+          import json, os, sys
+          try:
+              from zoneinfo import ZoneInfo
+              SH = ZoneInfo("Asia/Shanghai")
+          except Exception:
+              SH = None
+          today = _dt.datetime.now(SH).strftime("%Y-%m-%d") if SH else _dt.datetime.now().strftime("%Y-%m-%d")
+          p = "market-data.json"
+          if not os.path.exists(p):
+              print("market-data.json 缺失"); sys.exit(1)
+          d = json.load(open(p, encoding="utf-8"))
+          quotes = d.get("quotes", {})
+          if len(quotes) != 13:
+              print(f"公司数量异常: {len(quotes)}"); sys.exit(1)
+          for code, q in quotes.items():
+              qt = (q.get("quote_time") or "")[:10]
+              if qt != today:
+                  print(f"{q.get('name')} 行情日期 {qt} 非今日 {today}"); sys.exit(1)
+              if q.get("price") is None or q.get("market_cap_yi") is None:
+                  print(f"{q.get('name')} 价格/市值缺失"); sys.exit(1)
+          print("校验通过：13 家公司均为今日行情。")
+          PY
 
       - name: Commit changes
         run: |
