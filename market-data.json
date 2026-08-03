@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-03 20:36:25",
+  "updated_at": "2026-08-03 23:37:31",
   "primary_source": "Tencent qt.gtimg.cn",
-  "secondary_source": "Eastmoney push2.eastmoney.com",
-  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 飞荣达: 东方财富市值校验未返回；东山精密: 东方财富市值校验未返回；寒武纪: 东方财富市值校验未返回；沪电股份: 东方财富市值校验未返回；中际旭创: 东方财富市值校验未返回；兆易创新: 东方财富市值校验未返回；伟测科技: 东方财富市值校验未返回；紫光股份: 东方财富市值校验未返回；长芯博创: 东方财富市值校验未返回",
+  "secondary_source": "Eastmoney push2.eastmoney.com / Sina hq.sinajs.cn",
+  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 飞荣达: 东方财富市值校验未返回；长飞光纤: 东方财富市值校验未返回；胜宏科技: 东方财富市值校验未返回；东山精密: 东方财富市值校验未返回；寒武纪: 东方财富市值校验未返回；沪电股份: 东方财富市值校验未返回；中际旭创: 东方财富市值校验未返回；兆易创新: 东方财富市值校验未返回；伟测科技: 东方财富市值校验未返回；联讯仪器: 东方财富市值校验未返回；紫光股份: 东方财富市值校验未返回；长芯博创: 东方财富市值校验未返回；三环集团: 东方财富市值校验未返回",
   "quotes": {
     "300602": {
       "code": "300602",
@@ -17,7 +17,10 @@
       "recent_high_price": 52.92,
       "drawdown_from_recent_high_pct": -41.44,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 30.99,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "601869": {
       "code": "601869",
@@ -32,9 +35,10 @@
       "recent_high_price": 600.0,
       "drawdown_from_recent_high_pct": -56.283,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 2171.6,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available",
+      "sina_price": 262.3,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "300476": {
       "code": "300476",
@@ -49,9 +53,10 @@
       "recent_high_price": 375.8,
       "drawdown_from_recent_high_pct": -49.627,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 1860.41,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available",
+      "sina_price": 189.3,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "002384": {
       "code": "002384",
@@ -66,7 +71,10 @@
       "recent_high_price": 280.08,
       "drawdown_from_recent_high_pct": -41.87,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 162.81,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "688256": {
       "code": "688256",
@@ -81,7 +89,10 @@
       "recent_high_price": 1620.0,
       "drawdown_from_recent_high_pct": -36.543,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 1028.0,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "002463": {
       "code": "002463",
@@ -96,7 +107,10 @@
       "recent_high_price": 158.2,
       "drawdown_from_recent_high_pct": -35.771,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 101.61,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "300308": {
       "code": "300308",
@@ -111,7 +125,10 @@
       "recent_high_price": 1416.88,
       "drawdown_from_recent_high_pct": -36.304,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 902.5,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "603986": {
       "code": "603986",
@@ -126,7 +143,10 @@
       "recent_high_price": 846.66,
       "drawdown_from_recent_high_pct": -59.755,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 340.74,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "688372": {
       "code": "688372",
@@ -141,7 +161,10 @@
       "recent_high_price": 199.73,
       "drawdown_from_recent_high_pct": -48.33,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 103.2,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "688808": {
       "code": "688808",
@@ -156,9 +179,10 @@
       "recent_high_price": 2777.77,
       "drawdown_from_recent_high_pct": -41.536,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 1667.31,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available",
+      "sina_price": 1624.0,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "000938": {
       "code": "000938",
@@ -173,7 +197,10 @@
       "recent_high_price": 45.8,
       "drawdown_from_recent_high_pct": -27.729,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 33.1,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "300548": {
       "code": "300548",
@@ -188,7 +215,10 @@
       "recent_high_price": 309.69,
       "drawdown_from_recent_high_pct": -54.464,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available"
+      "eastmoney_check": "not_available",
+      "sina_price": 141.02,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     },
     "300408": {
       "code": "300408",
@@ -203,9 +233,10 @@
       "recent_high_price": 180.35,
       "drawdown_from_recent_high_pct": -36.79,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_market_cap_yi": 2266.16,
-      "eastmoney_diff_pct": 0.0,
-      "eastmoney_check": "pass"
+      "eastmoney_check": "not_available",
+      "sina_price": 114.0,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
     }
   }
 }
