@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13 18:30:10",
+  "updated_at": "2026-08-14 18:18:28",
   "source_repo": "Annettehub/ai-investing",
   "source_repo_url": "https://github.com/Annettehub/ai-investing",
   "source_commit": "1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0",
@@ -162,87 +162,74 @@
     "东山精密": [
       {
         "company": "东山精密",
-        "title": "S2.1 先进制造瓶颈、先进封装和国产替代",
-        "source_path": "02-kb/hypotheses/S-产业结构与价值捕获/S2.1-advanced-manufacturing-packaging-localization.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/S-%E4%BA%A7%E4%B8%9A%E7%BB%93%E6%9E%84%E4%B8%8E%E4%BB%B7%E5%80%BC%E6%8D%95%E8%8E%B7/S2.1-advanced-manufacturing-packaging-localization.md",
+        "title": "英特尔 - 陈立武的手术刀，特朗普的输血袋，与IFS那不得不说的未来",
+        "source_path": "03-raw/zsxq/id_u29rlg57wswd_英特尔 - 陈立武的手术刀，特朗普的输血袋，与IFS那不得不说的未来.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_u29rlg57wswd_%E8%8B%B1%E7%89%B9%E5%B0%94%20-%20%E9%99%88%E7%AB%8B%E6%AD%A6%E7%9A%84%E6%89%8B%E6%9C%AF%E5%88%80%EF%BC%8C%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E8%BE%93%E8%A1%80%E8%A2%8B%EF%BC%8C%E4%B8%8EIFS%E9%82%A3%E4%B8%8D%E5%BE%97%E4%B8%8D%E8%AF%B4%E7%9A%84%E6%9C%AA%E6%9D%A5.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "东山精密",
-          "AI算力/CAPEX",
-          "光模块/CPO",
-          "存储/HBM",
-          "AI芯片/国产替代"
+          "东山精密"
         ],
-        "snippet": "日期 证据 影响 来源标签 2026 07 21 东山精密调研会称 2027 年 DSP 供给紧张、公司锁定 2500 万颗以上 DSP；2027 年硅光成为主力产品，PIC 由希烽、Silex、Tower、粤芯等供应；InP 衬底价值量不到 2% 支持 S2 的“瓶颈接力”判断：AI 硬件结构瓶颈不仅在先进制程、CoWoS、HBM，也会扩散到 DSP、PIC、硅光、光芯片和海外产能认证 02 kb/sources/2026 07 21..."
+        "snippet": "美国政府入股得到政治背书，是英特尔起死回生的第一步，所以今年以来他们高调的宣布18A的各种进程，向政府释放救我是值得的，我还有机会东山再起。"
       },
       {
         "company": "东山精密",
-        "title": "R1 上游兑现：AI 基础设施需求进入产业链的业绩",
-        "source_path": "02-kb/hypotheses/R-业绩兑现/R1-upstream-ai-infrastructure-earnings.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/R-%E4%B8%9A%E7%BB%A9%E5%85%91%E7%8E%B0/R1-upstream-ai-infrastructure-earnings.md",
+        "title": "英特尔或拿下苹果订单 股价大涨的背后",
+        "source_path": "03-raw/zsxq/id_suphkad5wmah_英特尔或拿下苹果订单 股价大涨的背后.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_suphkad5wmah_%E8%8B%B1%E7%89%B9%E5%B0%94%E6%88%96%E6%8B%BF%E4%B8%8B%E8%8B%B9%E6%9E%9C%E8%AE%A2%E5%8D%95%20%E8%82%A1%E4%BB%B7%E5%A4%A7%E6%B6%A8%E7%9A%84%E8%83%8C%E5%90%8E.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "东山精密",
-          "AI算力/CAPEX",
-          "光模块/CPO"
+          "东山精密"
         ],
-        "snippet": "日期 证据 判断 来源与置信度 2026 07 21 东山精密调研会给出 AI 光模块产量、1.6T 产能、DSP 锁单、泰国/台湾产能和硅光成本等具体上游指标 支持 R1 的“AI 基础设施需求进入上游订单与产能”路径，但尚未完成收入、毛利率、现金流验证 02 kb/sources/2026 07 21 feishu dsbj optical module qa.md；中高 2026 08 08 Coherent 专家 Q&A 给出 ..."
+        "snippet": "美国政府入股得到政治背书，是英特尔起死回生的第一步，所以今年以来他们高调的宣布18A的各种进程，向政府释放救我是值得的，我还有机会东山再起。"
       },
       {
         "company": "东山精密",
-        "title": "G3 AI 推理需求规模验证",
-        "source_path": "02-kb/hypotheses/G-需求与周期/G3-inference-demand-scale.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/G-%E9%9C%80%E6%B1%82%E4%B8%8E%E5%91%A8%E6%9C%9F/G3-inference-demand-scale.md",
+        "title": "E189 期 芯片20年：狂欢成长与残酷周期，AI赛道步入下半场｜永庆对话海哥",
+        "source_path": "03-raw/podwise/E189_期_芯片20年狂欢成长与残酷周期AI赛道步入下半场永庆对话海哥_8324896.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/podwise/E189_%E6%9C%9F_%E8%8A%AF%E7%89%8720%E5%B9%B4%E7%8B%82%E6%AC%A2%E6%88%90%E9%95%BF%E4%B8%8E%E6%AE%8B%E9%85%B7%E5%91%A8%E6%9C%9FAI%E8%B5%9B%E9%81%93%E6%AD%A5%E5%85%A5%E4%B8%8B%E5%8D%8A%E5%9C%BA%E6%B0%B8%E5%BA%86%E5%AF%B9%E8%AF%9D%E6%B5%B7%E5%93%A5_8324896.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
           "东山精密",
-          "AI算力/CAPEX",
-          "光模块/CPO",
-          "AI芯片/国产替代"
+          "存储/HBM"
         ],
-        "snippet": "日期 证据 影响 来源标签 2026 07 22 Feishu 社区观点称豆包 daily token consumption 达 180 万亿，Agent、视频生成和国内模型集群扩张继续推高 GPU/内存/机柜需求 🟡 支持推理需求扩散，但该数字需字节披露、第三方流量和芯片采购数据交叉验证 02 kb/sources/2026 07 22 feishu bytedance capex revision.md 2026 08 08 Gr..."
+        "snippet": "[01:00:51] 海哥 海外。 所以说东山精密现在大家也很关注，因为他有索尔斯， 收购了也是很厉害的。 那么海外的话，他们还是比较紧缺的，所以 coherent 和 light, 但他们都挺贵的，坦白说，对，都是黄仁勋看好的公司， 所以黄仁勋就让他们扩大，所以他入股了嘛，他个头了 20 亿美元， 对，包括给康宁做光线，因为机柜间机柜那些有光线的需要的量也是不得了， 这些还是缺的，但是像光线那些我觉得都不会有问题的， 因为中国那么多公..."
       }
     ],
     "寒武纪": [
       {
         "company": "寒武纪",
-        "title": "S1.1 芯片与加速器竞争结构",
-        "source_path": "02-kb/hypotheses/S-产业结构与价值捕获/S1.1-chip-accelerator-competition.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/S-%E4%BA%A7%E4%B8%9A%E7%BB%93%E6%9E%84%E4%B8%8E%E4%BB%B7%E5%80%BC%E6%8D%95%E8%8E%B7/S1.1-chip-accelerator-competition.md",
+        "title": "2025年全球及大A投资逻辑与建议(A股篇)",
+        "source_path": "03-raw/zsxq/id_cxsb50m9r1ns_2025年全球及大A投资逻辑与建议(A股篇).md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_cxsb50m9r1ns_2025%E5%B9%B4%E5%85%A8%E7%90%83%E5%8F%8A%E5%A4%A7A%E6%8A%95%E8%B5%84%E9%80%BB%E8%BE%91%E4%B8%8E%E5%BB%BA%E8%AE%AE%28A%E8%82%A1%E7%AF%87%29.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
           "寒武纪",
-          "AI算力/CAPEX",
           "AI芯片/国产替代"
         ],
-        "snippet": "关联 G : G1 AI CAPEX 与产能传导；G3 AI 应用与制造需求 关联 S : S2 先进制造瓶颈、先进封装和国产替代 关联 R : R1 上游兑现 关联 company : NVDA, AVGO, MRVL, AMD, TSM, 寒武纪, 华为"
+        "snippet": "当然大A的估值体系与海外市场不一样，半导体行业的PE可以高一点，毕竟有其稀缺性，甚至是唯一性，比如中芯国际，国内唯一能制造先进芯片的企业，比如寒武纪，国内唯一上市的AI芯片企业，但这个唯一性到底要给多少估值，没人说的明白，全是市场氛围说了算。"
       },
       {
         "company": "寒武纪",
-        "title": "R0 公司业绩兑现检查清单",
-        "source_path": "02-kb/hypotheses/R-业绩兑现/R0-company-earnings-checklist.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/R-%E4%B8%9A%E7%BB%A9%E5%85%91%E7%8E%B0/R0-company-earnings-checklist.md",
+        "title": "中芯国际的战略转型与2026财务健康关键年",
+        "source_path": "03-raw/zsxq/id_8gwwwb29nctw_中芯国际的战略转型与2026财务健康关键年.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_8gwwwb29nctw_%E4%B8%AD%E8%8A%AF%E5%9B%BD%E9%99%85%E7%9A%84%E6%88%98%E7%95%A5%E8%BD%AC%E5%9E%8B%E4%B8%8E2026%E8%B4%A2%E5%8A%A1%E5%81%A5%E5%BA%B7%E5%85%B3%E9%94%AE%E5%B9%B4.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "寒武纪",
-          "AI算力/CAPEX",
-          "AI芯片/国产替代"
+          "寒武纪"
         ],
-        "snippet": "日期 证据 影响 来源标签 2026 07 05 字节 4200 4300 亿算力预算；Anthropic ARR 数月内从 90 亿冲到 600 亿+；AI 应用进入\"宿醉期\"重新评估 ROI 🟢 [IMA] 字节专家访谈/20VC/Q2硅谷观察 2025 11 14 吴梓豪：中芯国际战略转型与2026财务健康关键年，28nm/45nm是绝对支柱(2025 11 14) 🟢 [知识星球] 2025 11 14 吴梓豪：AI芯片量级太低..."
+        "snippet": "笔者从去年就一直强调AI的量级太低，对fab来说不吃产能，比如寒武纪单颗590售价8万人民币，用20％如此低的良率来计算，每片wafer大约可以出12~15颗芯片。"
       },
       {
         "company": "寒武纪",
-        "title": "G1 AI CAPEX 与制造产能交叉验证",
-        "source_path": "02-kb/hypotheses/G-需求与周期/G1-ai-capex-and-capacity.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/hypotheses/G-%E9%9C%80%E6%B1%82%E4%B8%8E%E5%91%A8%E6%9C%9F/G1-ai-capex-and-capacity.md",
+        "title": "美国BIS全球禁用  国产AI芯片该何去何从(星球原版)",
+        "source_path": "03-raw/zsxq/id_63wpl2l64s4j_美国BIS全球禁用 国产AI芯片该何去何从(星球原版).md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_63wpl2l64s4j_%E7%BE%8E%E5%9B%BDBIS%E5%85%A8%E7%90%83%E7%A6%81%E7%94%A8%20%E5%9B%BD%E4%BA%A7AI%E8%8A%AF%E7%89%87%E8%AF%A5%E4%BD%95%E5%8E%BB%E4%BD%95%E4%BB%8E%28%E6%98%9F%E7%90%83%E5%8E%9F%E7%89%88%29.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
           "寒武纪",
-          "AI算力/CAPEX",
-          "存储/HBM",
           "AI芯片/国产替代"
         ],
-        "snippet": "1. 云厂商 CAPEX/订单承诺 : Amazon、Microsoft、Alphabet、Meta、阿里、字节、腾讯是否继续上修预算。 2. 半导体制造产能 : 台积电先进制程、CoWoS/CoPoS、HBM、WFE 是否能承接这些预算。 3. 中国国产替代产能 : SMIC N+1/N+2/N+3、昇腾/寒武纪/海光/平头哥等出货是否足以支撑国内预算叙事。"
+        "snippet": "a,b两条规则都属于3A090基本涵盖国产所有AI GPU以及ASIC，涉及的公司包含海思、寒武纪、壁仞、沐曦、燧原、天数、摩尔线程、海光的先进AI芯片。"
       }
     ],
     "沪电股份": [
@@ -277,46 +264,50 @@
     "中际旭创": [
       {
         "company": "中际旭创",
-        "title": "Ticker / Company",
-        "source_path": "02-kb/sources/Serenity-投研方法论框架.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/sources/Serenity-%E6%8A%95%E7%A0%94%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A1%86%E6%9E%B6.md",
+        "title": "博通大涨后 对光模块的看法与复盘",
+        "source_path": "03-raw/zsxq/id_oqs4wekgej2z_博通大涨后 对光模块的看法与复盘.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_oqs4wekgej2z_%E5%8D%9A%E9%80%9A%E5%A4%A7%E6%B6%A8%E5%90%8E%20%E5%AF%B9%E5%85%89%E6%A8%A1%E5%9D%97%E7%9A%84%E7%9C%8B%E6%B3%95%E4%B8%8E%E5%A4%8D%E7%9B%98.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "中际旭创",
-          "AI算力/CAPEX",
-          "光模块/CPO"
+          "中际旭创"
         ],
-        "snippet": "[!important] Serenity 不是只买“AI 主题” 她真正寻找的是 AI capex 漏斗里 下一段会被迫补资本开支的节点。主题只是入口，瓶颈才是 alpha 来源。 第二层：Architecture，判断架构代际，而不是只看行业名 同一个行业里，当前 winners 和下一代 winners 可能完全不同。 以光互联为例，Serenity 的笔记反复区分： 代际 典型方向 代表表达 当前代际 Pluggable opt..."
+        "snippet": "重新看这篇文章，复盘一下上面这句话，看似也没问题，中际旭创从1月份的130多一路下滑到80多。好像说的真那么回事。"
       },
       {
         "company": "中际旭创",
-        "title": "Serenity 投研方法论框架",
-        "source_path": "02-kb/concepts/跨层-方法论（Cross-Layer）/Serenity投研方法论框架.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/concepts/%E8%B7%A8%E5%B1%82-%E6%96%B9%E6%B3%95%E8%AE%BA%EF%BC%88Cross-Layer%EF%BC%89/Serenity%E6%8A%95%E7%A0%94%E6%96%B9%E6%B3%95%E8%AE%BA%E6%A1%86%E6%9E%B6.md",
+        "title": "博通大涨后 对光模块的看法与复盘（更新版）",
+        "source_path": "03-raw/zsxq/id_brmvnn31mahl_博通大涨后 对光模块的看法与复盘（更新版）.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_brmvnn31mahl_%E5%8D%9A%E9%80%9A%E5%A4%A7%E6%B6%A8%E5%90%8E%20%E5%AF%B9%E5%85%89%E6%A8%A1%E5%9D%97%E7%9A%84%E7%9C%8B%E6%B3%95%E4%B8%8E%E5%A4%8D%E7%9B%98%EF%BC%88%E6%9B%B4%E6%96%B0%E7%89%88%EF%BC%89.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "中际旭创",
-          "光模块/CPO"
+          "中际旭创"
         ],
-        "snippet": "代际 典型方向 代表表达 当前代际 Pluggable optics、EML、800G/1.6T 放量 LITE, COHR, AAOI, Innolight 过渡代际 服务器和交换机集成度提升，线缆、制造和组装受益 AAOI, JBL, FN 下一代 CPO、硅光、co packaged optics SIVE, Celestial AI, Ayar Labs, POET 更远期 wafer level optics、foundry ..."
+        "snippet": "重新看这篇文章，再复盘一下上面这句话，整體上還是有很大的理解錯誤，当时看似没问题，業績確實一直往上，但中际旭创从1月份的130多一路下滑到80多。好像说的真那么回事。"
       },
       {
         "company": "中际旭创",
-        "title": "L3 基础设施层触发器",
-        "source_path": "02-kb/concepts/L3-基础设施层（Infrastructure）/基础设施层触发器.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/concepts/L3-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%E8%A7%A6%E5%8F%91%E5%99%A8.md",
+        "title": "节后大A开盘 半导体股有啥值得期待?",
+        "source_path": "03-raw/zsxq/id_0tzms4jmrcoq_节后大A开盘 半导体股有啥值得期待_.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_0tzms4jmrcoq_%E8%8A%82%E5%90%8E%E5%A4%A7A%E5%BC%80%E7%9B%98%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E6%9C%89%E5%95%A5%E5%80%BC%E5%BE%97%E6%9C%9F%E5%BE%85_.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
-          "中际旭创",
-          "光模块/CPO",
-          "AI PCB",
-          "存储/HBM",
-          "被动元件/MLCC"
+          "中际旭创"
         ],
-        "snippet": "链条 观察对象 光模块/光器件 中际旭创、新易盛、天孚通信、Coherent、源杰科技、长光华芯 硅光/CPO/交换芯片 博通、台积电、英伟达、Cisco、Intel AI 服务器/PCB 东山精密、服务器 ODM、AI PCB 供应链 被动元件 村田、三星电机、太阳诱电、风华高科、三环集团 系统软件 CUDA、Triton、XLA、NCCL、RDMA、FlashAttention、PagedAttention"
+        "snippet": "有业绩支撑的英伟达或AI概念也是可以的 , 工业富联 , 中际旭创 , 工业富联目前价格不高 , 风险低 , 未来业绩持续往上走非常明确 , 是保守型投资者可以选择的 . 中际有业绩有未来涨幅也能到20% ."
       }
     ],
     "兆易创新": [
+      {
+        "company": "兆易创新",
+        "title": "2026投资建议- 简易版",
+        "source_path": "03-raw/zsxq/id_k8tw8jk3pvvj_2026投资建议- 简易版.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/zsxq/id_k8tw8jk3pvvj_2026%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE-%20%E7%AE%80%E6%98%93%E7%89%88.md",
+        "source_commit_time": "2026-08-10T03:18:40Z",
+        "matched_keywords": [
+          "兆易创新"
+        ],
+        "snippet": "长鑫（26年IPO)，长存(未IPO)，兆易创新，中微，宁德时代，寒武纪(1000以下找买点）。"
+      },
       {
         "company": "兆易创新",
         "title": "知识星球来源总索引",
@@ -334,30 +325,15 @@
       },
       {
         "company": "兆易创新",
-        "title": "华为芯片生态 / 韬定律",
-        "source_path": "02-kb/concepts/L2-芯片层（Chips）/地缘政治/华为芯片生态-韬定律.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/concepts/L2-%E8%8A%AF%E7%89%87%E5%B1%82%EF%BC%88Chips%EF%BC%89/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB/%E5%8D%8E%E4%B8%BA%E8%8A%AF%E7%89%87%E7%94%9F%E6%80%81-%E9%9F%AC%E5%AE%9A%E5%BE%8B.md",
+        "title": "603986.SH 兆易创新 — 实体档案",
+        "source_path": "02-kb/entities/兆易创新.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/entities/%E5%85%86%E6%98%93%E5%88%9B%E6%96%B0.md",
         "source_commit_time": "2026-08-10T03:18:40Z",
         "matched_keywords": [
           "兆易创新",
-          "存储/HBM",
-          "AI芯片/国产替代",
-          "半导体测试/仪器"
+          "存储/HBM"
         ],
-        "snippet": "标的 角色 关联度 受益/受损逻辑 中芯国际(00981) 华为核心代工厂 ★★★★★ 华为订单是中芯先进制程最大客户 YMTC 存储供应 ★★★★☆ 华为需要国产存储配套 华为(未上市) 生态核心 ★★★★★ 韬定律实践者，国产替代标杆 寒武纪 AI芯片竞品 ★★★☆☆ 昇腾 vs 思元竞争 海光信息 CPU竞品 ★★★☆☆ 鲲鹏 vs 海光竞争 长电科技 封测配套 ★★★☆☆ 华为芯片封测需求 兆易创新 存储/MCU ★★☆☆☆ 华..."
-      },
-      {
-        "company": "兆易创新",
-        "title": "存储产业链与周期（HBM、DRAM、NAND）",
-        "source_path": "02-kb/concepts/L2-芯片层（Chips）/供需周期与供应链/存储产业链与周期（HBM、DRAM、NAND）.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/concepts/L2-%E8%8A%AF%E7%89%87%E5%B1%82%EF%BC%88Chips%EF%BC%89/%E4%BE%9B%E9%9C%80%E5%91%A8%E6%9C%9F%E4%B8%8E%E4%BE%9B%E5%BA%94%E9%93%BE/%E5%AD%98%E5%82%A8%E4%BA%A7%E4%B8%9A%E9%93%BE%E4%B8%8E%E5%91%A8%E6%9C%9F%EF%BC%88HBM%E3%80%81DRAM%E3%80%81NAND%EF%BC%89.md",
-        "source_commit_time": "2026-08-10T03:18:40Z",
-        "matched_keywords": [
-          "兆易创新",
-          "存储/HBM",
-          "半导体测试/仪器"
-        ],
-        "snippet": "标的 角色 关联度 受益/受损逻辑 SK海力士 HBM绝对龙头 ★★★★★ 50%份额，英伟达核心供应商，HBM涨价最大受益者 三星 HBM追赶者 ★★★★☆ 份额~30%，垂直整合优势，HBM3E良率提升中 美光 HBM追赶者 ★★★★☆ 份额~15%，HBM3E进展快，美国本土优势 台积电 HBM封装平台 ★★★★★ CoWoS集成HBM，HBM需求→CoWoS需求 长鑫存储 国产HBM探索 ★★★☆☆ 受制裁限制，DDR5突破但H..."
+        "snippet": "项目 内容 全称 兆易创新科技集团股份有限公司 股票代码 603986.SH 总部 北京 业务 NOR Flash + NAND Flash + MCU + DRAM(代工) 关联方 长鑫存储(CXMT) — DRAM代工关系，关联交易额57亿 上市状态 ✅ A股上市"
       }
     ],
     "伟测科技": [
@@ -430,6 +406,17 @@
       },
       {
         "company": "三环集团",
+        "title": "20VC: Leo Aschenbrenner's Largest Holding: Inside the $90BN Bloom Energy | Why Electricity, Not AI Models, Will Decide the Winners of the AI Race | Why We Are Not in an AI Capex Bubble | Energy Sovereignty and The Future of Power with KR Sridhar",
+        "source_path": "03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md",
+        "source_commit_time": "2026-08-10T03:18:40Z",
+        "matched_keywords": [
+          "三环集团"
+        ],
+        "snippet": "[09:56] KR Sridhar 所以，在这里我们建造接下来的 10 个，接下来的 20 个。它们都在现场表现得很糟糕。 这让人震惊，因为在早期阶段，它们是昂贵的第一批产品。 名声岌岌可危。 所以，我想，这个不能扩展。 所以，我就停止了生产。 我给我的董事会打电话，我说，我需要帮助。 我需要人来帮我。 告诉我如何进行生产。 我不知道。 来的人中有安迪·格罗夫，他成了我的好朋友、导师和硅谷传奇。 还有其他一些制造专家。 其中一个是在我..."
+      },
+      {
+        "company": "三环集团",
         "title": "来源摘要：MLCC 涨价与供需紧绷信号",
         "source_path": "02-kb/sources/SRC-MLCC-涨价-2026-07-04.md",
         "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/sources/SRC-MLCC-%E6%B6%A8%E4%BB%B7-2026-07-04.md",
@@ -439,20 +426,6 @@
           "被动元件/MLCC"
         ],
         "snippet": "1. 村田宣布 2026 07 01 起对 AI 服务器/高端车规高容 MLCC 涨价 10% 40%。 → 证据：东方财富 2026 06 24。 2. 村田产能利用率接近 95%，交期延长至 4 个月。 → 证据：电子发烧友 2026 06 01 / TrendForce 2026 06。 3. AI 服务器 MLCC 需求年增 30%+，现有产能仅为订单量的一半。 → 证据：电子发烧友 2026 06 01。 4. 太阳诱电 20..."
-      },
-      {
-        "company": "三环集团",
-        "title": "L3 基础设施层触发器",
-        "source_path": "02-kb/concepts/L3-基础设施层（Infrastructure）/基础设施层触发器.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/1afeb14a9e5daa00d5d4ae671ec1ec558c413ff0/02-kb/concepts/L3-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%E8%A7%A6%E5%8F%91%E5%99%A8.md",
-        "source_commit_time": "2026-08-10T03:18:40Z",
-        "matched_keywords": [
-          "三环集团",
-          "AI算力/CAPEX",
-          "光模块/CPO",
-          "被动元件/MLCC"
-        ],
-        "snippet": "L3 只记录会改变算力建设节奏、集群效率或供应链利润分配的信号。 光模块、CPO、AI 服务器、MLCC、CUDA/NCCL/FlashAttention 等旧主题不再单独铺目录，统一作为触发器和证据项管理。 如果某个 L3 信号变成长期研究主线，再迁移到 L2、L4 或跨层动态，而不是在 L3 继续分叉。"
       }
     ]
   }
