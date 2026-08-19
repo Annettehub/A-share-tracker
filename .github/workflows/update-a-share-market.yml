@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   update:
+    if: false  # disabled 2026-08-19: migrated to WorkBuddy scheduled automation
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
