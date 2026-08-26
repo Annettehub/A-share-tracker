@@ -4,3 +4,10 @@ __pycache__/
 *.pyc
 东方电气_驱动因素分析_2026.html
 东方电气_驱动因素分析_2026年.md
+
+# 本地自动化脚本（不入库）
+daily_update.ps1
+install_daily_task.ps1
+daily_update_run.log
+.daily_update_stdout.txt
+.daily_update_stderr.txt
