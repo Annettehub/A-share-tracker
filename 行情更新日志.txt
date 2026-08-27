@@ -1,7 +1,7 @@
-更新时间：2026-08-27 19:27:53
+更新时间：2026-08-27 22:05:26
 主源：Tencent qt.gtimg.cn
 校验源：Eastmoney push2.eastmoney.com / Sina hq.sinajs.cn
-网页：C:\Users\Annette Zhang\Documents\Project1\A-share-tracker\2026 H2 吴梓豪A股公司追踪 2026.7.html
+网页：D:\WorkBuddy\A-share-tracker\2026 H2 吴梓豪A股公司追踪 2026.7.html
 ai-investing观察：已同步 ai-investing 观察：市场 10 条，公司 23 条。
 来源提交：c8ac716740eb1e92edeb182c8bc17ffa00cfac8d
 
