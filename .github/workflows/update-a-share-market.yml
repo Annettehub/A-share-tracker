@@ -2,10 +2,8 @@ name: Update A-share market data
 
 on:
   schedule:
-    # After A-share close. Multiple runs make GitHub scheduler delays less likely to miss a trading day.
-    - cron: "30 9 * * 1-5"
-    - cron: "30 12 * * 1-5"
-    - cron: "30 15 * * 1-5"
+    # 10:00 UTC = 18:00 Asia/Shanghai, weekdays after A-share close.
+    - cron: "0 10 * * 1-5"
   workflow_dispatch:
 
 permissions:
