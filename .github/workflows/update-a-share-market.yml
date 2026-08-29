@@ -2,8 +2,10 @@ name: Update A-share market data
 
 on:
   schedule:
-    # 09:20 UTC = 17:20 Asia/Shanghai, after A-share close.
-    - cron: "20 9 * * 1-5"
+    # After A-share close. Multiple runs make GitHub scheduler delays less likely to miss a trading day.
+    - cron: "30 9 * * 1-5"
+    - cron: "30 12 * * 1-5"
+    - cron: "30 15 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -51,7 +53,7 @@ jobs:
               SH = ZoneInfo("Asia/Shanghai")
           except Exception:
               SH = None
-          today = _dt.datetime.now(SH).strftime("%Y-%m-%d") if SH else _dt.datetime.now().strftime("%Y-%m-%d")
+          today = _dt.datetime.now(SH).date() if SH else _dt.datetime.now().date()
           p = "market-data.json"
           if not os.path.exists(p):
               print("market-data.json 缺失"); sys.exit(1)
@@ -59,13 +61,19 @@ jobs:
           quotes = d.get("quotes", {})
           if len(quotes) != 13:
               print(f"公司数量异常: {len(quotes)}"); sys.exit(1)
+          quote_dates = set()
           for code, q in quotes.items():
               qt = (q.get("quote_time") or "")[:10]
-              if qt != today:
-                  print(f"{q.get('name')} 行情日期 {qt} 非今日 {today}"); sys.exit(1)
+              quote_dates.add(qt)
               if q.get("price") is None or q.get("market_cap_yi") is None:
                   print(f"{q.get('name')} 价格/市值缺失"); sys.exit(1)
-          print("校验通过：13 家公司均为今日行情。")
+          if len(quote_dates) != 1:
+              print(f"行情日期不一致: {sorted(quote_dates)}"); sys.exit(1)
+          quote_date = _dt.date.fromisoformat(next(iter(quote_dates)))
+          age_days = (today - quote_date).days
+          if age_days < 0 or age_days > 10:
+              print(f"行情日期异常: quote_date={quote_date}, today={today}, age_days={age_days}"); sys.exit(1)
+          print(f"校验通过：13 家公司行情日期一致，quote_date={quote_date}。")
           PY
 
       - name: Commit changes

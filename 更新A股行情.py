@@ -201,42 +201,36 @@ def retry(fn, attempts: int = 3):
     raise last_error
 
 
-def already_updated_today() -> bool:
+def latest_saved_quote_date() -> str | None:
     if not MARKET_DATA.exists():
-        return False
+        return None
     try:
         data = json.loads(MARKET_DATA.read_text(encoding="utf-8"))
     except Exception:
-        return False
+        return None
     quotes = data.get("quotes", {})
     if not quotes:
-        return False
+        return None
     dates = [q.get("quote_time", "")[:10] for q in quotes.values() if q.get("quote_time")]
     if not dates:
-        return False
-    return max(dates) == today_str()
+        return None
+    return max(dates)
 
 
-def is_trading_day_today(s: requests.Session) -> bool:
-    """用一只股票探测今日是否有 A 股行情；探测失败则不跳过，交由主流程报错。"""
+def fetch_latest_market_probe(s: requests.Session) -> dict:
+    """Use the quote source date, not runner wall-clock date, as the update target."""
     item = COMPANIES[0]
-    try:
-        q = fetch_tencent_quote(item, s)
-    except Exception:
-        return True
-    return q["quote_time"][:10] == today_str()
+    return retry(lambda: fetch_tencent_quote(item, s))
 
 
 def main() -> None:
-    if os.environ.get("FORCE_UPDATE") != "1" and already_updated_today():
-        SKIP_REASON.write_text(f"今日已更新（{today_str()}），跳过。", encoding="utf-8")
-        print("今日已更新，跳过。")
-        return
-
     s = session()
-    if not is_trading_day_today(s):
-        SKIP_REASON.write_text(f"非交易日（{today_str()} 无 A 股行情），跳过。", encoding="utf-8")
-        print("非交易日，跳过。")
+    probe_quote = fetch_latest_market_probe(s)
+    target_quote_date = probe_quote["quote_time"][:10]
+
+    if os.environ.get("FORCE_UPDATE") != "1" and latest_saved_quote_date() == target_quote_date:
+        SKIP_REASON.write_text(f"最新交易日行情已更新（{target_quote_date}），跳过。", encoding="utf-8")
+        print(f"最新交易日行情已更新（{target_quote_date}），跳过。")
         return
 
     if SKIP_REASON.exists():
@@ -246,7 +240,10 @@ def main() -> None:
     checks = []
 
     for item in COMPANIES:
-        quote = retry(lambda item=item: fetch_tencent_quote(item, s))
+        if item["code"] == probe_quote["code"]:
+            quote = probe_quote
+        else:
+            quote = retry(lambda item=item: fetch_tencent_quote(item, s))
         try:
             quote.update(retry(lambda item=item, quote=quote: fetch_tencent_recent_high(item, quote, s)))
         except Exception as error:
