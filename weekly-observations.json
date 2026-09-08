@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-07 23:45:35",
+  "updated_at": "2026-09-08 22:24:02",
   "source_repo": "Annettehub/ai-investing",
   "source_repo_url": "https://github.com/Annettehub/ai-investing",
-  "source_commit": "a058528abcb0522778e6b6f2d62bc4ec485efcae",
+  "source_commit": "490043ecba92935174d49c24738ab54c6e19ee41",
   "market_observations": [
     {
       "company": null,
       "title": "2026-W29 H1.2 存储周期更新",
       "source_path": "04-output/weekly/2026-W29-H1.2-storage-cycle.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/weekly/2026-W29-H1.2-storage-cycle.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/weekly/2026-W29-H1.2-storage-cycle.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "光模块/CPO",
         "AI PCB",
@@ -23,8 +23,8 @@
       "company": null,
       "title": "2026-W28 H1.2 存储周期更新",
       "source_path": "04-output/weekly/2026-W28-H1.2-storage-cycle.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/weekly/2026-W28-H1.2-storage-cycle.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/weekly/2026-W28-H1.2-storage-cycle.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "存储/HBM",
         "AI芯片/国产替代"
@@ -35,8 +35,8 @@
       "company": null,
       "title": "2026-W27 周度复盘（测试版）",
       "source_path": "04-output/weekly/2026-W27.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/weekly/2026-W27.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/weekly/2026-W27.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "半导体测试/仪器",
@@ -48,8 +48,8 @@
       "company": null,
       "title": "G2 存储成长与周期分层长期跟踪表",
       "source_path": "04-output/tracking/H1.2-storage-tracking.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/tracking/H1.2-storage-tracking.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/tracking/H1.2-storage-tracking.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "存储/HBM",
@@ -62,8 +62,8 @@
       "company": null,
       "title": "G2 存储产业链深度研究：HBM、DRAM、NAND 的分层供需与周期重构",
       "source_path": "04-output/reports/H1.2-storage-restructured-2026-07-12.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/reports/H1.2-storage-restructured-2026-07-12.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/reports/H1.2-storage-restructured-2026-07-12.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "AI PCB",
@@ -77,8 +77,8 @@
       "company": null,
       "title": "2026投资建议- 谷歌篇",
       "source_path": "03-raw/zsxq/id_zqh9ckitmc17_2026投资建议- 谷歌篇.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_zqh9ckitmc17_2026%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE-%20%E8%B0%B7%E6%AD%8C%E7%AF%87.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_zqh9ckitmc17_2026%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE-%20%E8%B0%B7%E6%AD%8C%E7%AF%87.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "光模块/CPO",
@@ -92,8 +92,8 @@
       "company": null,
       "title": "中国限制稀土出口 全球半导体影响几何",
       "source_path": "03-raw/zsxq/id_za1s7or3l3qn_中国限制稀土出口 全球半导体影响几何.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "液冷/散热",
         "存储/HBM",
@@ -106,8 +106,8 @@
       "company": null,
       "title": "SiC碳化硅  海外锚定AI电源  而大A仍在 Interposer中介层",
       "source_path": "03-raw/zsxq/id_z1u1qqtaawnw_SiC碳化硅 海外锚定AI电源 而大A仍在 Interposer中介层.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_z1u1qqtaawnw_SiC%E7%A2%B3%E5%8C%96%E7%A1%85%20%E6%B5%B7%E5%A4%96%E9%94%9A%E5%AE%9AAI%E7%94%B5%E6%BA%90%20%E8%80%8C%E5%A4%A7A%E4%BB%8D%E5%9C%A8%20Interposer%E4%B8%AD%E4%BB%8B%E5%B1%82.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_z1u1qqtaawnw_SiC%E7%A2%B3%E5%8C%96%E7%A1%85%20%E6%B5%B7%E5%A4%96%E9%94%9A%E5%AE%9AAI%E7%94%B5%E6%BA%90%20%E8%80%8C%E5%A4%A7A%E4%BB%8D%E5%9C%A8%20Interposer%E4%B8%AD%E4%BB%8B%E5%B1%82.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "光模块/CPO",
@@ -121,8 +121,8 @@
       "company": null,
       "title": "自研ASIC形势一片大好？ 大模型场景的推理芯片及系统设计形态的辩证",
       "source_path": "03-raw/zsxq/id_x9l2ne9d62vd_自研ASIC形势一片大好？ 大模型场景的推理芯片及系统设计形态的辩证.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_x9l2ne9d62vd_%E8%87%AA%E7%A0%94ASIC%E5%BD%A2%E5%8A%BF%E4%B8%80%E7%89%87%E5%A4%A7%E5%A5%BD%EF%BC%9F%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9C%BA%E6%99%AF%E7%9A%84%E6%8E%A8%E7%90%86%E8%8A%AF%E7%89%87%E5%8F%8A%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%BD%A2%E6%80%81%E7%9A%84%E8%BE%A9%E8%AF%81.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_x9l2ne9d62vd_%E8%87%AA%E7%A0%94ASIC%E5%BD%A2%E5%8A%BF%E4%B8%80%E7%89%87%E5%A4%A7%E5%A5%BD%EF%BC%9F%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9C%BA%E6%99%AF%E7%9A%84%E6%8E%A8%E7%90%86%E8%8A%AF%E7%89%87%E5%8F%8A%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E5%BD%A2%E6%80%81%E7%9A%84%E8%BE%A9%E8%AF%81.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "AI算力/CAPEX",
         "存储/HBM",
@@ -134,8 +134,8 @@
       "company": null,
       "title": "全球竞争激烈快速推进 , 国产HBM将如何自处?",
       "source_path": "03-raw/zsxq/id_wwsoej85lmn0_全球竞争激烈快速推进 , 国产HBM将如何自处_.md",
-      "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_wwsoej85lmn0_%E5%85%A8%E7%90%83%E7%AB%9E%E4%BA%89%E6%BF%80%E7%83%88%E5%BF%AB%E9%80%9F%E6%8E%A8%E8%BF%9B%20%2C%20%E5%9B%BD%E4%BA%A7HBM%E5%B0%86%E5%A6%82%E4%BD%95%E8%87%AA%E5%A4%84_.md",
-      "source_commit_time": "2026-09-07T06:04:49Z",
+      "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_wwsoej85lmn0_%E5%85%A8%E7%90%83%E7%AB%9E%E4%BA%89%E6%BF%80%E7%83%88%E5%BF%AB%E9%80%9F%E6%8E%A8%E8%BF%9B%20%2C%20%E5%9B%BD%E4%BA%A7HBM%E5%B0%86%E5%A6%82%E4%BD%95%E8%87%AA%E5%A4%84_.md",
+      "source_commit_time": "2026-09-08T12:20:55Z",
       "matched_keywords": [
         "存储/HBM",
         "半导体测试/仪器"
@@ -149,8 +149,8 @@
         "company": "飞荣达",
         "title": "2026-09-03 吴梓豪 德邦科技华为散热投资分析",
         "source_path": "03-raw/feishu/2026-09-03 吴梓豪 德邦科技华为散热投资分析.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/feishu/2026-09-03%20%E5%90%B4%E6%A2%93%E8%B1%AA%20%E5%BE%B7%E9%82%A6%E7%A7%91%E6%8A%80%E5%8D%8E%E4%B8%BA%E6%95%A3%E7%83%AD%E6%8A%95%E8%B5%84%E5%88%86%E6%9E%90.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/feishu/2026-09-03%20%E5%90%B4%E6%A2%93%E8%B1%AA%20%E5%BE%B7%E9%82%A6%E7%A7%91%E6%8A%80%E5%8D%8E%E4%B8%BA%E6%95%A3%E7%83%AD%E6%8A%95%E8%B5%84%E5%88%86%E6%9E%90.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "飞荣达",
           "AI芯片/国产替代",
@@ -162,8 +162,8 @@
         "company": "飞荣达",
         "title": "89月A股操作操略",
         "source_path": "03-raw/feishu/2026-08-20 89月A股操作操略.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/feishu/2026-08-20%2089%E6%9C%88A%E8%82%A1%E6%93%8D%E4%BD%9C%E6%93%8D%E7%95%A5.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/feishu/2026-08-20%2089%E6%9C%88A%E8%82%A1%E6%93%8D%E4%BD%9C%E6%93%8D%E7%95%A5.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "飞荣达"
         ],
@@ -175,8 +175,8 @@
         "company": "长飞光纤",
         "title": "光互联大迁徙 - 从光纤、光模块、1.6T 到 CPO 与 OIO 的全产业链终局推演",
         "source_path": "03-raw/zsxq/id_08rgo2quvhuh_光互联大迁徙 - 从光纤、光模块、1.6T 到 CPO 与 OIO 的全产业链终局推演.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_08rgo2quvhuh_%E5%85%89%E4%BA%92%E8%81%94%E5%A4%A7%E8%BF%81%E5%BE%99%20-%20%E4%BB%8E%E5%85%89%E7%BA%A4%E3%80%81%E5%85%89%E6%A8%A1%E5%9D%97%E3%80%811.6T%20%E5%88%B0%20CPO%20%E4%B8%8E%20OIO%20%E7%9A%84%E5%85%A8%E4%BA%A7%E4%B8%9A%E9%93%BE%E7%BB%88%E5%B1%80%E6%8E%A8%E6%BC%94.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_08rgo2quvhuh_%E5%85%89%E4%BA%92%E8%81%94%E5%A4%A7%E8%BF%81%E5%BE%99%20-%20%E4%BB%8E%E5%85%89%E7%BA%A4%E3%80%81%E5%85%89%E6%A8%A1%E5%9D%97%E3%80%811.6T%20%E5%88%B0%20CPO%20%E4%B8%8E%20OIO%20%E7%9A%84%E5%85%A8%E4%BA%A7%E4%B8%9A%E9%93%BE%E7%BB%88%E5%B1%80%E6%8E%A8%E6%BC%94.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "长飞光纤"
         ],
@@ -189,8 +189,8 @@
         "company": "东山精密",
         "title": "2026-W29 H1.2 存储周期更新",
         "source_path": "04-output/weekly/2026-W29-H1.2-storage-cycle.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/weekly/2026-W29-H1.2-storage-cycle.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/weekly/2026-W29-H1.2-storage-cycle.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "东山精密",
           "光模块/CPO",
@@ -204,8 +204,8 @@
         "company": "东山精密",
         "title": "泡沫逃生：技术进步与科技投资简史（原书第2版） — [美]阿拉斯戴尔·奈恩",
         "source_path": "03-raw/weread/投资框架/泡沫逃生：技术进步与科技投资简史（原书第2版）-[美]阿拉斯戴尔·奈恩.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/weread/%E6%8A%95%E8%B5%84%E6%A1%86%E6%9E%B6/%E6%B3%A1%E6%B2%AB%E9%80%83%E7%94%9F%EF%BC%9A%E6%8A%80%E6%9C%AF%E8%BF%9B%E6%AD%A5%E4%B8%8E%E7%A7%91%E6%8A%80%E6%8A%95%E8%B5%84%E7%AE%80%E5%8F%B2%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88%EF%BC%89-%5B%E7%BE%8E%5D%E9%98%BF%E6%8B%89%E6%96%AF%E6%88%B4%E5%B0%94%C2%B7%E5%A5%88%E6%81%A9.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/weread/%E6%8A%95%E8%B5%84%E6%A1%86%E6%9E%B6/%E6%B3%A1%E6%B2%AB%E9%80%83%E7%94%9F%EF%BC%9A%E6%8A%80%E6%9C%AF%E8%BF%9B%E6%AD%A5%E4%B8%8E%E7%A7%91%E6%8A%80%E6%8A%95%E8%B5%84%E7%AE%80%E5%8F%B2%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88%EF%BC%89-%5B%E7%BE%8E%5D%E9%98%BF%E6%8B%89%E6%96%AF%E6%88%B4%E5%B0%94%C2%B7%E5%A5%88%E6%81%A9.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "东山精密"
         ],
@@ -215,8 +215,8 @@
         "company": "东山精密",
         "title": "枪炮、病菌与钢铁 — 贾雷德·戴蒙德",
         "source_path": "03-raw/weread/人文/枪炮、病菌与钢铁-贾雷德·戴蒙德.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/weread/%E4%BA%BA%E6%96%87/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81-%E8%B4%BE%E9%9B%B7%E5%BE%B7%C2%B7%E6%88%B4%E8%92%99%E5%BE%B7.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/weread/%E4%BA%BA%E6%96%87/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81-%E8%B4%BE%E9%9B%B7%E5%BE%B7%C2%B7%E6%88%B4%E8%92%99%E5%BE%B7.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "东山精密"
         ],
@@ -228,8 +228,8 @@
         "company": "寒武纪",
         "title": "节后第二天 大A操盘感想",
         "source_path": "03-raw/zsxq/id_uzk3i2kx4kxx_节后第二天 大A操盘感想.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_uzk3i2kx4kxx_%E8%8A%82%E5%90%8E%E7%AC%AC%E4%BA%8C%E5%A4%A9%20%E5%A4%A7A%E6%93%8D%E7%9B%98%E6%84%9F%E6%83%B3.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_uzk3i2kx4kxx_%E8%8A%82%E5%90%8E%E7%AC%AC%E4%BA%8C%E5%A4%A9%20%E5%A4%A7A%E6%93%8D%E7%9B%98%E6%84%9F%E6%83%B3.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "寒武纪"
         ],
@@ -239,8 +239,8 @@
         "company": "寒武纪",
         "title": "台积电断供7nm利好国内的芯片代工企业？",
         "source_path": "03-raw/zsxq/id_pkxcshnmsqgc_台积电断供7nm利好国内的芯片代工企业？.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_pkxcshnmsqgc_%E5%8F%B0%E7%A7%AF%E7%94%B5%E6%96%AD%E4%BE%9B7nm%E5%88%A9%E5%A5%BD%E5%9B%BD%E5%86%85%E7%9A%84%E8%8A%AF%E7%89%87%E4%BB%A3%E5%B7%A5%E4%BC%81%E4%B8%9A%EF%BC%9F.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_pkxcshnmsqgc_%E5%8F%B0%E7%A7%AF%E7%94%B5%E6%96%AD%E4%BE%9B7nm%E5%88%A9%E5%A5%BD%E5%9B%BD%E5%86%85%E7%9A%84%E8%8A%AF%E7%89%87%E4%BB%A3%E5%B7%A5%E4%BC%81%E4%B8%9A%EF%BC%9F.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "寒武纪"
         ],
@@ -250,8 +250,8 @@
         "company": "寒武纪",
         "title": "节后大A开盘 半导体股有啥值得期待?",
         "source_path": "03-raw/zsxq/id_0tzms4jmrcoq_节后大A开盘 半导体股有啥值得期待_.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_0tzms4jmrcoq_%E8%8A%82%E5%90%8E%E5%A4%A7A%E5%BC%80%E7%9B%98%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E6%9C%89%E5%95%A5%E5%80%BC%E5%BE%97%E6%9C%9F%E5%BE%85_.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_0tzms4jmrcoq_%E8%8A%82%E5%90%8E%E5%A4%A7A%E5%BC%80%E7%9B%98%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E6%9C%89%E5%95%A5%E5%80%BC%E5%BE%97%E6%9C%9F%E5%BE%85_.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "寒武纪",
           "AI算力/CAPEX"
@@ -264,8 +264,8 @@
         "company": "沪电股份",
         "title": "来源摘要：花旗 - 苏州东山精密调研纪要",
         "source_path": "02-kb/sources/2026-07-05-citi-dongshan-precision.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/sources/2026-07-05-citi-dongshan-precision.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/sources/2026-07-05-citi-dongshan-precision.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "沪电股份",
           "AI算力/CAPEX",
@@ -278,8 +278,8 @@
         "company": "沪电股份",
         "title": "东山精密 (DSBJ) — 实体档案",
         "source_path": "02-kb/entities/东山精密.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/entities/%E4%B8%9C%E5%B1%B1%E7%B2%BE%E5%AF%86.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/entities/%E4%B8%9C%E5%B1%B1%E7%B2%BE%E5%AF%86.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "沪电股份",
           "光模块/CPO",
@@ -293,8 +293,8 @@
         "company": "中际旭创",
         "title": "中国版Tower 卓胜微 到底能不能对标Tower",
         "source_path": "03-raw/zsxq/id_j3vrlqq0vgu1_中国版Tower 卓胜微 到底能不能对标Tower.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_j3vrlqq0vgu1_%E4%B8%AD%E5%9B%BD%E7%89%88Tower%20%E5%8D%93%E8%83%9C%E5%BE%AE%20%E5%88%B0%E5%BA%95%E8%83%BD%E4%B8%8D%E8%83%BD%E5%AF%B9%E6%A0%87Tower.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_j3vrlqq0vgu1_%E4%B8%AD%E5%9B%BD%E7%89%88Tower%20%E5%8D%93%E8%83%9C%E5%BE%AE%20%E5%88%B0%E5%BA%95%E8%83%BD%E4%B8%8D%E8%83%BD%E5%AF%B9%E6%A0%87Tower.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "中际旭创",
           "AI算力/CAPEX",
@@ -306,8 +306,8 @@
         "company": "中际旭创",
         "title": "从 EML 到 CW/ELS 光源产业链的彻底重洗  源杰跟索尔思的位置在哪",
         "source_path": "03-raw/zsxq/id_96l5sshf356q_从 EML 到 CW_ELS 光源产业链的彻底重洗 源杰跟索尔思的位置在哪.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_96l5sshf356q_%E4%BB%8E%20EML%20%E5%88%B0%20CW_ELS%20%E5%85%89%E6%BA%90%E4%BA%A7%E4%B8%9A%E9%93%BE%E7%9A%84%E5%BD%BB%E5%BA%95%E9%87%8D%E6%B4%97%20%E6%BA%90%E6%9D%B0%E8%B7%9F%E7%B4%A2%E5%B0%94%E6%80%9D%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%9C%A8%E5%93%AA.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_96l5sshf356q_%E4%BB%8E%20EML%20%E5%88%B0%20CW_ELS%20%E5%85%89%E6%BA%90%E4%BA%A7%E4%B8%9A%E9%93%BE%E7%9A%84%E5%BD%BB%E5%BA%95%E9%87%8D%E6%B4%97%20%E6%BA%90%E6%9D%B0%E8%B7%9F%E7%B4%A2%E5%B0%94%E6%80%9D%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%9C%A8%E5%93%AA.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "中际旭创"
         ],
@@ -317,8 +317,8 @@
         "company": "中际旭创",
         "title": "节后大A开盘 半导体股有啥值得期待?",
         "source_path": "03-raw/zsxq/id_0tzms4jmrcoq_节后大A开盘 半导体股有啥值得期待_.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_0tzms4jmrcoq_%E8%8A%82%E5%90%8E%E5%A4%A7A%E5%BC%80%E7%9B%98%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E6%9C%89%E5%95%A5%E5%80%BC%E5%BE%97%E6%9C%9F%E5%BE%85_.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_0tzms4jmrcoq_%E8%8A%82%E5%90%8E%E5%A4%A7A%E5%BC%80%E7%9B%98%20%E5%8D%8A%E5%AF%BC%E4%BD%93%E8%82%A1%E6%9C%89%E5%95%A5%E5%80%BC%E5%BE%97%E6%9C%9F%E5%BE%85_.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "中际旭创"
         ],
@@ -330,8 +330,8 @@
         "company": "兆易创新",
         "title": "2026投资建议- 简易版",
         "source_path": "03-raw/zsxq/id_k8tw8jk3pvvj_2026投资建议- 简易版.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_k8tw8jk3pvvj_2026%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE-%20%E7%AE%80%E6%98%93%E7%89%88.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_k8tw8jk3pvvj_2026%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE-%20%E7%AE%80%E6%98%93%E7%89%88.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "兆易创新"
         ],
@@ -341,8 +341,8 @@
         "company": "兆易创新",
         "title": "知识星球来源总索引",
         "source_path": "02-kb/sources/_index-zsxq.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/sources/_index-zsxq.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/sources/_index-zsxq.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "兆易创新",
           "AI算力/CAPEX",
@@ -356,8 +356,8 @@
         "company": "兆易创新",
         "title": "华为芯片生态 / 韬定律",
         "source_path": "02-kb/concepts/L2-芯片层（Chips）/地缘政治/华为芯片生态-韬定律.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/concepts/L2-%E8%8A%AF%E7%89%87%E5%B1%82%EF%BC%88Chips%EF%BC%89/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB/%E5%8D%8E%E4%B8%BA%E8%8A%AF%E7%89%87%E7%94%9F%E6%80%81-%E9%9F%AC%E5%AE%9A%E5%BE%8B.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/concepts/L2-%E8%8A%AF%E7%89%87%E5%B1%82%EF%BC%88Chips%EF%BC%89/%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB/%E5%8D%8E%E4%B8%BA%E8%8A%AF%E7%89%87%E7%94%9F%E6%80%81-%E9%9F%AC%E5%AE%9A%E5%BE%8B.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "兆易创新",
           "存储/HBM",
@@ -372,8 +372,8 @@
         "company": "伟测科技",
         "title": "Annette投研系统投研 — Annette 股票池",
         "source_path": "config/watchlist.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/config/watchlist.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/config/watchlist.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "伟测科技",
           "AI算力/CAPEX",
@@ -387,8 +387,8 @@
         "company": "伟测科技",
         "title": "603986.SH 兆易创新 — 实体档案",
         "source_path": "02-kb/entities/兆易创新.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/entities/%E5%85%86%E6%98%93%E5%88%9B%E6%96%B0.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/entities/%E5%85%86%E6%98%93%E5%88%9B%E6%96%B0.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "伟测科技"
         ],
@@ -398,8 +398,8 @@
         "company": "伟测科技",
         "title": "688372.SH 伟测科技 — 实体档案",
         "source_path": "02-kb/entities/688372-伟测科技.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/02-kb/entities/688372-%E4%BC%9F%E6%B5%8B%E7%A7%91%E6%8A%80.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/02-kb/entities/688372-%E4%BC%9F%E6%B5%8B%E7%A7%91%E6%8A%80.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "伟测科技",
           "半导体测试/仪器"
@@ -413,8 +413,8 @@
         "company": "紫光股份",
         "title": "2026-07-10 全球AI算力产业链中外对标纪要",
         "source_path": "03-raw/wechat/20260710-NOTE-全球AI算力产业链中外对标纪要.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/wechat/20260710-NOTE-%E5%85%A8%E7%90%83AI%E7%AE%97%E5%8A%9B%E4%BA%A7%E4%B8%9A%E9%93%BE%E4%B8%AD%E5%A4%96%E5%AF%B9%E6%A0%87%E7%BA%AA%E8%A6%81.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/wechat/20260710-NOTE-%E5%85%A8%E7%90%83AI%E7%AE%97%E5%8A%9B%E4%BA%A7%E4%B8%9A%E9%93%BE%E4%B8%AD%E5%A4%96%E5%AF%B9%E6%A0%87%E7%BA%AA%E8%A6%81.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "紫光股份",
           "AI芯片/国产替代"
@@ -428,8 +428,8 @@
         "company": "三环集团",
         "title": "2026-W27 周度复盘（测试版）",
         "source_path": "04-output/weekly/2026-W27.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/04-output/weekly/2026-W27.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/04-output/weekly/2026-W27.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "三环集团",
           "被动元件/MLCC"
@@ -440,8 +440,8 @@
         "company": "三环集团",
         "title": "中国限制稀土出口 全球半导体影响几何",
         "source_path": "03-raw/zsxq/id_za1s7or3l3qn_中国限制稀土出口 全球半导体影响几何.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/zsxq/id_za1s7or3l3qn_%E4%B8%AD%E5%9B%BD%E9%99%90%E5%88%B6%E7%A8%80%E5%9C%9F%E5%87%BA%E5%8F%A3%20%E5%85%A8%E7%90%83%E5%8D%8A%E5%AF%BC%E4%BD%93%E5%BD%B1%E5%93%8D%E5%87%A0%E4%BD%95.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "三环集团"
         ],
@@ -451,8 +451,8 @@
         "company": "三环集团",
         "title": "20VC: Leo Aschenbrenner's Largest Holding: Inside the $90BN Bloom Energy | Why Electricity, Not AI Models, Will Decide the Winners of the AI Race | Why We Are Not in an AI Capex Bubble | Energy Sovereignty and The Future of Power with KR Sridhar",
         "source_path": "03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md",
-        "source_url": "https://github.com/Annettehub/ai-investing/blob/a058528abcb0522778e6b6f2d62bc4ec485efcae/03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md",
-        "source_commit_time": "2026-09-07T06:04:49Z",
+        "source_url": "https://github.com/Annettehub/ai-investing/blob/490043ecba92935174d49c24738ab54c6e19ee41/03-raw/podwise/20VC_Leo_Aschenbrenners_Largest_Holding_Inside_the_90BN_Bloom_Energy__Why_Electr_8326163.md",
+        "source_commit_time": "2026-09-08T12:20:55Z",
         "matched_keywords": [
           "三环集团"
         ],
