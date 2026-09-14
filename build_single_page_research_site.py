@@ -68,6 +68,16 @@ def ranked_metric(value: object, kind: str, rank: object | None) -> str:
     return text
 
 
+def format_source_note(value: object) -> str:
+    """Render each dated research update on its own line in the dashboard."""
+    note = html.escape(str(value))
+    return re.sub(
+        r"(一更：|二更：|三更：)",
+        lambda match: match.group(0) if match.start() == 0 else f"<br>{match.group(0)}",
+        note,
+    )
+
+
 def quote_day_label(companies: list[dict]) -> str:
     for company in companies:
         quote_time = company.get("quote_time")
@@ -237,7 +247,11 @@ table { width: 100%; min-width: 1490px; border-collapse: collapse; background: #
 th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; line-height: 1.55; }
 th { color: #173237; background: #e7efed; font-weight: 800; white-space: normal; }
 th.baseline, td.baseline { background: var(--baseline); }
-th.metric-cell, td.metric-cell { width: 112px; text-align: center; vertical-align: middle; }
+/* Make room for the research excerpts without changing the dashboard's total width. */
+#dashboard .metric-cell { width: 92px; }
+#dashboard .source-note-cell { width: 460px; }
+#dashboard .table-wrap > table th, #dashboard .table-wrap > table td { vertical-align: middle; }
+th.metric-cell, td.metric-cell { text-align: center; vertical-align: middle; }
 th.metric-cell { line-height: 1.25; word-break: keep-all; }
 .rank-badge { display: inline-block; min-width: 68px; padding: 4px 8px; border-radius: 5px; font-weight: 800; text-align: center; line-height: 1.25; }
 .rank-down-1 { background: #ffd7d2; color: #7c1f17; box-shadow: inset 0 0 0 1px #e79a92; }
@@ -400,7 +414,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <td class="metric-cell">{ranked_metric(c.get('drawdown_from_recent_high', '-'), 'down', c.get('drawdown_rank'))}</td>
           <td class="metric-cell">{cap(c['year_end_market_cap'])}</td>
           <td class="metric-cell">{ranked_metric(c['space'], 'up', c.get('upside_rank'))}</td>
-          <td>{c['source_note']}</td>
+          <td class="source-note-cell">{format_source_note(c['source_note'])}</td>
         </tr>
         """
         for c in dashboard_companies
@@ -526,7 +540,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
                 <th class="metric-cell">距最高点<br>下跌幅度</th>
                 <th class="metric-cell">2026 年底<br>目标市值</th>
                 <th class="metric-cell">目前至<br>年底空间</th>
-                <th style="width:300px;">图片说明摘录</th>
+                <th class="source-note-cell">图片说明摘录</th>
               </tr>
             </thead>
             <tbody>{rows}</tbody>
