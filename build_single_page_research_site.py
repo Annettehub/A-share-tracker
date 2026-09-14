@@ -558,11 +558,10 @@ def write_single_page(base: Path, companies: list[dict], dashboard_companies: li
 
 
 def main() -> None:
-    companies = prepare()
-    trim_repeated_company_heading(companies)
-    dashboard_companies = prepare_dashboard_companies(companies)
-    write_single_page(OUTPUTS, companies, dashboard_companies)
-    write_single_page(DEST, companies, dashboard_companies)
+    dashboard_companies = prepare_dashboard_companies(prepare())
+    trim_repeated_company_heading(dashboard_companies)
+    write_single_page(OUTPUTS, dashboard_companies, dashboard_companies)
+    write_single_page(DEST, dashboard_companies, dashboard_companies)
 
 
 if __name__ == "__main__":

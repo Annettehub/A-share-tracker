@@ -462,7 +462,8 @@ def prepare_dashboard_companies(research_companies: list[dict] | None = None) ->
     research = research_companies or [as_dict(row) for row in COMPANIES]
     by_id = {company["id"]: dict(company) for company in research}
     by_id.update({company["id"]: dashboard_only_as_dict(company) for company in DASHBOARD_ONLY_COMPANIES if company["id"] not in by_id})
-    return [by_id[company_id] for company_id in DASHBOARD_COMPANY_IDS]
+    selected = [by_id[company_id] for company_id in DASHBOARD_COMPANY_IDS]
+    return sorted(selected, key=lambda company: company["recommendation_score"], reverse=True)
 
 
 def nav(companies: list[dict], active: str, prefix: str = "") -> str:
@@ -706,7 +707,7 @@ def write_site(base: Path, companies: list[dict]) -> None:
 
 
 def main() -> None:
-    companies = prepare()
+    companies = prepare_dashboard_companies(prepare())
     write_site(OUTPUTS, companies)
     write_site(DEST, companies)
 
