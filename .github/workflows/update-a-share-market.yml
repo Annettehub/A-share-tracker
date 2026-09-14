@@ -60,7 +60,7 @@ jobs:
               print("market-data.json 缺失"); sys.exit(1)
           d = json.load(open(p, encoding="utf-8"))
           quotes = d.get("quotes", {})
-          if len(quotes) != 13:
+          if len(quotes) != 10:
               print(f"公司数量异常: {len(quotes)}"); sys.exit(1)
           quote_dates = set()
           for code, q in quotes.items():
@@ -74,7 +74,7 @@ jobs:
           age_days = (today - quote_date).days
           if age_days < 0 or age_days > 10:
               print(f"行情日期异常: quote_date={quote_date}, today={today}, age_days={age_days}"); sys.exit(1)
-          print(f"校验通过：13 家公司行情日期一致，quote_date={quote_date}。")
+          print(f"校验通过：10 家公司行情日期一致，quote_date={quote_date}。")
           PY
 
       - name: Commit changes

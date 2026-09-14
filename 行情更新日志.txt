@@ -1,23 +1,30 @@
-更新时间：2026-09-14 19:41:35
+更新时间：2026-09-14 20:03:48
 主源：Tencent qt.gtimg.cn
 校验源：Eastmoney push2.eastmoney.com / Sina hq.sinajs.cn
 网页：C:\Users\Annette Zhang\Documents\Codex\2026-09-13\https-github-com-annettehub-a-share\work\A-share-tracker\2026 H2 吴梓豪A股公司追踪 2026.7.html
-ai-investing观察：ai-investing 观察同步失败，已继续更新行情：Command '['C:\\Users\\Annette Zhang\\AppData\\Local\\Programs\\Python\\Python313\\python.exe', 'C:\\Users\\Annette Zhang\\Documents\\Codex\\2026-09-13\\https-github-com-annettehub-a-share\\work\\A-share-tracker\\sync_ai_investing_observations.py']' returned non-zero exit status 1.
+ai-investing观察：ai-investing 刷新失败，使用本地缓存：error: unable to create file 03-raw/feishu/2026-04-15 人工智能超级周期的经济学 斯坦福大学Class #2  MS&E435 Economics of the AI Supercycle Stanford University Spring '26 Apoorv Agra.md: Filename too long
+error: unable to create file 03-raw/feishu/2026-04-15 人工智能超级周期的经济学 斯坦福大学Class #2  MS&E435 Economics of the AI Supercycle Stanford University Spring '26 Apoorv Agrawal.md: Filename too long
+error: unable to create file 03-raw/feishu/2026-05-21 Jane Street 谈 GPU、交易和招聘：与 Dwarkesh 的对话 Jane Street on GPUs, Trading, and Hiring A Conversation with Dwarkesh.md: Filename too long
+error: unable to create file 03-raw/feishu/2026-05-23 1 亿美元的CRO泡沫-20Sales The $100M CRO Bubble Why Anthropic Are Causing a Comp Crisis  Why You Should Never Hire F.md: Filename too long
+error: unable to create file 03-raw/feishu/2026-06-02 - All-In with Chamath, Jason, Sacks & Friedberg - OpenAI CFO Sarah Friar on IPO, AI Rivalries, New Device, an: Filename too long
+error: unable to create file 03-raw/feishu/2026-06-02 - All-In with Chamath, Jason, Sacks & Friedberg - OpenAI CFO Sarah Friar on IPO, AI Rivalries, New Device, and Spending $100B+ on Compute.md: Filename too long
+error: unable to create file 03-raw/feishu/2026-06-24 SaaStr 863 The Enterprise AI Reality Check From Dashboard Graveyards to 30-Day Migrations with Databricks' Co: Filename too long
+error: unable to create file 03-raw/feishu/SaaStr 863 The Enterprise AI Reality Check From Dashboard Graveyards to 30-Day Migrations with Databricks' Co-Founder and SVP of Field Engineering.md: Filename too long
+fatal: Could not reset index file to revision 'origin/main'.
+已同步 ai-investing 观察：市场 10 条，公司 24 条。
+来源提交：fc2df04aa261b90248eba892e3040d6789081108
 
 本次行情：
-- 飞荣达 300602：价格 37.56，总市值 220.27 亿，行情时间 2026-09-14 16:14:45，近 2 个月最高价 46.74（2026-09-03），距高点 -19.6%
 - 长飞光纤 601869：价格 459.66，总市值 3805.55 亿，行情时间 2026-09-14 16:15:00，近 2 个月最高价 475.52（2026-09-11），距高点 -3.3%
-- 胜宏科技 300476：价格 225.0，总市值 2211.27 亿，行情时间 2026-09-14 16:14:09，近 2 个月最高价 294.99（2026-07-14），距高点 -23.7%
 - 东山精密 002384：价格 185.11，总市值 3390.49 亿，行情时间 2026-09-14 16:14:15，近 2 个月最高价 280.08（2026-07-15），距高点 -33.9%
 - 寒武纪 688256：价格 1040.0，总市值 6540.08 亿，行情时间 2026-09-14 16:14:40，近 2 个月最高价 1425.98（2026-07-14），距高点 -27.1%
 - 沪电股份 002463：价格 125.7，总市值 2418.92 亿，行情时间 2026-09-14 16:14:45，近 2 个月最高价 142.99（2026-07-16），距高点 -12.1%
-- 中际旭创 300308：价格 873.0，总市值 10283.15 亿，行情时间 2026-09-14 16:14:03，近 2 个月最高价 1207.98（2026-07-15），距高点 -27.7%
-- 兆易创新 603986：价格 356.88，总市值 2512.33 亿，行情时间 2026-09-14 16:14:45，近 2 个月最高价 608.07（2026-07-15），距高点 -41.3%
-- 伟测科技 688372：价格 108.0，总市值 182.52 亿，行情时间 2026-09-14 16:14:48，近 2 个月最高价 171.0（2026-07-15），距高点 -36.8%
-- 联讯仪器 688808：价格 2411.98，总市值 2476.30 亿，行情时间 2026-09-14 16:14:43，近 2 个月最高价 2733.0（2026-09-08），距高点 -11.7%
 - 紫光股份 000938：价格 32.73，总市值 936.10 亿，行情时间 2026-09-14 16:14:36，近 2 个月最高价 45.8（2026-07-23），距高点 -28.5%
-- 长芯博创 300548：价格 204.09，总市值 601.73 亿，行情时间 2026-09-14 16:14:54，近 2 个月最高价 227.8（2026-07-15），距高点 -10.4%
 - 三环集团 300408：价格 125.83，总市值 2512.47 亿，行情时间 2026-09-14 16:14:39，近 2 个月最高价 137.77（2026-08-11），距高点 -8.7%
+- 生益科技 600183：价格 146.0，总市值 3546.35 亿，行情时间 2026-09-14 16:14:47，近 2 个月最高价 160.3（2026-07-15），距高点 -8.9%
+- 思瑞浦 688536：价格 315.84，总市值 436.10 亿，行情时间 2026-09-14 16:14:51，近 2 个月最高价 321.5（2026-08-21），距高点 -1.8%
+- 深南电路 002916：价格 389.13，总市值 2650.62 亿，行情时间 2026-09-14 16:14:24，近 2 个月最高价 416.3（2026-07-14），距高点 -6.5%
+- 工业富联 601138：价格 61.57，总市值 12218.01 亿，行情时间 2026-09-14 16:14:49，近 2 个月最高价 70.97（2026-08-10），距高点 -13.2%
 
 校验说明：
 双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。

@@ -42,19 +42,16 @@ MARKET_DATA = PROJECT_DIR / "market-data.json"
 SKIP_REASON = PROJECT_DIR / "SKIP_REASON.txt"
 
 COMPANIES = [
-    {"code": "300602", "market": "SZ", "name": "飞荣达", "start_market_cap_yi": 214.7},
     {"code": "601869", "market": "SH", "name": "长飞光纤", "start_market_cap_yi": 2993.0},
-    {"code": "300476", "market": "SZ", "name": "胜宏科技", "start_market_cap_yi": 2373.0},
     {"code": "002384", "market": "SZ", "name": "东山精密", "start_market_cap_yi": 4431.0},
     {"code": "688256", "market": "SH", "name": "寒武纪", "start_market_cap_yi": 7480.0},
     {"code": "002463", "market": "SZ", "name": "沪电股份", "start_market_cap_yi": 2459.0},
-    {"code": "300308", "market": "SZ", "name": "中际旭创", "start_market_cap_yi": 10900.0},
-    {"code": "603986", "market": "SH", "name": "兆易创新", "start_market_cap_yi": 3250.0},
-    {"code": "688372", "market": "SH", "name": "伟测科技", "start_market_cap_yi": 204.0},
-    {"code": "688808", "market": "SH", "name": "联讯仪器", "start_market_cap_yi": 1628.7},
     {"code": "000938", "market": "SZ", "name": "紫光股份", "start_market_cap_yi": 1004.7},
-    {"code": "300548", "market": "SZ", "name": "长芯博创", "start_market_cap_yi": 490.0},
     {"code": "300408", "market": "SZ", "name": "三环集团", "start_market_cap_yi": 1968.2},
+    {"code": "600183", "market": "SH", "name": "生益科技", "start_market_cap_yi": 3213.33},
+    {"code": "688536", "market": "SH", "name": "思瑞浦", "start_market_cap_yi": 334.25},
+    {"code": "002916", "market": "SZ", "name": "深南电路", "start_market_cap_yi": 2275.09},
+    {"code": "601138", "market": "SH", "name": "工业富联", "start_market_cap_yi": 11299.23},
 ]
 
 TENCENT_PREFIX = {"SZ": "sz", "SH": "sh"}

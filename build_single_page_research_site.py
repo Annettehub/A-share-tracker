@@ -417,7 +417,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <td class="metric-cell">{ranked_metric(c['space'], 'up', c.get('upside_rank'))}</td>
           <td class="source-note-cell">{format_source_note(c['source_note'], c['recommendation_score'])}</td>
         </tr>
-        """
+        """.strip()
         for c in dashboard_companies
     )
     company_views = "\n".join(
