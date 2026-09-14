@@ -68,14 +68,15 @@ def ranked_metric(value: object, kind: str, rank: object | None) -> str:
     return text
 
 
-def format_source_note(value: object) -> str:
-    """Render each dated research update on its own line in the dashboard."""
+def format_source_note(value: object, recommendation_score: object) -> str:
+    """Render the score and each dated research update on separate dashboard lines."""
     note = html.escape(str(value))
-    return re.sub(
+    updates = re.sub(
         r"(一更：|二更：|三更：)",
         lambda match: match.group(0) if match.start() == 0 else f"<br>{match.group(0)}",
         note,
     )
+    return f"本期推荐指数：{float(recommendation_score):.1f}<br>{updates}"
 
 
 def quote_day_label(companies: list[dict]) -> str:
@@ -414,7 +415,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <td class="metric-cell">{ranked_metric(c.get('drawdown_from_recent_high', '-'), 'down', c.get('drawdown_rank'))}</td>
           <td class="metric-cell">{cap(c['year_end_market_cap'])}</td>
           <td class="metric-cell">{ranked_metric(c['space'], 'up', c.get('upside_rank'))}</td>
-          <td class="source-note-cell">{format_source_note(c['source_note'])}</td>
+          <td class="source-note-cell">{format_source_note(c['source_note'], c['recommendation_score'])}</td>
         </tr>
         """
         for c in dashboard_companies

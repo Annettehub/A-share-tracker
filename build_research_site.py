@@ -54,6 +54,23 @@ REASONABLE_MARKET_CAPS = {
     "sanhuan": 2666,
 }
 
+# 2026-09-07 rating report, column P: "本期推荐指数".
+RECOMMENDATION_SCORES = {
+    "frd": 6.8,
+    "yofc": 7.5,
+    "shkj": 7.3,
+    "dsjm": 7.4,
+    "cambricon": 7.8,
+    "hudian": 7.7,
+    "innolight": 7.2,
+    "gigadevice": 6.6,
+    "weice": 7.1,
+    "lianxun": 6.8,
+    "unisplendour": 7.3,
+    "eoptolink": 7.0,
+    "sanhuan": 7.4,
+}
+
 DASHBOARD_ONLY_COMPANIES = []
 
 
@@ -61,6 +78,7 @@ def as_dict(row: tuple) -> dict:
     keys = ["id", "name", "code", "track", "start_price", "start_market_cap", "year_end_market_cap", "space", "source_note", "file"]
     data = dict(zip(keys, row))
     data["year_end_market_cap"] = REASONABLE_MARKET_CAPS[data["id"]]
+    data["recommendation_score"] = RECOMMENDATION_SCORES[data["id"]]
     data["file"] = Path(data["file"])
     data["current_market_cap"] = data["start_market_cap"]
     data["change_from_start"] = "0.0%"
