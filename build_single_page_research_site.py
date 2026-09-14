@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import html
-import base64
 import json
 import re
 from datetime import datetime
@@ -328,7 +327,6 @@ td span { color: var(--muted); font-size: 12px; }
 def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
     market_data = apply_market_data(dashboard_companies)
     annotate_dashboard_ranks(dashboard_companies)
-    weekly_data = load_weekly_observations()
     quote_day = quote_day_label(dashboard_companies)
     market_note = "当前市值暂等于起点市值。接入行情快照后，这里会显示抓取时间、来源与校验结果。"
     if market_data:
@@ -344,29 +342,10 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
             f"主源：腾讯行情｜"
             f"校验：{compact_validation}"
         )
-    weekly_note = "尚未同步 ai-investing 仓库；这里先保留观察项占位。"
-    if weekly_data:
-        weekly_note = (
-            f"已同步 {html.escape(str(weekly_data.get('source_repo', 'Annettehub/ai-investing')))}；"
-            f"快照时间：{html.escape(str(weekly_data.get('updated_at', '')))}；"
-            f"来源提交：{html.escape(str(weekly_data.get('source_commit', ''))[:7])}。"
-        )
-    market_observation_html = render_observation_items(
-        (weekly_data or {}).get("market_observations", []),
-        [
-            "AI CAPEX 与国内算力建设变化",
-            "800G / 1.6T / CPO 产业链订单与产能变化",
-            "AI PCB、液冷散热、存储周期的周度新闻",
-        ],
-    )
-    company_observation_html = render_company_observations(weekly_data, companies)
-    image_data = base64.b64encode(IMAGE_SOURCE.read_bytes()).decode("ascii")
-    image_src = f"data:image/png;base64,{image_data}"
     nav_main = "\n".join(
         [
             '<a class="nav-main" href="#home" data-target="home">README 首页</a>',
             '<a class="nav-main" href="#dashboard" data-target="dashboard">公司池仪表盘</a>',
-            '<a class="nav-main" href="#weekly" data-target="weekly">周度观察</a>',
         ]
     )
     nav_companies = "\n".join(
@@ -377,14 +356,12 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
         [
             '<a class="mobile-chip" href="#home" data-target="home">首页</a>',
             '<a class="mobile-chip" href="#dashboard" data-target="dashboard">仪表盘</a>',
-            '<a class="mobile-chip" href="#weekly" data-target="weekly">观察</a>',
         ]
     )
     mobile_menu_main = "\n".join(
         [
             '<a class="mobile-menu-link" href="#home" data-target="home">README 首页</a>',
             '<a class="mobile-menu-link" href="#dashboard" data-target="dashboard">公司池仪表盘</a>',
-            '<a class="mobile-menu-link" href="#weekly" data-target="weekly">周度观察</a>',
         ]
     )
     mobile_companies = "\n".join(
@@ -399,7 +376,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <span>{c['track']}</span>
           <em>起点市值 {cap(c['start_market_cap'])}</em>
         </a>
-        """
+        """.strip()
         for c in companies
     )
     rows = "\n".join(
@@ -431,7 +408,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           </div>
           <div class="markdown-body">{c['content']}</div>
         </article>
-        """
+        """.strip()
         for c in companies
     )
     return f"""<!doctype html>
@@ -478,7 +455,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           </div>
           <div class="hero-metrics">
             <div class="metric"><span>已接入资料</span><strong>{len(companies)} 家公司</strong></div>
-            <div class="metric"><span>更新节奏</span><strong>周度观察</strong></div>
+            <div class="metric"><span>更新节奏</span><strong>工作日行情</strong></div>
             <div class="metric"><span>页面结构</span><strong>单文件切换</strong></div>
           </div>
         </header>
@@ -491,19 +468,6 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
               <p>每一轮大行情都需要一个真实的基本面方向。没有 AI 产业趋势，就不会有最早的一批买家；没有利润和资本开支的兑现，趋势也不可能维持这么久。牛市里，基本面负责点火，资金结构决定火势。消息制造第一批买家，业绩排名、基准压力和产品规则制造后面的买家。下跌时也是一样：消息制造第一批卖家，趋势、波动率、融资和赎回制造后面的卖家。所以动量把牛市推高后，也必然会把下跌变成踩踏，这是机制决定的。</p>
               <p>虽然吴梓豪大佬的逻辑扎实，AI 依然是未来，但股市里的 AI，需要一百分的谨慎。</p>
             </div>
-          </div>
-        </section>
-        <section>
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Source Image</p>
-              <h2>吴梓豪 2026H2 投资建议图片</h2>
-              <p>原图作为首页研究来源展示区保留，表格中的「目前市值」「年底市值」「目前至年底空间」用于第一版仪表盘的起点数据。</p>
-            </div>
-          </div>
-          <div class="source-image">
-            <img src="{image_src}" alt="吴梓豪2026H2 A+H股投资建议原图">
-            <p class="note">来源标注：吴梓豪「半导体大佬的会议室」2026H2 A+H 股投资建议。页面仅作个人研究归档与跟踪。</p>
           </div>
         </section>
         <section>
@@ -548,27 +512,6 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           </table>
         </div>
         <p class="note">「距最高点下跌幅度」按最近 2 个月日线最高股价直接计算；「合理市值」取自 09.07 评分表的「26年底合理市值/亿」，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
-      </section>
-
-      <section class="view" id="weekly">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Weekly Monitor</p>
-            <h1>周度市场观察记录</h1>
-            <p>自动扫描 Annettehub/ai-investing 中与 {len(companies)} 家公司或强相关产业链有关的记录，推入市场观察和公司观察。这里只记录事实与来源，不写买卖判断。</p>
-            <p>{weekly_note}</p>
-          </div>
-        </div>
-        <div class="weekly">
-          <div class="monitor-box">
-            <h3>市场观察</h3>
-            {market_observation_html}
-          </div>
-          <div class="monitor-box">
-            <h3>公司观察</h3>
-            {company_observation_html}
-          </div>
-        </div>
       </section>
 
       {company_views}

@@ -37,6 +37,14 @@ COMPANIES = [
     ("sanhuan", "三环集团", "300408.SZ", "被动元件 / MLCC / 陶瓷件", "99.01", 1968.2, 2090, "0%", "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。三更：细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。8月建议100以下找低点建仓非常精准，目前维持该建议价格。", PROJECT_DIR / "13.三环集团_驱动因素分析_2026年.md"),
 ]
 
+# Newly selected dashboard companies with dedicated research pages.
+COMPANIES += [
+    ("shengyi", "生益科技", "600183.SH", "覆铜板 / 高端 CCL", "132.29", 3213.33, 3905, "9.9%", "高端CCL国内一哥，通用FR4占业务大头，因全球紧缺通用型也涨价，叠加利润增量，通用型基本盘增量未来会放缓。M8/M9高端产品为后续新增量，高端26将占集团营收22%，子公司生益电子PCB业务高增长，目前占集团收入18%，基数小增长高，专攻高端，小而精，但技术能力与各大巨头有点差距。类ABF膜属于远期题材，不纳入估值预期。", PROJECT_DIR / "14.生益科技_驱动因素分析_2026年.md"),
+    ("siruipu", "思瑞浦", "688536.SH", "模拟芯片 / PMIC", "242.08", 334.25, 495, "18.1%", "信号链模拟赶上光模块大好，1.6T方案跟ADI/TI竞争较难，但有很大市场。PMIC业务稳增。其独立AFE在NPO时代在有不小的市场空间，未来两年收入增幅在50%+。", PROJECT_DIR / "15.思瑞浦_驱动因素分析_2026年.md"),
+    ("shennan", "深南电路", "002916.SZ", "AI PCB / ABF", "334.0", 2275.09, 2675, "2.7%", "国内mSAP光模块PCB一哥，仅次于全球第一梯队的欣兴、健鼎、南亚科；国内第一梯队，高于方正、兴森、景旺。ABF出货比兴森大，但以16层下为主；国内ABF出货一哥，兴森走更高阶市场预期高、放量较慢，深南走低层数目前已开始放量。", PROJECT_DIR / "16.深南电路_驱动因素分析_2026年.md"),
+    ("foxconn", "工业富联", "601138.SH", "AI 服务器 / 交换机代工", "56.94", 11299.23, 14430, "12.7%", "鸿海集团AI服务器以及交换机代工主体，Rubin时代份额会持续提升，广达、纬创27年才会进入小批量二供。未来业务稳步高增长，但代工业务PE低，未来靠利润不断往上顶市值，明确度高，可长期持有。", PROJECT_DIR / "17.工业富联_驱动因素分析_2026年.md"),
+]
+
 # 2026-09-07 rating report, column M: "26年底 合理市值/亿".
 REASONABLE_MARKET_CAPS = {
     "frd": 244,
@@ -52,6 +60,10 @@ REASONABLE_MARKET_CAPS = {
     "unisplendour": 1161,
     "eoptolink": 624,
     "sanhuan": 2666,
+    "shengyi": 3905,
+    "siruipu": 495,
+    "shennan": 2675,
+    "foxconn": 14430,
 }
 
 # 2026-09-07 rating report, column P: "本期推荐指数".
@@ -69,6 +81,10 @@ RECOMMENDATION_SCORES = {
     "unisplendour": 7.3,
     "eoptolink": 7.0,
     "sanhuan": 7.4,
+    "shengyi": 7.6,
+    "siruipu": 7.5,
+    "shennan": 7.4,
+    "foxconn": 7.4,
 }
 
 # Dashboard selection: the 09.07 top ten by recommendation score, with
@@ -78,38 +94,8 @@ DASHBOARD_COMPANY_IDS = [
     "dsjm", "sanhuan", "shennan", "foxconn", "unisplendour",
 ]
 
-# These four companies are in the dashboard selection but have no research
-# markdown yet, so they intentionally do not create company-detail pages.
-DASHBOARD_ONLY_COMPANIES = [
-    {
-        "id": "shengyi", "name": "生益科技", "code": "600183.SH",
-        "track": "覆铜板 / 高端 CCL", "start_price": 132.29,
-        "start_market_cap": 3213.33, "year_end_market_cap": 3905,
-        "space": "9.9%", "recommendation_score": 7.6,
-        "source_note": "高端CCL国内一哥，通用FR4占业务大头，因全球紧缺通用型也涨价，叠加利润增量，通用型基本盘增量未来会放缓。M8/M9高端产品为后续新增量，高端26将占集团营收22%，子公司生益电子PCB业务高增长，目前占集团收入18%，基数小增长高，专攻高端，小而精，但技术能力与各大巨头有点差距。类ABF膜属于远期题材，不纳入估值预期。",
-    },
-    {
-        "id": "siruipu", "name": "思瑞浦", "code": "688536.SH",
-        "track": "模拟芯片 / PMIC", "start_price": 242.08,
-        "start_market_cap": 334.25, "year_end_market_cap": 495,
-        "space": "18.1%", "recommendation_score": 7.5,
-        "source_note": "信号链模拟赶上光模块大好，1.6T方案跟ADI/TI竞争较难，但有很大市场。PMIC业务稳增。其独立AFE在NPO时代在有不小的市场空间，未来两年收入增幅在50%+。",
-    },
-    {
-        "id": "shennan", "name": "深南电路", "code": "002916.SZ",
-        "track": "AI PCB / ABF", "start_price": 334.0,
-        "start_market_cap": 2275.09, "year_end_market_cap": 2675,
-        "space": "2.7%", "recommendation_score": 7.4,
-        "source_note": "国内mSAP光模块PCB一哥，仅次于全球第一梯队的欣兴、健鼎、南亚科；国内第一梯队，高于方正、兴森、景旺。ABF出货比兴森大，但以16层下为主；国内ABF出货一哥，兴森走更高阶市场预期高、放量较慢，深南走低层数目前已开始放量。",
-    },
-    {
-        "id": "foxconn", "name": "工业富联", "code": "601138.SH",
-        "track": "AI 服务器 / 交换机代工", "start_price": 56.94,
-        "start_market_cap": 11299.23, "year_end_market_cap": 14430,
-        "space": "12.7%", "recommendation_score": 7.4,
-        "source_note": "鸿海集团AI服务器以及交换机代工主体，Rubin时代份额会持续提升，广达、纬创27年才会进入小批量二供。未来业务稳步高增长，但代工业务PE低，未来靠利润不断往上顶市值，明确度高，可长期持有。",
-    },
-]
+# All dashboard companies now have a research markdown source and a detail page.
+DASHBOARD_ONLY_COMPANIES: list[dict] = []
 
 
 def as_dict(row: tuple) -> dict:
@@ -475,7 +461,7 @@ def prepare() -> list[dict]:
 def prepare_dashboard_companies(research_companies: list[dict] | None = None) -> list[dict]:
     research = research_companies or [as_dict(row) for row in COMPANIES]
     by_id = {company["id"]: dict(company) for company in research}
-    by_id.update({company["id"]: dashboard_only_as_dict(company) for company in DASHBOARD_ONLY_COMPANIES})
+    by_id.update({company["id"]: dashboard_only_as_dict(company) for company in DASHBOARD_ONLY_COMPANIES if company["id"] not in by_id})
     return [by_id[company_id] for company_id in DASHBOARD_COMPANY_IDS]
 
 
