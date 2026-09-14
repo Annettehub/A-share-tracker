@@ -37,12 +37,30 @@ COMPANIES = [
     ("sanhuan", "三环集团", "300408.SZ", "被动元件 / MLCC / 陶瓷件", "99.01", 1968.2, 2090, "0%", "细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。100以下找低点建仓。三更：细分领域突出。第一业务为MLCC(37%)，专攻高压高容大尺寸，受惠AI服务器，高端MLCC由日韩台掌控，三环主攻国内AI服务器。通信器件陶瓷插芯全球第一梯队，真正拳头产品，营收占比29%，受惠AI光通信。半导体陶瓷件占22%也不错。未来稳步高增长，明确度高。8月建议100以下找低点建仓非常精准，目前维持该建议价格。", PROJECT_DIR / "13.三环集团_驱动因素分析_2026年.md"),
 ]
 
+# 2026-09-07 rating report, column M: "26年底 合理市值/亿".
+REASONABLE_MARKET_CAPS = {
+    "frd": 244,
+    "yofc": 3740,
+    "shkj": 2496,
+    "dsjm": 4095,
+    "cambricon": 8000,
+    "hudian": 2795,
+    "innolight": 12300,
+    "gigadevice": 2640,
+    "weice": 216,
+    "lianxun": 2520,
+    "unisplendour": 1161,
+    "eoptolink": 624,
+    "sanhuan": 2666,
+}
+
 DASHBOARD_ONLY_COMPANIES = []
 
 
 def as_dict(row: tuple) -> dict:
     keys = ["id", "name", "code", "track", "start_price", "start_market_cap", "year_end_market_cap", "space", "source_note", "file"]
     data = dict(zip(keys, row))
+    data["year_end_market_cap"] = REASONABLE_MARKET_CAPS[data["id"]]
     data["file"] = Path(data["file"])
     data["current_market_cap"] = data["start_market_cap"]
     data["change_from_start"] = "0.0%"
@@ -555,7 +573,7 @@ def dashboard_page(companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；当前市值暂等于起点市值，后续每周更新后记录「距起点变化」和「距 2026 年底观察市值空间」。</p>
+            <p>第一版以 2026-07-17 为起点。灰色列为起点数据；当前市值暂等于起点市值，后续每周更新后记录「距起点变化」和「距 2026 年底合理市值空间」。</p>
           </div>
         </div>
         <div class="table-wrap">
@@ -568,7 +586,7 @@ def dashboard_page(companies: list[dict]) -> str:
                 <th class="baseline">07/17 市值</th>
                 <th>当前市值</th>
                 <th>距起点变化</th>
-                <th>2026 年底观察市值</th>
+                <th>26 年底合理市值</th>
                 <th>目前至年底空间</th>
                 <th>图片说明摘录</th>
               </tr>
@@ -576,7 +594,7 @@ def dashboard_page(companies: list[dict]) -> str:
             <tbody>{rows}</tbody>
           </table>
         </div>
-        <p class="note">命名采用「观察市值」而不是投资目标；页面不展示基本面评级、估值高低判断或价格走势图。</p>
+        <p class="note">「合理市值」取自 09.07 评分表的「26年底合理市值/亿」，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
       </section>
     """
     return shell_page("公司池仪表盘", body, companies, "dashboard")

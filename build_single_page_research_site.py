@@ -522,7 +522,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
           <div>
             <p class="eyebrow">Dashboard</p>
             <h1>公司池市值跟踪仪表盘</h1>
-            <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底目标市值空间」。</p>
+            <p>所有公司均以 2026-07-17 为起点。灰色列为 07/17 起点数据；行情日收盘价和市值来自本地行情快照，后续每周更新后记录「距起点变化」「距最高点下跌幅度」和「距 2026 年底合理市值空间」。</p>
             <p>{market_note}</p>
           </div>
         </div>
@@ -538,7 +538,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
                 <th class="metric-cell">{quote_day}<br>市值</th>
                 <th class="metric-cell">距起点<br>变化</th>
                 <th class="metric-cell">距最高点<br>下跌幅度</th>
-                <th class="metric-cell">2026 年底<br>目标市值</th>
+                <th class="metric-cell">26 年底<br>合理市值</th>
                 <th class="metric-cell">目前至<br>年底空间</th>
                 <th class="source-note-cell">图片说明摘录</th>
               </tr>
@@ -546,7 +546,7 @@ def render(companies: list[dict], dashboard_companies: list[dict]) -> str:
             <tbody>{rows}</tbody>
           </table>
         </div>
-        <p class="note">「距最高点下跌幅度」按最近 2 个月日线最高股价直接计算；「目标市值」仅用于记录原图中的年底目标市值，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
+        <p class="note">「距最高点下跌幅度」按最近 2 个月日线最高股价直接计算；「合理市值」取自 09.07 评分表的「26年底合理市值/亿」，不代表投资建议；页面不展示基本面评级、估值高低判断或价格走势图。</p>
       </section>
 
       <section class="view" id="weekly">
