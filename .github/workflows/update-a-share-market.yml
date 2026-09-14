@@ -2,12 +2,11 @@ name: Update A-share market data
 
 on:
   schedule:
-    # Avoid :00, when GitHub can delay or drop scheduled jobs under load.
-    # 10:07 / 10:37 UTC = 18:07 / 18:37 Asia/Shanghai on weekdays.
-    # The second run is an idempotent fallback: it exits when that trade date
-    # has already been saved by the first run.
-    - cron: "7 10 * * 1-5"
-    - cron: "37 10 * * 1-5"
+    # GitHub scheduled events can arrive hours late. Retry hourly after the
+    # close, avoiding :00; the script exits without changes once that trade
+    # date has already been saved.
+    # 06:17–11:17 UTC = 14:17–19:17 Asia/Shanghai on weekdays.
+    - cron: "17 6-11 * * 1-5"
   workflow_dispatch:
 
 permissions:
