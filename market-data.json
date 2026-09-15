@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-15 19:47:33",
+  "updated_at": "2026-09-15 22:11:25",
   "primary_source": "Tencent qt.gtimg.cn",
   "secondary_source": "Eastmoney push2.eastmoney.com / Sina hq.sinajs.cn",
-  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。 思瑞浦: 东方财富市值校验未返回；深南电路: 东方财富市值校验未返回；工业富联: 东方财富市值校验未返回",
+  "validation": "双源可用时要求总市值差异不超过 0.2%；校验源不可用时保留主源并提示。",
   "quotes": {
     "601869": {
       "code": "601869",
@@ -157,7 +157,9 @@
       "recent_high_price": 321.5,
       "drawdown_from_recent_high_pct": -2.308,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available",
+      "eastmoney_market_cap_yi": 433.67,
+      "eastmoney_diff_pct": 0.001,
+      "eastmoney_check": "pass",
       "sina_price": 314.08,
       "sina_diff_pct": 0.0,
       "sina_check": "pass"
@@ -175,7 +177,9 @@
       "recent_high_price": 414.8,
       "drawdown_from_recent_high_pct": -6.046,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available",
+      "eastmoney_market_cap_yi": 2654.64,
+      "eastmoney_diff_pct": 0.0,
+      "eastmoney_check": "pass",
       "sina_price": 389.72,
       "sina_diff_pct": 0.0,
       "sina_check": "pass"
@@ -193,8 +197,30 @@
       "recent_high_price": 70.97,
       "drawdown_from_recent_high_pct": -14.33,
       "recent_high_source": "Tencent daily kline qfq endpoint",
-      "eastmoney_check": "not_available",
+      "eastmoney_market_cap_yi": 12065.21,
+      "eastmoney_diff_pct": 0.0,
+      "eastmoney_check": "pass",
       "sina_price": 60.8,
+      "sina_diff_pct": 0.0,
+      "sina_check": "pass"
+    },
+    "688372": {
+      "code": "688372",
+      "name": "伟测科技",
+      "price": 109.37,
+      "market_cap_yi": 184.83,
+      "quote_time": "2026-09-15 16:14:55",
+      "source": "Tencent qt.gtimg.cn",
+      "recent_high_window_start": "2026-07-15",
+      "recent_high_window_end": "2026-09-15",
+      "recent_high_date": "2026-07-15",
+      "recent_high_price": 171.0,
+      "drawdown_from_recent_high_pct": -36.041,
+      "recent_high_source": "Tencent daily kline qfq endpoint",
+      "eastmoney_market_cap_yi": 184.83,
+      "eastmoney_diff_pct": 0.001,
+      "eastmoney_check": "pass",
+      "sina_price": 109.37,
       "sina_diff_pct": 0.0,
       "sina_check": "pass"
     }

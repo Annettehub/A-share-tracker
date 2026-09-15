@@ -51,6 +51,7 @@ COMPANIES = [
     {"code": "688536", "market": "SH", "name": "思瑞浦", "start_market_cap_yi": 334.25},
     {"code": "002916", "market": "SZ", "name": "深南电路", "start_market_cap_yi": 2275.09},
     {"code": "601138", "market": "SH", "name": "工业富联", "start_market_cap_yi": 11299.23},
+    {"code": "688372", "market": "SH", "name": "伟测科技", "start_market_cap_yi": 204.0},
 ]
 
 TENCENT_PREFIX = {"SZ": "sz", "SH": "sh"}
