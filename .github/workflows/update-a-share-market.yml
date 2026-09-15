@@ -60,8 +60,18 @@ jobs:
               print("market-data.json 缺失"); sys.exit(1)
           d = json.load(open(p, encoding="utf-8"))
           quotes = d.get("quotes", {})
-          if len(quotes) != 10:
-              print(f"公司数量异常: {len(quotes)}"); sys.exit(1)
+          # Keep validation aligned with the same company list used by the
+          # updater, rather than a stale hard-coded quote count.
+          import runpy
+          updater = runpy.run_path("更新A股行情.py")
+          expected_codes = {item["code"] for item in updater["COMPANIES"]}
+          actual_codes = set(quotes)
+          if actual_codes != expected_codes:
+              print(
+                  "公司代码异常: "
+                  f"expected={sorted(expected_codes)}, actual={sorted(actual_codes)}"
+              )
+              sys.exit(1)
           quote_dates = set()
           for code, q in quotes.items():
               qt = (q.get("quote_time") or "")[:10]
@@ -74,7 +84,7 @@ jobs:
           age_days = (today - quote_date).days
           if age_days < 0 or age_days > 10:
               print(f"行情日期异常: quote_date={quote_date}, today={today}, age_days={age_days}"); sys.exit(1)
-          print(f"校验通过：10 家公司行情日期一致，quote_date={quote_date}。")
+          print(f"校验通过：{len(quotes)} 家公司行情日期一致，quote_date={quote_date}。")
           PY
 
       - name: Commit changes
