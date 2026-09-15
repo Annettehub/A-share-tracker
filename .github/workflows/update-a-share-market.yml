@@ -2,9 +2,9 @@ name: Update A-share market data
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. Sunday–Thursday 22:00 UTC maps to
-    # Monday–Friday 06:00 Asia/Shanghai, so Monday morning is included.
-    - cron: "0 22 * * 0-4"
+    # GitHub Actions cron uses UTC. Monday–Friday 09:00 UTC maps to
+    # Monday–Friday 17:00 Asia/Shanghai, after the A-share close.
+    - cron: "0 9 * * 1-5"
   workflow_dispatch:
 
 permissions:
