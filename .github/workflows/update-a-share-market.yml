@@ -2,11 +2,9 @@ name: Update A-share market data
 
 on:
   schedule:
-    # GitHub scheduled events can arrive hours late. Retry hourly after the
-    # close, avoiding :00; the script exits without changes once that trade
-    # date has already been saved.
-    # 06:17–11:17 UTC = 14:17–19:17 Asia/Shanghai on weekdays.
-    - cron: "17 6-11 * * 1-5"
+    # GitHub Actions cron uses UTC. Sunday–Thursday 22:00 UTC maps to
+    # Monday–Friday 06:00 Asia/Shanghai, so Monday morning is included.
+    - cron: "0 22 * * 0-4"
   workflow_dispatch:
 
 permissions:
