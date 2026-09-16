@@ -2,9 +2,10 @@ name: Update A-share market data
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. 12:30 UTC maps to 20:30 Asia/Shanghai.
-    # Avoid the top of the hour, where GitHub may delay or drop scheduled events.
-    - cron: "30 12 * * 1-5"
+    # GitHub Actions cron uses UTC. 12:25 and 12:35 UTC map to 20:25 and
+    # 20:35 Asia/Shanghai. The first run waits for the 20:30 update window;
+    # the second is an automatic fallback if its scheduled event is dropped.
+    - cron: "25,35 12 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -20,8 +21,8 @@ jobs:
     env:
       TZ: Asia/Shanghai
       TRACKER_PROJECT_DIR: ${{ github.workspace }}
-      # Scheduled runs also write a fresh timestamp and commit, so each run is auditable.
-      FORCE_UPDATE: "1"
+      # A normal scheduled refresh is idempotent; manual dispatch may force a rerun.
+      FORCE_UPDATE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
 
     steps:
       - name: Checkout
@@ -34,6 +35,19 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
+
+      - name: Wait for the 20:30 Beijing update window
+        if: github.event_name == 'schedule'
+        run: |
+          target_epoch=$(TZ=Asia/Shanghai date -d 'today 20:30:05' +%s)
+          now_epoch=$(date +%s)
+          if [ "$now_epoch" -lt "$target_epoch" ]; then
+            wait_seconds=$((target_epoch - now_epoch))
+            echo "Scheduled at ${{ github.event.schedule }}; waiting ${wait_seconds}s for 20:30 Asia/Shanghai."
+            sleep "$wait_seconds"
+          else
+            echo "Scheduled at ${{ github.event.schedule }}; already after 20:30 Asia/Shanghai."
+          fi
 
       - name: Update market data and HTML
         run: python "更新A股行情.py"
