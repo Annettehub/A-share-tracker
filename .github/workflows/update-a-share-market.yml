@@ -2,11 +2,11 @@ name: Update A-share market data
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. 12:55 and 13:05 UTC map to 20:55 and
-    # 21:05 Asia/Shanghai. The first run waits for the 21:00 update window;
+    # GitHub Actions cron uses UTC. 13:55 and 14:05 UTC map to 21:55 and
+    # 22:05 Asia/Shanghai. The first run waits for the 22:00 update window;
     # the second is an automatic fallback if its scheduled event is dropped.
-    - cron: "55 12 * * 1-5"
-    - cron: "5 13 * * 1-5"
+    - cron: "55 13 * * 1-5"
+    - cron: "5 14 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -37,17 +37,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Wait for the 21:00 Beijing update window
+      - name: Wait for the 22:00 Beijing update window
         if: github.event_name == 'schedule'
         run: |
-          target_epoch=$(TZ=Asia/Shanghai date -d 'today 21:00:05' +%s)
+          target_epoch=$(TZ=Asia/Shanghai date -d 'today 22:00:05' +%s)
           now_epoch=$(date +%s)
           if [ "$now_epoch" -lt "$target_epoch" ]; then
             wait_seconds=$((target_epoch - now_epoch))
-            echo "Scheduled at ${{ github.event.schedule }}; waiting ${wait_seconds}s for 21:00 Asia/Shanghai."
+            echo "Scheduled at ${{ github.event.schedule }}; waiting ${wait_seconds}s for 22:00 Asia/Shanghai."
             sleep "$wait_seconds"
           else
-            echo "Scheduled at ${{ github.event.schedule }}; already after 21:00 Asia/Shanghai."
+            echo "Scheduled at ${{ github.event.schedule }}; already after 22:00 Asia/Shanghai."
           fi
 
       - name: Update market data and HTML
