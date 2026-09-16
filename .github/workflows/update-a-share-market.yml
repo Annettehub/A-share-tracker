@@ -2,9 +2,9 @@ name: Update A-share market data
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. Monday–Friday 09:00 UTC maps to
-    # Monday–Friday 17:00 Asia/Shanghai, after the A-share close.
-    - cron: "0 9 * * 1-5"
+    # GitHub Actions cron uses UTC. 12:30 UTC maps to 20:30 Asia/Shanghai.
+    # Avoid the top of the hour, where GitHub may delay or drop scheduled events.
+    - cron: "30 12 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -20,8 +20,8 @@ jobs:
     env:
       TZ: Asia/Shanghai
       TRACKER_PROJECT_DIR: ${{ github.workspace }}
-      # 手动触发（workflow_dispatch）时强制刷新；定时触发保留幂等，避免重复提交
-      FORCE_UPDATE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+      # Scheduled runs also write a fresh timestamp and commit, so each run is auditable.
+      FORCE_UPDATE: "1"
 
     steps:
       - name: Checkout
