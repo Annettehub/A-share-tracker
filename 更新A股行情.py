@@ -43,7 +43,7 @@ SKIP_REASON = PROJECT_DIR / "SKIP_REASON.txt"
 COMPANIES = [
     {"code": "601869", "market": "SH", "name": "长飞光纤", "start_market_cap_yi": 2993.0},
     {"code": "002384", "market": "SZ", "name": "东山精密", "start_market_cap_yi": 4431.0},
-    {"code": "688256", "market": "SH", "name": "寒武纪", "start_market_cap_yi": 7480.0},
+    {"code": "603893", "market": "SH", "name": "瑞芯微", "start_market_cap_yi": 815.0},
     {"code": "002463", "market": "SZ", "name": "沪电股份", "start_market_cap_yi": 2459.0},
     {"code": "000938", "market": "SZ", "name": "紫光股份", "start_market_cap_yi": 1004.7},
     {"code": "300408", "market": "SZ", "name": "三环集团", "start_market_cap_yi": 1968.2},
