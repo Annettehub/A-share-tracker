@@ -1,12 +1,12 @@
 name: Update A-share market data
 
 on:
-  schedule:
-    # GitHub Actions cron uses UTC. 13:55 and 14:05 UTC map to 21:55 and
-    # 22:05 Asia/Shanghai. The first run waits for the 22:00 update window;
-    # the second is an automatic fallback if its scheduled event is dropped.
-    - cron: "55 13 * * 1-5"
-    - cron: "5 14 * * 1-5"
+  # Scheduled (cron) triggers are intentionally removed as of 2026-10-13:
+  # market data is refreshed on demand instead of on a timer.
+  # Re-enable by restoring the `schedule:` block below:
+  #   schedule:
+  #     - cron: "55 13 * * 1-5"   # 21:55 Asia/Shanghai, Mon-Fri
+  #     - cron: "5 14 * * 1-5"    # 22:05 fallback
   workflow_dispatch:
 
 permissions:
