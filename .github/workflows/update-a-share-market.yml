@@ -1,6 +1,9 @@
 name: Update A-share market data
 
 on:
+  push:
+    paths:
+      - ".github/workflows/update-a-share-market.yml"
   schedule:
     # 22:00 Asia/Shanghai = 14:00 UTC, Mon-Fri. A-share closes 15:00 CST and
     # quotes settle well before 22:00, so no in-job waiting is needed.
